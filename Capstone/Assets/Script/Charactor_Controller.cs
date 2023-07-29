@@ -5,6 +5,9 @@ using TMPro;
 
 public class Charactor_Controller : MonoBehaviour
 {
+    [Header("Player Status")]
+    public bool isInteracting;
+
     [Header("Movement")]
     public float moveSpeed;
 
@@ -39,6 +42,7 @@ public class Charactor_Controller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        isInteracting = false;
 
         readyToJump = true;
     }
@@ -61,6 +65,7 @@ public class Charactor_Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(isInteracting != true)
         MovePlayer();
     }
 
