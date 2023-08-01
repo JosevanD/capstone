@@ -38,6 +38,9 @@ public class Charactor_Controller : MonoBehaviour
 
     Rigidbody rb;
 
+    [Header("Animation")]
+    public Animator animator;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();

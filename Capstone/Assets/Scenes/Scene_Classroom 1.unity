@@ -664,6 +664,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7530d5ed2c9f414f847cb8a509e0b71, type: 3}
+--- !u!1 &1193041758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1815253359286798458, guid: 4e3cb737d5acb0549a199105cfbfe16b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1671206319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1193041762
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193041758}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6bb38c4fb463cef409397d5274ac4be5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1241738543
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeXZAxis: 1
+  spriteAnimator: {fileID: 0}
 --- !u!1 &1308781147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,6 +1092,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1815253359286798436, guid: 4e3cb737d5acb0549a199105cfbfe16b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1052023996, guid: c5942a066f1ff494e9c318a74e32c0a2,
+        type: 3}
     - target: {fileID: 1815253359318599718, guid: 4e3cb737d5acb0549a199105cfbfe16b,
         type: 3}
       propertyPath: m_CameraDistance
@@ -1097,9 +1130,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1815253361190743008, guid: 4e3cb737d5acb0549a199105cfbfe16b,
         type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1193041762}
+    - target: {fileID: 1815253361190743008, guid: 4e3cb737d5acb0549a199105cfbfe16b,
+        type: 3}
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4968122895655074923, guid: 4e3cb737d5acb0549a199105cfbfe16b,
+        type: 3}
+      propertyPath: spriteAnimator
+      value: 
+      objectReference: {fileID: 1193041762}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e3cb737d5acb0549a199105cfbfe16b, type: 3}
 --- !u!1001 &1812138386
