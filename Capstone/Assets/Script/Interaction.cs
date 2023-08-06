@@ -9,11 +9,13 @@ public class Interaction : MonoBehaviour
 
     public Canvas PuzzleCanvas;
 
+    public GameObject PuzzleCanvasObj;
+
     public Charactor_Controller charactorController;
     private void Awake()
     {
         PuzzleCanvas.enabled = false;
-
+        PuzzleCanvasObj.SetActive(false);
         charactorController = FindObjectOfType<Charactor_Controller>();
     }
     private void Update()
@@ -26,6 +28,7 @@ public class Interaction : MonoBehaviour
                 if (hitCollider.transform.tag == "Player")
                 {
                     Debug.Log("Interected");
+                    PuzzleCanvasObj.SetActive(true);
                     PuzzleCanvas.enabled = true;
                     charactorController.isInteracting = true;
                     Destroy(gameObject);
