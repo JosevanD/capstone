@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeXZAxis: 1
+  spriteAnimator: {fileID: 0}
 --- !u!1 &1815253359318599716
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +345,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -582,6 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89fd25bcd70f3746bf5d6b9f8c2e142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteracting: 0
   moveSpeed: 10
   groundDrag: 2
   jumpForce: 0
@@ -595,6 +597,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   orientation: {fileID: 1815253359533186006}
+  animator: {fileID: 0}
 --- !u!143 &1815253361190743020
 CharacterController:
   m_ObjectHideFlags: 0
