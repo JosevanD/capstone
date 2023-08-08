@@ -40,6 +40,26 @@ public class SpriteSystem: MonoBehaviour
         {
             spriteAnimator.SetBool("FrontWalk", false);
         }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            spriteAnimator.SetBool("RightWalk", true);
+        }
+
+        else
+        {
+            spriteAnimator.SetBool("RightWalk", false);
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            spriteAnimator.SetBool("LeftWalk", true);
+        }
+
+        else
+        {
+            spriteAnimator.SetBool("LeftWalk", false);
+        }
     }
 
 }
