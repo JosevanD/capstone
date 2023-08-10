@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class StirringChoco : MonoBehaviour
 {
+    public ChocoPuzzleManager chocoPuzzleManager;
     public GameObject objectToDrag;
+
 
     private float startTime = 0f;
     private float pressTime = 0f;
 
     public float totalPressTime = 0f;
 
+    private void Start()
+    {
+        chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+    }
     public void OnMouseDrag()
     {
         
@@ -33,7 +39,8 @@ public class StirringChoco : MonoBehaviour
 
         if (pressTime >= totalPressTime)
         {
-            Debug.Log("puzzle complete! ");
+            chocoPuzzleManager.IsPanelFinished = true;
+            Debug.Log("Stirring Choco is finished");
         }
     }
 }

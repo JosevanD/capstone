@@ -621,6 +621,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   orientation: {fileID: 4932169065265691760}
+  FootStepAudioSource: {fileID: 0}
+  FootStepClip: {fileID: 0}
   animator: {fileID: 6720363443705834859}
 --- !u!143 &4932169066820406346
 CharacterController:
@@ -663,7 +665,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4932169066820406337}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b995bc1775ea83b4b8f861763e9a1424, type: 3}

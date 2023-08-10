@@ -38,6 +38,11 @@ public class Charactor_Controller : MonoBehaviour
 
     Rigidbody rb;
 
+    [Header("Audio")]
+    public AudioSource FootStepAudioSource;
+
+    public AudioClip FootStepClip;
+
     [Header("Animation")]
     public Animator animator;
 
@@ -48,6 +53,10 @@ public class Charactor_Controller : MonoBehaviour
         isInteracting = false;
 
         readyToJump = true;
+
+        FootStepAudioSource = GetComponent<AudioSource>();
+        FootStepAudioSource.clip = FootStepClip;
+        FootStepAudioSource.enabled = false;
     }
 
     private void Update()
@@ -64,6 +73,16 @@ public class Charactor_Controller : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+
+        if (horizontalInput != 0 || verticalInput != 0)
+        { 
+            FootStepAudioSource.enabled = true; 
+        }
+        if (horizontalInput == 0 && verticalInput == 0)
+        {
+            FootStepAudioSource.enabled = false;
+        }
     }
 
     private void FixedUpdate()
@@ -90,6 +109,7 @@ public class Charactor_Controller : MonoBehaviour
 
     private void MovePlayer()
     {
+        
         // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 

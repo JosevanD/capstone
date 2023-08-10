@@ -2,27 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PouringPot : MonoBehaviour
+public class PouringMatchMilk : MonoBehaviour
 {
+    
     public Animator potAnimator;
     public Animator moldAnimator;
 
     public ChocoPuzzleManager chocoPuzzleManager;
-    public GameObject MixingMatchMilkPanel;
     public GameObject StirringChocolatePanel;
+    //public GameObject 
 
     private float playerHoldingTimer;
     public float RequiredTimer;
 
-    public bool isPouringFinished;
+    
+    //public bool isPouringFinished;
     private void Start()
     {
-        isPouringFinished = false;
+        //isPouringFinished = false;
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        StirringChocolatePanel.SetActive(false);
     }
     public void OnPointerDown()
     {
-        if (playerHoldingTimer < RequiredTimer) 
+        if (playerHoldingTimer < RequiredTimer)
         {
             potAnimator.SetBool("isPouring", true);
             //potAnimator.speed = 1;
@@ -34,7 +37,7 @@ public class PouringPot : MonoBehaviour
 
     }
 
-    public void OnPointerUp() 
+    public void OnPointerUp()
     {
         potAnimator.SetBool("isPouring", false);
 
@@ -45,18 +48,11 @@ public class PouringPot : MonoBehaviour
     {
         if (playerHoldingTimer < RequiredTimer)
         {
-            if (MixingMatchMilkPanel.active == true)
-            {
-                chocoPuzzleManager.IsPanelFinished = true;
-            
-            }
-            if (StirringChocolatePanel == true)
-            {
-                isPouringFinished = true;
-
-            }
-            
-            
+            //isPouringFinished = true;
+            StirringChocolatePanel.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
+
+
