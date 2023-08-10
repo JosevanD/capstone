@@ -587,6 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezeXZAxis: 1
   spriteAnimator: {fileID: 0}
+  walkAudioObject: {fileID: 0}
 --- !u!1 &1389383904
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +844,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e552f7c2f5732d04098b67fed36076df, type: 3}
+--- !u!1001 &4647195901463679073
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893481933457406598, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918664182458509677, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a3023630fcab634b81851a6b812e1d3, type: 3}
 --- !u!1001 &6720363444660810249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -913,7 +983,7 @@ PrefabInstance:
     - target: {fileID: 7137102647431981494, guid: 30d09a6e580ab5b43a1b869b003504da,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d09a6e580ab5b43a1b869b003504da, type: 3}
