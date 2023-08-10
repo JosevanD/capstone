@@ -66,7 +66,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 8dbdbbf1436d9734e961e536dd26092d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1e12d975e71472b4282660cfeb6710f9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -83,7 +83,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 1
+    - _Alpha: 0.351
     - _AlphaClip: 0
     - _Blend: 2
     - _BlendOp: 0
@@ -102,7 +102,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _Posterize_intensity: -0.835
+    - _Posterize_intensity: -1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -114,7 +114,7 @@ Material:
     - _Speed: 0.02
     - _SrcBlend: 5
     - _Surface: 1
-    - _Texture_offset_X: 0
+    - _Texture_offset_X: 1
     - _Texture_offset_Y: 0
     - _Texture_size_X: 1
     - _Texture_size_Y: 1
