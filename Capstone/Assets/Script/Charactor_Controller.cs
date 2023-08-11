@@ -40,8 +40,9 @@ public class Charactor_Controller : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource FootStepAudioSource;
-
     public AudioClip FootStepClip;
+    public float StopAudioAfter = 0.5f;
+
 
     [Header("Animation")]
     public Animator animator;
@@ -81,8 +82,11 @@ public class Charactor_Controller : MonoBehaviour
         }
         if (horizontalInput == 0 && verticalInput == 0)
         {
-            FootStepAudioSource.enabled = false;
+            
+            //FootStepAudioSource.enabled = false;
+            StartCoroutine(StopAudio(StopAudioAfter));
         }
+
     }
 
     private void FixedUpdate()
@@ -144,5 +148,13 @@ public class Charactor_Controller : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+    }
+
+
+    IEnumerator StopAudio(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        FootStepAudioSource.enabled = false;
     }
 }
