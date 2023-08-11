@@ -1,52 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PouringMatchMilk : MonoBehaviour
+public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     
     public Animator potAnimator;
     public Animator moldAnimator;
 
-    public ChocoPuzzleManager chocoPuzzleManager;
+    //public ChocoPuzzleManager chocoPuzzleManager;
     public GameObject StirringChocolatePanel;
     //public GameObject 
 
     private float playerHoldingTimer;
     public float RequiredTimer;
 
-    
+    private bool isPressingOn;
     //public bool isPouringFinished;
     private void Start()
     {
         //isPouringFinished = false;
-        chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        isPressingOn = false;
+        //chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         StirringChocolatePanel.SetActive(false);
     }
-    public void OnPointerDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        if (playerHoldingTimer < RequiredTimer)
+        if (playerHoldingTimer <= RequiredTimer)
         {
+            isPressingOn = true;
             potAnimator.SetBool("isPouring", true);
             //potAnimator.speed = 1;
             moldAnimator.SetBool("isFilling", true);
             moldAnimator.speed = 1;
-            playerHoldingTimer += Time.deltaTime;
+            //playerHoldingTimer += Time.deltaTime;
 
         }
-
     }
 
-    public void OnPointerUp()
+    public void OnPointerUp(PointerEventData eventData)
     {
         potAnimator.SetBool("isPouring", false);
-
+        isPressingOn = false;
         moldAnimator.speed = 0;
     }
 
     private void Update()
     {
-        if (playerHoldingTimer < RequiredTimer)
+        Debug.Log("isPressingon " + isPressingOn);
+        if (isPressingOn)
+        {
+            playerHoldingTimer += Time.deltaTime;
+
+        }
+        if (playerHoldingTimer >= RequiredTimer)
         {
             //isPouringFinished = true;
             StirringChocolatePanel.SetActive(true);

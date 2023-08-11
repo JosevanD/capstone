@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SwitchImage : MonoBehaviour
 {
@@ -9,11 +10,15 @@ public class SwitchImage : MonoBehaviour
 
     public ChocoPuzzleManager chocoPuzzleManager;
 
+    public GameObject theNextPanel;
+    public GameObject theCurrPenel;
+    public Canvas ChocolatePuzzleCanvas;
     private int ImageCount = 0;
 
     private void Start()
     {
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+
         Debug.Log(ChocolateImages.Length);
     }
 
@@ -42,8 +47,12 @@ public class SwitchImage : MonoBehaviour
         if (ImageCount >= ChocolateImages.Length - 1)
         {
             Debug.Log("Breaking Choco is finished");
-            chocoPuzzleManager.IsPanelFinished = true;
 
+            //ChocolatePuzzleCanvas.enabled = false;
+            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+            chocoPuzzleManager.charactorController.isInteracting = false;
+            theNextPanel.SetActive(true);
+            theCurrPenel.SetActive(false);
         }
 
     }

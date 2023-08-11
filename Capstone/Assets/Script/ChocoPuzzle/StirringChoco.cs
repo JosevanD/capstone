@@ -6,7 +6,8 @@ public class StirringChoco : MonoBehaviour
 {
     public ChocoPuzzleManager chocoPuzzleManager;
     public GameObject objectToDrag;
-
+    public GameObject theNextPanel;
+    public GameObject theCurrPenel;
 
     private float startTime = 0f;
     private float pressTime = 0f;
@@ -39,7 +40,10 @@ public class StirringChoco : MonoBehaviour
 
         if (pressTime >= totalPressTime)
         {
-            chocoPuzzleManager.IsPanelFinished = true;
+            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+            chocoPuzzleManager.charactorController.isInteracting = true;
+            theNextPanel.SetActive(true);
+            theCurrPenel.SetActive(false);
             Debug.Log("Stirring Choco is finished");
         }
     }

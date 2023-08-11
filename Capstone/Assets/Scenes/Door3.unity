@@ -2000,6 +2000,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1851497873143421901, guid: 30d09a6e580ab5b43a1b869b003504da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4932169064983588802, guid: 30d09a6e580ab5b43a1b869b003504da,
         type: 3}
       propertyPath: m_SortingLayer
@@ -2085,10 +2090,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -3.731472
       objectReference: {fileID: 0}
+    - target: {fileID: 4932169066820406342, guid: 30d09a6e580ab5b43a1b869b003504da,
+        type: 3}
+      propertyPath: FootStepClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b995bc1775ea83b4b8f861763e9a1424, type: 3}
     - target: {fileID: 5870248758026330026, guid: 30d09a6e580ab5b43a1b869b003504da,
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137102647431981494, guid: 30d09a6e580ab5b43a1b869b003504da,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137102647431981494, guid: 30d09a6e580ab5b43a1b869b003504da,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30d09a6e580ab5b43a1b869b003504da, type: 3}

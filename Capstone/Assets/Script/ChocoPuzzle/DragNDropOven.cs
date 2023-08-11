@@ -3,27 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DragNDropPuzzle : MonoBehaviour
+public class DragNDropOven : MonoBehaviour
 {
     public GameObject objectToDrag;
     public GameObject objectDragToPos;
-
+    public GameObject theNextPanel;
+    public GameObject theCurrPanel;
+    private ChocoPuzzleManager chocoPuzzleManager;
     public float DropDistance;
 
     public bool isLocked = false;
+
 
     Vector2 objectInitPos;
 
     public Charactor_Controller charactorController;
 
-    [Header("The Puzzle Canvas")]
-    public Canvas PuzzleCanvas;
+    //[Header("The Puzzle Canvas")]
+    //public Canvas PuzzleCanvas;
     // Start is called before the first frame update
     void Start()
     {
         objectInitPos = objectToDrag.transform.position;
-
-        charactorController = FindObjectOfType<Charactor_Controller>();
+        chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        //charactorController = FindObjectOfType<Charactor_Controller>();
 
     }
 
@@ -31,6 +34,7 @@ public class DragNDropPuzzle : MonoBehaviour
     {
         if (!isLocked)
         {
+            Debug.Log("Dragging");
             objectToDrag.transform.position = Input.mousePosition; 
             
         }
@@ -45,8 +49,12 @@ public class DragNDropPuzzle : MonoBehaviour
         {
             isLocked = true;
             objectToDrag.transform.position = objectDragToPos.transform.position;
-            PuzzleCanvas.enabled = false;
-            charactorController.isInteracting = false;
+            //PuzzleCanvas.enabled = false;
+            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+            chocoPuzzleManager.charactorController.isInteracting = false;
+            
+            theNextPanel.SetActive(true);
+            theCurrPanel.SetActive(false);
             Debug.Log("Puzzle Solved");
 
         }
