@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public Animator potAnimator;
-    public Animator moldAnimator;
+    public Animator bowlAnimator;
 
     public ChocoPuzzleManager chocoPuzzleManager;
     public GameObject theNextPanel;
@@ -36,8 +36,8 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             isPressingOn = true;
             potAnimator.SetBool("isPouringMilk", true);
             //potAnimator.speed = 1;
-            moldAnimator.SetBool("isFilling", true);
-            moldAnimator.speed = 1;
+            bowlAnimator.SetBool("isFillingMilk", true);
+            bowlAnimator.speed = 1;
             playerHoldingTimer += Time.deltaTime;
 
 
@@ -50,7 +50,7 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         potAnimator.SetBool("isPouringMilk", false);
         isPressingOn = false;
-        moldAnimator.speed = 0;
+        bowlAnimator.speed = 0;
     }
 
     private void Update()
