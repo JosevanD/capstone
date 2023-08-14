@@ -11,7 +11,7 @@ public class SpriteSystem : MonoBehaviour
 
     [SerializeField] GameObject walkAudioObject;
 
-    bool isWalking = false;
+    //bool isWalking = false;
     //bool audioToggle = true;
 
     void Update()
