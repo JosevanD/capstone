@@ -1430,7 +1430,7 @@ GameObject:
   - component: {fileID: 468551438}
   - component: {fileID: 468551444}
   m_Layer: 5
-  m_Name: Pot
+  m_Name: Milk Bowl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1453,7 +1453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109, y: 84}
+  m_AnchoredPosition: {x: 362, y: 48}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &468551438
@@ -1540,7 +1540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potAnimator: {fileID: 468551444}
-  moldAnimator: {fileID: 1412085577}
+  bowlAnimator: {fileID: 1412085581}
   chocoPuzzleManager: {fileID: 0}
   theNextPanel: {fileID: 786716849}
   theCurrPanel: {fileID: 639829869}
@@ -1567,7 +1567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab2a3541dba854044994afeee442779f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2370a731a6d544f40bf698578f31778c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2403,7 +2403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &639829870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2477,7 +2477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potAnimator: {fileID: 0}
-  moldAnimator: {fileID: 1412085577}
+  bowlAnimator: {fileID: 0}
   chocoPuzzleManager: {fileID: 0}
   theNextPanel: {fileID: 0}
   theCurrPanel: {fileID: 639829869}
@@ -2727,7 +2727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potAnimator: {fileID: 683932318}
-  moldAnimator: {fileID: 847316193}
+  bowlAnimator: {fileID: 0}
   chocoPuzzleManager: {fileID: 0}
   theNextPanel: {fileID: 0}
   theCurrPanel: {fileID: 0}
@@ -3521,7 +3521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &786716850
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6049,7 +6049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1332d8c9c2b283d4297ca8a3092d1b3f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6479,34 +6479,14 @@ GameObject:
   - component: {fileID: 1412085580}
   - component: {fileID: 1412085579}
   - component: {fileID: 1412085578}
-  - component: {fileID: 1412085577}
+  - component: {fileID: 1412085581}
   m_Layer: 5
-  m_Name: Bowl
+  m_Name: Matcha Bowl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1412085577
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412085576}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 002640f86a8cfbc47ad6bf13e4c88314, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1412085578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6527,7 +6507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab2a3541dba854044994afeee442779f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4df4fd609ba418746b004aff5fe8b307, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6562,9 +6542,29 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: -59}
+  m_AnchoredPosition: {x: -67, y: -301}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1412085581
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412085576}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14168c15bee053e4d847b17f4022bc46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1417733709
 GameObject:
   m_ObjectHideFlags: 0
@@ -6728,7 +6728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potAnimator: {fileID: 1446952865}
-  moldAnimator: {fileID: 1667041984}
+  bowlAnimator: {fileID: 0}
   chocoPuzzleManager: {fileID: 0}
   theNextPanel: {fileID: 0}
   theCurrPanel: {fileID: 1106499715}
