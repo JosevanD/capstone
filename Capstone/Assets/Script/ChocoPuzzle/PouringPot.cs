@@ -34,7 +34,7 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (playerHoldingTimer <= RequiredTimer) 
         {
             isPressingOn = true;
-            potAnimator.SetBool("isPouring", true);
+            potAnimator.SetBool("isPouringMilk", true);
             //potAnimator.speed = 1;
             moldAnimator.SetBool("isFilling", true);
             moldAnimator.speed = 1;
@@ -48,7 +48,7 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData) 
     {
-        potAnimator.SetBool("isPouring", false);
+        potAnimator.SetBool("isPouringMilk", false);
         isPressingOn = false;
         moldAnimator.speed = 0;
     }
@@ -61,18 +61,29 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             playerHoldingTimer += Time.deltaTime;
 
         }
+        if (!isPressingOn)
+        {
+            potAnimator.SetBool("isPouringMilk", false);
+
+        }
         if (playerHoldingTimer >= RequiredTimer)
         {
 
             //chocoPuzzleManager.IsPanelFinished = true;
-            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+            /*chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
             chocoPuzzleManager.charactorController.isInteracting = false;
             theNextPanel.SetActive(true);
-            theCurrPanel.SetActive(false);
+            theCurrPanel.SetActive(false);*/
+
             Debug.Log("Mixing Matcha Finished");
-            
-            
-            
+            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+            chocoPuzzleManager.charactorController.isInteracting = false;
+            //theNextPanel.SetActive(true);
+            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.Oven;
+            theCurrPanel.SetActive(false);
+
+
+
         }
     }
 }

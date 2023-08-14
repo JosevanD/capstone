@@ -11,7 +11,7 @@ public class SwitchImage : MonoBehaviour
     public ChocoPuzzleManager chocoPuzzleManager;
 
     public GameObject theNextPanel;
-    public GameObject theCurrPenel;
+    public GameObject theCurrPanel;
     public Canvas ChocolatePuzzleCanvas;
     private int ImageCount = 0;
 
@@ -51,8 +51,9 @@ public class SwitchImage : MonoBehaviour
             //ChocolatePuzzleCanvas.enabled = false;
             chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
             chocoPuzzleManager.charactorController.isInteracting = false;
-            theNextPanel.SetActive(true);
-            theCurrPenel.SetActive(false);
+            //theNextPanel.SetActive(true);
+            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.MixingMatcha;
+            theCurrPanel.SetActive(false);
         }
 
     }

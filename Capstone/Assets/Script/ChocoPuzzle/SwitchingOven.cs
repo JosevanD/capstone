@@ -68,10 +68,17 @@ public class SwitchingOven : MonoBehaviour
             CurrentButton.interactable = false;
 
             //ObjMatchaParent.SetActive(true);
+            /*chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+            chocoPuzzleManager.charactorController.isInteracting = false;
+            //theNextPanel.SetActive(true);
+            theCurrPanel.SetActive(false);*/
+
             chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
             chocoPuzzleManager.charactorController.isInteracting = false;
-            theNextPanel.SetActive(true);
+            //theNextPanel.SetActive(true);
+            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.StirringChoco;
             theCurrPanel.SetActive(false);
+
             isOpened = true;
         }
 
@@ -110,7 +117,8 @@ public class SwitchingOven : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("isInOven " + isInOven + "isOPen" + isOpened);
+        //Debug.Log("isInOven " + isInOven + "isOPen" + isOpened);
+
         if (isHeating && isInOven)
         {
             CurrWaitingTime += Time.deltaTime;

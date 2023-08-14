@@ -7,7 +7,7 @@ public class StirringChoco : MonoBehaviour
     public ChocoPuzzleManager chocoPuzzleManager;
     public GameObject objectToDrag;
     public GameObject theNextPanel;
-    public GameObject theCurrPenel;
+    public GameObject theCurrPanel;
 
     private float startTime = 0f;
     private float pressTime = 0f;
@@ -40,10 +40,16 @@ public class StirringChoco : MonoBehaviour
 
         if (pressTime >= totalPressTime)
         {
-            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+            /*chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
             chocoPuzzleManager.charactorController.isInteracting = true;
             theNextPanel.SetActive(true);
-            theCurrPenel.SetActive(false);
+            theCurrPanel.SetActive(false);*/
+
+            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+            chocoPuzzleManager.charactorController.isInteracting = false;
+            //theNextPanel.SetActive(true);
+            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.FillingTart;
+            theCurrPanel.SetActive(false);
             Debug.Log("Stirring Choco is finished");
         }
     }

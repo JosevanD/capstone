@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class DragNDropOven : MonoBehaviour
 {
@@ -37,9 +38,10 @@ public class DragNDropOven : MonoBehaviour
 
     public void DragObject()
     {
+        //Debug.Log("Dragging");
         if (!isLocked)
         {
-            Debug.Log("Dragging");
+            
             objectToDrag.transform.position = Input.mousePosition; 
             
         }
@@ -73,5 +75,9 @@ public class DragNDropOven : MonoBehaviour
         
         }
     
+    }
+    private void Update()
+    {
+        //Debug.Log("is locked" + isLocked);
     }
 }

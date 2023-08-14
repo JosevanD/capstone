@@ -8,6 +8,7 @@ public class Interaction : MonoBehaviour
     public float InteractionDistance = 2;
 
     public Canvas PuzzleCanvas;
+    public GameObject PuzzlePanel;
 
     public GameObject PuzzleCanvasObj;
 
@@ -15,7 +16,8 @@ public class Interaction : MonoBehaviour
     private void Awake()
     {
         PuzzleCanvas.enabled = false;
-        PuzzleCanvasObj.SetActive(false);
+        PuzzlePanel.SetActive(false);
+        //PuzzleCanvasObj.SetActive(false);
         charactorController = FindObjectOfType<Charactor_Controller>();
     }
     private void Update()
@@ -28,10 +30,12 @@ public class Interaction : MonoBehaviour
                 if (hitCollider.transform.tag == "Player")
                 {
                     Debug.Log("Interected");
-                    PuzzleCanvasObj.SetActive(true);
+
+                    //PuzzleCanvasObj.SetActive(true);
+                    PuzzlePanel.SetActive(true);
                     PuzzleCanvas.enabled = true;
                     charactorController.isInteracting = true;
-                    Destroy(gameObject);
+                    //Destroy(gameObject);
                     
                 }
             }
