@@ -7,8 +7,12 @@ public class DragNDropOven : MonoBehaviour
 {
     public GameObject objectToDrag;
     public GameObject objectDragToPos;
-    public GameObject theNextPanel;
-    public GameObject theCurrPanel;
+    //public GameObject theNextPanel;
+    //public GameObject theCurrPanel;
+    public GameObject ObjParent;
+    private SwitchingOven switchingOven;
+
+    public Button theOvenButton;
     private ChocoPuzzleManager chocoPuzzleManager;
     public float DropDistance;
 
@@ -26,6 +30,7 @@ public class DragNDropOven : MonoBehaviour
     {
         objectInitPos = objectToDrag.transform.position;
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        switchingOven = FindObjectOfType<SwitchingOven>();
         //charactorController = FindObjectOfType<Charactor_Controller>();
 
     }
@@ -50,12 +55,16 @@ public class DragNDropOven : MonoBehaviour
             isLocked = true;
             objectToDrag.transform.position = objectDragToPos.transform.position;
             //PuzzleCanvas.enabled = false;
-            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
+            //chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+            //chocoPuzzleManager.charactorController.isInteracting = false;
             
-            theNextPanel.SetActive(true);
-            theCurrPanel.SetActive(false);
+            //theNextPanel.SetActive(true);
+            //theCurrPanel.SetActive(false);
+            theOvenButton.interactable = true;
+            switchingOven.isInOven = true;
+            switchingOven.isOpened = true;
             Debug.Log("Puzzle Solved");
+            ObjParent.SetActive(false);
 
         }
         else 
