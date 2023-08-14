@@ -83,8 +83,9 @@ public class Charactor_Controller : MonoBehaviour
         if (horizontalInput == 0 && verticalInput == 0)
         {
             
-            //FootStepAudioSource.enabled = false;
-            StartCoroutine(StopAudio(StopAudioAfter));
+            FootStepAudioSource.enabled = false;
+            //FootStepAudioSource.PlayOneShot(FootStepClip);
+            //StartCoroutine(StopAudio(StopAudioAfter));
         }
 
     }
@@ -154,7 +155,7 @@ public class Charactor_Controller : MonoBehaviour
     IEnumerator StopAudio(float time)
     {
         yield return new WaitForSeconds(time);
-
+        //FootStepAudioSource.Stop();
         FootStepAudioSource.enabled = false;
     }
 }
