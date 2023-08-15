@@ -47,12 +47,6 @@ public class CutscenePlay : MonoBehaviour
         cutsceneObject.SetActive(true);
         cutsceneAudio.enabled = true;
 
-        //deactivates an object
-        if (hasObjToDectivate == true)
-        {
-            objToDeactivate.SetActive(false);
-        }
-
         //starts timer for cutscene music and off
         StartCoroutine(CutsceneOff(cutsceneTime));
     }
@@ -66,6 +60,13 @@ public class CutscenePlay : MonoBehaviour
         cutsceneAudio.enabled = false;
         cutsceneObject.SetActive(false);
         bgAudioObject.GetComponent<BackgroundAudioController>().ResumeBGAudio();
+
+        //deactivates an object
+        if (hasObjToDectivate == true)
+        {
+            objToDeactivate.SetActive(false);
+        }
+
 
         //activate any objects
         if (hasObjToActivate == true)
