@@ -13,7 +13,6 @@ public class ChocoPuzzleManager : MonoBehaviour
        Oven,
        StirringChoco,
        FillingTart,
-       PlacingChoco,
        Packing,
        AllFinished
     
@@ -91,16 +90,12 @@ public class ChocoPuzzleManager : MonoBehaviour
                 Destroy(ChocoPuzzleObjects[3]);
                 ChocoPuzzleObjects[4].SetActive(true);
                 break;
-            case CurrPanels.PlacingChoco:
-                Destroy(ChocoPuzzleObjects[4]);
-                ChocoPuzzleObjects[5].SetActive(true);
-                break;
             case CurrPanels.Packing:
                 Destroy(ChocoPuzzleObjects[5]);
-                ChocoPuzzleObjects[6].SetActive(true);
+                ChocoPuzzleObjects[5].SetActive(true);
                 break;
             case CurrPanels.AllFinished:
-                Destroy(ChocoPuzzleObjects[6]);
+                Destroy(ChocoPuzzleObjects[5]);
                 
                 break;
         }

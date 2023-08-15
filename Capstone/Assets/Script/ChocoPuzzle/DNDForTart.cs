@@ -6,7 +6,7 @@ public class DNDForTart : MonoBehaviour
 {
     private ChocoPuzzleManager chocoPuzzleManager;
     public GameObject objectToDrag;
-    public GameObject theNextPanel;
+    //public GameObject theNextPanel;
     public GameObject theCurrPanel;
     private int TotalTartCount;
     public int TartCount;
@@ -48,7 +48,7 @@ public class DNDForTart : MonoBehaviour
             chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
             chocoPuzzleManager.charactorController.isInteracting = false;
             //theNextPanel.SetActive(true);
-            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.PlacingChoco;
+            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.Packing;
             theCurrPanel.SetActive(false);
 
         }
