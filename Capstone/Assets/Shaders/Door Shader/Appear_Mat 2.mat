@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dissolve_Mat 2
+  m_Name: Appear_Mat 2
   m_Shader: {fileID: -6465566751694194690, guid: bec5add04d8776b4b9b95bf8af22225c,
     type: 3}
   m_ValidKeywords:
@@ -45,7 +45,7 @@ Material:
     - _Blend: 0
     - _CastShadows: 1
     - _Cull: 2
-    - _DissolveAmount: 0
+    - _DissolveAmount: 1
     - _DissolveScale: 40
     - _DissolveWidth: 0.11
     - _DstBlend: 0
@@ -59,7 +59,7 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.3339622, b: 0.3339622, a: 0}
+    - _BaseColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0}
     - _DissolveColor: {r: 20.865906, g: 18.680994, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &460287639590847248
