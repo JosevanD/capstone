@@ -2092,6 +2092,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1580008214337739138, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: sceneTrackerObj
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580008214337739138, guid: 4a3023630fcab634b81851a6b812e1d3,
+        type: 3}
+      propertyPath: currentDoorNumber
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2138184591358835179, guid: 4a3023630fcab634b81851a6b812e1d3,
         type: 3}
       propertyPath: m_Enabled

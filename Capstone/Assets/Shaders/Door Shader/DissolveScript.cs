@@ -37,14 +37,15 @@ public class DissolveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DoorAppear();
-
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            DoorAppear();
+        }
     }
 
     private void DoorAppear()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+        
             appearSound.enabled = true;
             doorCollider.enabled = true;
             frameCollider.enabled = true;
@@ -52,7 +53,6 @@ public class DissolveScript : MonoBehaviour
             StartCoroutine(MaterializeCor());
             StartCoroutine(StartAnim(animDelay));
 
-        }
     }
 
 

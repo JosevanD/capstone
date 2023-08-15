@@ -127,6 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetSceneName: WhiteHallway
+  currentDoorNumber: 0
+  sceneTrackerObj: {fileID: 0}
+  fromWhiteHallway: 0
 --- !u!82 &3113370066098743570
 AudioSource:
   m_ObjectHideFlags: 0
@@ -525,8 +528,8 @@ MonoBehaviour:
   mesh: {fileID: 4778339710273683133}
   dissolveRate: 0.0125
   refreshRate: 0.025
-  appearSound: {fileID: 0}
-  doorAnimator: {fileID: 0}
+  appearSound: {fileID: 6432408765095930151}
+  doorAnimator: {fileID: 1890413801912751180}
   animDelay: 2
   doorCollider: {fileID: 6045445110456146274}
   frameCollider: {fileID: 2982634679220429727}
@@ -545,8 +548,8 @@ MonoBehaviour:
   mesh: {fileID: 3205380274258302637}
   dissolveRate: 0.0125
   refreshRate: 0.025
-  appearSound: {fileID: 0}
-  doorAnimator: {fileID: 0}
+  appearSound: {fileID: 6432408765095930151}
+  doorAnimator: {fileID: 1890413801912751180}
   animDelay: 2
   doorCollider: {fileID: 6045445110456146274}
   frameCollider: {fileID: 2982634679220429727}
@@ -562,7 +565,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6299a558ef7bda74188089dfcc27be9d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.5
   m_Pitch: 0.7
   Loop: 0
   Mute: 0
