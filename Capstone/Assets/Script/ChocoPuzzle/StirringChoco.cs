@@ -8,6 +8,7 @@ public class StirringChoco : MonoBehaviour
     public GameObject objectToDrag;
     //public GameObject theNextPanel;
     public GameObject theCurrPanel;
+    public Animator MatchaChocoAnimator;
 
     private float startTime = 0f;
     private float pressTime = 0f;
@@ -22,6 +23,8 @@ public class StirringChoco : MonoBehaviour
     {
         
         objectToDrag.transform.position = Input.mousePosition;
+        MatchaChocoAnimator.SetBool("isStirring", true);
+        MatchaChocoAnimator.speed = 1;
         pressTime += Time.deltaTime;
 
 
@@ -31,6 +34,7 @@ public class StirringChoco : MonoBehaviour
         //pressTime = Time.time - pressTime;
        
         Debug.Log("press Time is " + pressTime);
+        MatchaChocoAnimator.speed = 0;
         pressTime = 0;
     }
 

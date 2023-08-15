@@ -401,7 +401,7 @@ MonoBehaviour:
   FillingTimer: 0
   FilledSprite: {fileID: 21300000, guid: 122814fbcdf6031449d367f4d8f9fed1, type: 3}
   CurrImage: {fileID: 93668768}
-  DetectionDistance: 50
+  DetectionDistance: 30
   MatchaChocoBowl: {fileID: 572575141}
 --- !u!114 &93668768
 MonoBehaviour:
@@ -594,7 +594,7 @@ MonoBehaviour:
   FillingTimer: 0
   FilledSprite: {fileID: 21300000, guid: 122814fbcdf6031449d367f4d8f9fed1, type: 3}
   CurrImage: {fileID: 151813423}
-  DetectionDistance: 50
+  DetectionDistance: 30
   MatchaChocoBowl: {fileID: 572575141}
 --- !u!114 &151813423
 MonoBehaviour:
@@ -930,12 +930,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currSpriteNum: 0
   ImageSprites:
-  - {fileID: 21300000, guid: a3f7c5675bc9ffd4a98aed991c55b6ad, type: 3}
-  - {fileID: 21300000, guid: 7b768ee6a9218584080475f5058b1094, type: 3}
-  - {fileID: 21300000, guid: 2252907a316acf7488c6f368d4d09200, type: 3}
-  - {fileID: 21300000, guid: 897d2f123011ad94c84128e549a4bb4c, type: 3}
-  - {fileID: 21300000, guid: ac3b3af1c4f972c41919b933009fc20c, type: 3}
-  - {fileID: 21300000, guid: 5819b4f238f7a77488bdcff771a26f42, type: 3}
+  - {fileID: 21300000, guid: 63524df34b5241241a5be4b3c99c871d, type: 3}
+  - {fileID: 21300000, guid: df1112038ace48740ad4b86e8cae3139, type: 3}
+  - {fileID: 21300000, guid: 1ac0255b500a72243a95508dc26c17fd, type: 3}
+  - {fileID: 21300000, guid: a92325c2e2dd2da408f601cae7bf4575, type: 3}
+  - {fileID: 21300000, guid: febdbd55a806b48468196d5fb630cdff, type: 3}
+  - {fileID: 21300000, guid: 2755b0ca2b662ef4793895e23b22cb5f, type: 3}
   PackingBoxImage: {fileID: 1654612869}
   PlacingParent: {fileID: 1175764423}
   theCurrPanel: {fileID: 239612362}
@@ -1956,11 +1956,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 639829870}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 287, y: 48}
+  m_AnchoredPosition: {x: 181, y: -72}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &468551438
@@ -2624,7 +2624,7 @@ MonoBehaviour:
   FillingTimer: 0
   FilledSprite: {fileID: 21300000, guid: 122814fbcdf6031449d367f4d8f9fed1, type: 3}
   CurrImage: {fileID: 561839474}
-  DetectionDistance: 50
+  DetectionDistance: 30
   MatchaChocoBowl: {fileID: 572575141}
 --- !u!114 &561839474
 MonoBehaviour:
@@ -3021,8 +3021,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 468551437}
   - {fileID: 1412085580}
+  - {fileID: 468551437}
   m_Father: {fileID: 854865740}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4777,6 +4777,7 @@ MonoBehaviour:
   chocoPuzzleManager: {fileID: 0}
   objectToDrag: {fileID: 845130483}
   theCurrPanel: {fileID: 1924870654}
+  MatchaChocoAnimator: {fileID: 1702840142}
   totalPressTime: 5
 --- !u!114 &845130488
 MonoBehaviour:
@@ -6339,7 +6340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1069952957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7189,7 +7190,7 @@ MonoBehaviour:
   FillingTimer: 0
   FilledSprite: {fileID: 21300000, guid: 122814fbcdf6031449d367f4d8f9fed1, type: 3}
   CurrImage: {fileID: 1274231123}
-  DetectionDistance: 50
+  DetectionDistance: 30
   MatchaChocoBowl: {fileID: 572575141}
 --- !u!114 &1274231123
 MonoBehaviour:
@@ -7675,7 +7676,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 639829870}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9521,7 +9522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 364338d0417b61b4fb3d33fa106b3150, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dbde59078059e3f448a4a32828b1d85c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9923,6 +9924,7 @@ MonoBehaviour:
   chocoPuzzleManager: {fileID: 0}
   objectToDrag: {fileID: 1732502337}
   theCurrPanel: {fileID: 0}
+  MatchaChocoAnimator: {fileID: 0}
   totalPressTime: 0
 --- !u!114 &1732502342
 MonoBehaviour:
@@ -10824,7 +10826,7 @@ MonoBehaviour:
   FillingTimer: 0
   FilledSprite: {fileID: 21300000, guid: 122814fbcdf6031449d367f4d8f9fed1, type: 3}
   CurrImage: {fileID: 1844892123}
-  DetectionDistance: 50
+  DetectionDistance: 30
   MatchaChocoBowl: {fileID: 572575141}
 --- !u!114 &1844892123
 MonoBehaviour:
@@ -11571,7 +11573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2133799506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11705,7 +11707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 242, y: 177}
+  m_AnchoredPosition: {x: 117, y: -8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &2142592387
