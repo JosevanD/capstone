@@ -75,6 +75,7 @@ public class ChocoPuzzleManager : MonoBehaviour
                 ChocoPuzzleObjects[0].SetActive(true);
                 break;
             case CurrPanels.MixingMatcha:
+                //ChocoPuzzleObjects[0].SetActive(false);
                 Destroy(ChocoPuzzleObjects[0]);
                 ChocoPuzzleObjects[1].SetActive(true);
                 break;
@@ -91,7 +92,7 @@ public class ChocoPuzzleManager : MonoBehaviour
                 ChocoPuzzleObjects[4].SetActive(true);
                 break;
             case CurrPanels.Packing:
-                Destroy(ChocoPuzzleObjects[5]);
+                Destroy(ChocoPuzzleObjects[4]);
                 ChocoPuzzleObjects[5].SetActive(true);
                 break;
             case CurrPanels.AllFinished:

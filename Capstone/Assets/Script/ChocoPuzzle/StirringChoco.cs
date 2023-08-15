@@ -6,7 +6,7 @@ public class StirringChoco : MonoBehaviour
 {
     public ChocoPuzzleManager chocoPuzzleManager;
     public GameObject objectToDrag;
-    public GameObject theNextPanel;
+    //public GameObject theNextPanel;
     public GameObject theCurrPanel;
 
     private float startTime = 0f;

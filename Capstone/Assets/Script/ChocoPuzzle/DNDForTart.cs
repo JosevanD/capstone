@@ -8,7 +8,7 @@ public class DNDForTart : MonoBehaviour
     public GameObject objectToDrag;
     //public GameObject theNextPanel;
     public GameObject theCurrPanel;
-    private int TotalTartCount;
+    public int TotalTartCount;
     public int TartCount;
     Vector2 objectInitPos;
 

@@ -13,6 +13,7 @@ public class ChangingTartSprite : MonoBehaviour
     public float DetectionDistance;
     public GameObject MatchaChocoBowl;
     private DNDForTart DragNDropForTart;
+    private bool isFinished;
 
     //public Sprite Fi
 
@@ -43,12 +44,14 @@ public class ChangingTartSprite : MonoBehaviour
         {
             //GetComponent<SpriteRenderer>.sprite = FilledSprite
             FillingTimer += Time.deltaTime;
-            Debug.Log("collide");
+            Debug.Log("collide" + CurrImage);
         }
-        if (Distance < DetectionDistance && FillingTimer >= MaxFillingTimer)
+        if (Distance < DetectionDistance && FillingTimer >= MaxFillingTimer && !isFinished)
         {
             CurrImage.sprite = FilledSprite;
             DragNDropForTart.TartCount++;
+            isFinished = true;
+            
         }
     }
 
