@@ -18,7 +18,7 @@ public class SceneTracker : MonoBehaviour
     public bool levelCompleted = false;
     public bool magicDoorAppeared = false;
     public GameObject magicDoorPrefab;
-
+    public GameObject triggerDissolveObj;
 
 
     // Start is called before the first frame update
@@ -41,10 +41,11 @@ public class SceneTracker : MonoBehaviour
 
     void Update()
     {
-        //Teleports player in front of completed door
+        //Teleports player in front of completed door & start door dissolve
         if (whiteHallway == true && playerFound == true)
         {
             playerPrefab.transform.position = playerSpawnPos[exitDoorNo];
+            DoorDissolveActivate();
             whiteHallway = false;
             playerFound = false;
         }
@@ -71,6 +72,13 @@ public class SceneTracker : MonoBehaviour
     public void FromSceneNo(int sNumber)
     {
         exitDoorNo = sNumber;
+    }
+
+    public int SetDissolveDoorNumber()
+    {
+        int doorNumber;
+        doorNumber = exitDoorNo;
+        return doorNumber;
     }
 
     public void FindPlayerPrefab()
@@ -103,4 +111,10 @@ public class SceneTracker : MonoBehaviour
         levelCompleted = false;
     }
 
+    //Trigger Door Dissolve
+    public void DoorDissolveActivate()
+    {
+        triggerDissolveObj = GameObject.Find("TriggerDissolve");
+        triggerDissolveObj.GetComponent<TriggerDissolve>().CallDissolve();
+    }
 }

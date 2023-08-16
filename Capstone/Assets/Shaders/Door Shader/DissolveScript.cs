@@ -7,11 +7,15 @@ public class DissolveScript : MonoBehaviour
     // Start is called before the first frame update
 
     [Header("Dissolve/Appear")]
+    public bool isDissolve;
     public MeshRenderer mesh;
     public float dissolveRate = 0.0125f;
     public float refreshRate = 0.025f;
     private Material[] meshMaterials;
+
+    [Header("Sounds")]
     public AudioSource appearSound;
+    public AudioSource dissolveSound;
 
     [Header("Animation")]
     public Animator doorAnimator;
@@ -21,6 +25,7 @@ public class DissolveScript : MonoBehaviour
     [Header("Colliders")]
     public BoxCollider doorCollider;
     public MeshCollider frameCollider;
+    public BoxCollider enterDoorCollider;
 
     void Start()
     {
@@ -29,15 +34,24 @@ public class DissolveScript : MonoBehaviour
             meshMaterials = mesh.materials;
         }
 
-        doorCollider.enabled = false;
-        frameCollider.enabled = false;
-        appearSound = GetComponent<AudioSource>();
+        if (isDissolve == false)
+        {
+            doorCollider.enabled = false;
+            frameCollider.enabled = false;
+            appearSound = GetComponent<AudioSource>();
+        }
+
+        if (isDissolve == true)
+        {
+            dissolveSound = GetComponent<AudioSource>();
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) && isDissolve ==  false)
         {
             DoorAppear();
         }
@@ -53,6 +67,18 @@ public class DissolveScript : MonoBehaviour
             StartCoroutine(MaterializeCor());
             StartCoroutine(StartAnim(animDelay));
 
+    }
+
+    public void DoorDissolve()
+    {
+        dissolveSound.enabled = true;
+        doorCollider.enabled = false;
+        frameCollider.enabled = false;
+        enterDoorCollider.enabled = false;
+
+
+        StartCoroutine(DissolveCor());
+        Destroy(this, 2);
     }
 
 

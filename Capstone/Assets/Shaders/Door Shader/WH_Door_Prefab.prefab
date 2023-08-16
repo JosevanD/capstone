@@ -588,14 +588,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660c6f999c08d034dae48bb96faf0219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDissolve: 1
   mesh: {fileID: 4778339710273683133}
   dissolveRate: 0.0125
   refreshRate: 0.025
   appearSound: {fileID: 6432408765095930151}
+  dissolveSound: {fileID: 6432408765095930151}
   doorAnimator: {fileID: 1890413801912751180}
   animDelay: 2
   doorCollider: {fileID: 6045445110456146274}
   frameCollider: {fileID: 2982634679220429727}
+  enterDoorCollider: {fileID: 4244679750804714186}
 --- !u!114 &3738878026473947381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,14 +611,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660c6f999c08d034dae48bb96faf0219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDissolve: 1
   mesh: {fileID: 3205380274258302637}
   dissolveRate: 0.0125
   refreshRate: 0.025
   appearSound: {fileID: 6432408765095930151}
+  dissolveSound: {fileID: 6432408765095930151}
   doorAnimator: {fileID: 1890413801912751180}
   animDelay: 2
   doorCollider: {fileID: 6045445110456146274}
   frameCollider: {fileID: 2982634679220429727}
+  enterDoorCollider: {fileID: 4244679750804714186}
 --- !u!82 &6432408765095930151
 AudioSource:
   m_ObjectHideFlags: 0
@@ -626,9 +632,9 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6299a558ef7bda74188089dfcc27be9d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c1c981ad9dcc836499e113c8c1ed8095, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.394
   m_Pitch: 0.7
   Loop: 0
   Mute: 0
