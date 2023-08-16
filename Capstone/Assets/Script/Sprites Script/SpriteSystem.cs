@@ -21,8 +21,6 @@ public class SpriteSystem : MonoBehaviour
 
         SpriteAnim();
 
-
-        
     }
 
     private void Billboard()
