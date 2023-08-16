@@ -43,7 +43,7 @@ public class DissolveScript : MonoBehaviour
         }
     }
 
-    private void DoorAppear()
+    public void DoorAppear()
     {
         
             appearSound.enabled = true;

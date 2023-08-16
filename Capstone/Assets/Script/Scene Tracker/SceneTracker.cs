@@ -7,17 +7,27 @@ public class SceneTracker : MonoBehaviour
 {
     private static SceneTracker sceneTracker;
 
+    [Header("Player Tracker")]
     public int exitDoorNo;
     public GameObject playerPrefab;
     public Vector3[] playerSpawnPos;
     public bool whiteHallway = false;
     public bool playerFound = false;
 
+    [Header("Level Tracker")]
+    public bool levelCompleted = false;
+    public bool magicDoorAppeared = false;
+    public GameObject magicDoorPrefab;
+
+
+
     // Start is called before the first frame update
     private void Awake()
     {
+        //ensuring script object is not destroyed through changing scenes
         DontDestroyOnLoad(transform.gameObject);
 
+        //ensuring no duplicates
         if (sceneTracker == null)
         {
             sceneTracker = this;
@@ -29,15 +39,29 @@ public class SceneTracker : MonoBehaviour
     }
     
 
-    // Update is called once per frame
     void Update()
     {
+        //Teleports player in front of completed door
         if (whiteHallway == true && playerFound == true)
         {
             playerPrefab.transform.position = playerSpawnPos[exitDoorNo];
             whiteHallway = false;
             playerFound = false;
         }
+
+        //Activate Magic door once level is completed
+
+        if (levelCompleted == true && magicDoorAppeared == false)
+        {
+            ActivateMagicDoor();
+        }
+
+        //Quit Game
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
     }
     public void InWhiteHallway()
     {
@@ -58,4 +82,25 @@ public class SceneTracker : MonoBehaviour
     {
         playerFound = true;
     }
+
+
+    //Level Complete Code
+    public void LevelCompleted()
+    {
+        levelCompleted = true;
+    }
+
+    public void FindMagicDoor()
+    {
+        magicDoorPrefab = GameObject.FindGameObjectWithTag("Magic Door");
+    }
+
+    public void ActivateMagicDoor()
+    {
+        //magicDoorPrefab.SetActive(true);
+        magicDoorPrefab.GetComponent<DissolveScript>().DoorAppear();
+        magicDoorAppeared = true;
+        levelCompleted = false;
+    }
+
 }
