@@ -334,12 +334,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Calista Reyner\n~\nNarrative \nAnimation\r\nConcept Art\nIllustration\r\nTech
-    art\r\n\n\n\nHoang Tri Cuong Nguyen (Owen)\n~\n2D Concept Art\nIllustration\nCharacter
-    design\r\n3D Environment\r\n\n\n\nYong Jian Mao (Issac)\n~\nProgrammer\r\nLevel
-    Design\r\nPuzzle Design\r\nTech art\r\n\n\n\nJosevan Danusastra\n~\nProducer\r\n3D
-    generalist\r\nAudio\r\nProgrammer\nTech Art\n\n\n\nExternal Credits\n\nMusic
-    ~ Tim Naylor\n"
+  m_text: "by team 100%g\n\n\n\nCalista Reyner\n~\nNarrative \nAnimation\r\nConcept
+    Art\nIllustration\r\nTech art\r\n\n\n\nHoang Tri Cuong Nguyen (Owen)\n~\n2D Concept
+    Art\nIllustration\nCharacter design\r\n3D Environment\r\n\n\n\nYong Jian Mao
+    (Issac)\n~\nProgrammer\r\nLevel Design\r\nPuzzle Design\r\nTech art\r\n\n\n\nJosevan
+    Danusastra\n~\nProducer\r\nAudio\r\nProgrammer\nTech Art\n\n\n\nExternal Credits\n\nMusic
+    ~ Timothy Naylor\n\nSounds ~ freesound.org\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25307efb51f724f4c8e24a0884997b1f, type: 2}
   m_sharedMaterial: {fileID: -6041545018537193908, guid: 25307efb51f724f4c8e24a0884997b1f,
@@ -647,7 +647,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1690622249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1807075047}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2140972750}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &676228345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,13 +1524,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1807075048}
+  - component: {fileID: 1807075049}
+  - component: {fileID: 1807075050}
   m_Layer: 0
   m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1807075048
 Transform:
   m_ObjectHideFlags: 0
@@ -1515,7 +1541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807075047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.433069, y: 0.07123311, z: -3.0164762}
+  m_LocalPosition: {x: -29, y: -450, z: -3.016476}
   m_LocalScale: {x: 0.41666663, y: 0.41666663, z: 0.41666663}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1523,6 +1549,39 @@ Transform:
   m_Father: {fileID: 558176205}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1807075049
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807075047}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d7b294c712a3414986bc85ffe818760, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1807075050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807075047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d550415ad868c3e4b9ceb9b5f99160b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuObject: {fileID: 2140972750}
 --- !u!1 &1895267092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,7 +1884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2140972751
 RectTransform:
   m_ObjectHideFlags: 0

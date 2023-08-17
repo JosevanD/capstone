@@ -11,6 +11,8 @@ public class SpriteSystem : MonoBehaviour
 
     [SerializeField] GameObject walkAudioObject;
 
+    private bool isWalkRight;
+    private bool isWalkLeft;
     //bool isWalking = false;
     //bool audioToggle = true;
 
@@ -51,21 +53,25 @@ public class SpriteSystem : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             spriteAnimator.SetBool("RightWalk", true);
+            isWalkRight = true;
         }
 
         else
         {
             spriteAnimator.SetBool("RightWalk", false);
+            isWalkRight = false;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             spriteAnimator.SetBool("LeftWalk", true);
+            isWalkLeft = true;
         }
 
         else
         {
             spriteAnimator.SetBool("LeftWalk", false);
+            isWalkLeft = false;
         }
 
         if (Input.GetKey(KeyCode.W))
@@ -94,5 +100,30 @@ public class SpriteSystem : MonoBehaviour
             walkAudioObject.SetActive(false);
         }
      
+    }
+
+    public bool IsWalkRight()
+    {
+        if (isWalkRight == true)
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+    }
+    public bool IsWalkLeft()
+    {
+        if (isWalkLeft == true)
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
     }
 }
