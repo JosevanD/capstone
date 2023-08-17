@@ -34,4 +34,9 @@ public class SceneSwitch : MonoBehaviour
         }
 
     }
+
+    public void SceneSwitchTrigger()
+    {
+        SceneManager.LoadScene(TargetSceneName);
+    }
 }
