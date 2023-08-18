@@ -6,7 +6,7 @@ using Cinemachine;
 public class CameraSwitcher : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform Player;
+    //public Transform Player;
     public CinemachineVirtualCamera activeCam;
 
     private void OnTriggerEnter(Collider other)
