@@ -48,23 +48,26 @@ public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
     private void Update()
     {
-        Debug.Log("isPressingon " + isPressingOn);
+        //Debug.Log("isPressingon " + isPressingOn);
         if (isPressingOn)
         {
             playerHoldingTimer += Time.deltaTime;
-            moldAnimator.SetBool("isStirring", true);
+            moldAnimator.SetBool("isFilling", true);
 
         }
         if (!isPressingOn)
         {
             //playerHoldingTimer += Time.deltaTime;
-            moldAnimator.SetBool("isStirring", false);
+            moldAnimator.SetBool("isFilling", false);
+            
         }
         if (playerHoldingTimer >= RequiredTimer)
         {
             //isPouringFinished = true;
             StirringChocolatePanel.SetActive(true);
-            moldAnimator.SetBool("isStirring", false);
+            moldAnimator.StopPlayback();
+            //moldAnimator.speed = 0;
+            //moldAnimator.SetBool("isStirring", false);
             gameObject.SetActive(false);
         }
     }
