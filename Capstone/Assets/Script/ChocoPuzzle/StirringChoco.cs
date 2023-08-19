@@ -10,6 +10,8 @@ public class StirringChoco : MonoBehaviour
     public GameObject theCurrPanel;
     public Animator MatchaChocoAnimator;
 
+    private bool isPressingOn;
+
     private float startTime = 0f;
     private float pressTime = 0f;
 
@@ -18,11 +20,13 @@ public class StirringChoco : MonoBehaviour
     private void Start()
     {
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        isPressingOn = false;
     }
     public void OnMouseDrag()
     {
-        
+        isPressingOn = true;
         objectToDrag.transform.position = Input.mousePosition;
+        MatchaChocoAnimator.SetBool("isFilling", false);
         MatchaChocoAnimator.SetBool("isStirring", true);
         MatchaChocoAnimator.speed = 1;
         pressTime += Time.deltaTime;
@@ -32,7 +36,7 @@ public class StirringChoco : MonoBehaviour
     public void OnMouseUp()
     {
         //pressTime = Time.time - pressTime;
-       
+        MatchaChocoAnimator.SetBool("isStirring", false);
         Debug.Log("press Time is " + pressTime);
         MatchaChocoAnimator.speed = 0;
         pressTime = 0;
@@ -51,6 +55,7 @@ public class StirringChoco : MonoBehaviour
 
             chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
             chocoPuzzleManager.charactorController.isInteracting = false;
+            MatchaChocoAnimator.speed = 0;
             //theNextPanel.SetActive(true);
             chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.FillingTart;
             theCurrPanel.SetActive(false);

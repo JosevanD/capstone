@@ -34,7 +34,7 @@ public class MovingCamera : MonoBehaviour
         if (isCollidePlayer == true)
         {
             CamTimer += Time.deltaTime;
-        
+            
         }
         if (CamTimer >= MaxCamTime)
         {
