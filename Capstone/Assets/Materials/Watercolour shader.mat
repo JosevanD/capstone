@@ -66,7 +66,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 2a2bcc5df7a16844f93612d6a35bd994, type: 3}
+        m_Texture: {fileID: 2800000, guid: c21f31fb96a566f4d81e68b5bcdee3e5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -83,7 +83,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.01
+    - _Alpha: 0.02
     - _AlphaClip: 0
     - _Blend: 2
     - _BlendOp: 0
@@ -99,7 +99,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Lerp_white_black_values: 5.26
+    - _Lerp_white_black_values: 1.9
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -118,8 +118,8 @@ Material:
     - _Surface: 1
     - _Texture_offset_X: 0
     - _Texture_offset_Y: 0
-    - _Texture_size_X: 2.15
-    - _Texture_size_Y: 3.17
+    - _Texture_size_X: 1.61
+    - _Texture_size_Y: 2.84
     - _Texture_tiling: 1.65
     - _WorkflowMode: 1
     - _ZWrite: 0
