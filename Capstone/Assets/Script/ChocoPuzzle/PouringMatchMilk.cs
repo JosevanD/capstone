@@ -43,7 +43,7 @@ public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     {
         potAnimator.SetBool("isPouring", false);
         isPressingOn = false;
-        //moldAnimator.speed = ;
+        moldAnimator.speed = 0;
     }
 
     private void Update()
@@ -59,12 +59,14 @@ public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         {
             //playerHoldingTimer += Time.deltaTime;
             moldAnimator.SetBool("isFilling", false);
+            
         }
         if (playerHoldingTimer >= RequiredTimer)
         {
             //isPouringFinished = true;
             StirringChocolatePanel.SetActive(true);
-            moldAnimator.speed = 0;
+            moldAnimator.StopPlayback();
+            //moldAnimator.speed = 0;
             //moldAnimator.SetBool("isStirring", false);
             gameObject.SetActive(false);
         }
