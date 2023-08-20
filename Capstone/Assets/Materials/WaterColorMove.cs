@@ -8,13 +8,21 @@ public class WaterColorMove : MonoBehaviour
 
     private Material textureMaterial;
 
-    public GameObject spriteSys;
-
     private bool isMovingRight;
 
     private bool isMovingLeft;
 
     public float scrollAmount;
+
+    public GameObject playerRB;
+
+    public Rigidbody rb;
+
+    private float scrollMagnitude;
+
+    private float oldPos;
+
+    public float playerPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,23 +31,49 @@ public class WaterColorMove : MonoBehaviour
             textureMaterial = mesh.material;
         }
 
-
+        rb = playerRB.GetComponent<Rigidbody>();
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        isMovingRight = spriteSys.GetComponent<SpriteSystem>().IsWalkRight();
-        isMovingLeft = spriteSys.GetComponent<SpriteSystem>().IsWalkLeft();
+        playerPos = playerRB.transform.position.x;
+
+        scrollMagnitude = rb.velocity.magnitude;
+
+
+        if (playerPos > oldPos)
+        {
+            isMovingRight = true;
+            isMovingLeft = false;
+        }
+
+        if (playerPos < oldPos)
+        {
+            isMovingLeft = true;
+            isMovingRight = false;
+        }
+
+
 
         if (isMovingRight == true)
         {
-            textureMaterial.SetFloat("_Scroll_value", textureMaterial.GetFloat("_Scroll_value") - scrollAmount);
+            textureMaterial.SetFloat("_Scroll_value", textureMaterial.GetFloat("_Scroll_value") - (scrollMagnitude * scrollAmount));
         }
 
         if (isMovingLeft == true)
         {
-            textureMaterial.SetFloat("_Scroll_value", textureMaterial.GetFloat("_Scroll_value") + scrollAmount);
+            textureMaterial.SetFloat("_Scroll_value", textureMaterial.GetFloat("_Scroll_value") + (scrollMagnitude * scrollAmount));
         }
+
+
+
+    }
+
+    void LateUpdate()
+    {
+        oldPos = playerPos;
     }
 }

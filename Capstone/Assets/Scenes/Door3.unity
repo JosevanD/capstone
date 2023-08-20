@@ -951,8 +951,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 111447999}
-  spriteSys: {fileID: 588977598}
-  scrollAmount: 0.001
+  scrollAmount: 0.002
+  playerRB: {fileID: 130399510}
+  rb: {fileID: 0}
+  scrollMagnitude: 0
+  oldPos: 0
+  playerPos: 0
 --- !u!114 &119010213 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4932169066781065763, guid: 30d09a6e580ab5b43a1b869b003504da,
@@ -965,6 +969,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &130399510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4932169066820406337, guid: 30d09a6e580ab5b43a1b869b003504da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1848936047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &140216941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1857564409586773311, guid: d988b4a4d162ba4418f0855e22f79bb5,
@@ -2311,12 +2321,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d988b4a4d162ba4418f0855e22f79bb5, type: 3}
---- !u!1 &588977598 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4932169064983588828, guid: 30d09a6e580ab5b43a1b869b003504da,
-    type: 3}
-  m_PrefabInstance: {fileID: 1848936047}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &630051116 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6354710348518214913, guid: d988b4a4d162ba4418f0855e22f79bb5,
