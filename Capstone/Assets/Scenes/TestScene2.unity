@@ -1090,6 +1090,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239612362}
   m_CullTransparentMesh: 1
+--- !u!1 &262772510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4595664784719105428, guid: 80a6b4b0e3125e94fa110399980bef62,
+    type: 3}
+  m_PrefabInstance: {fileID: 275389605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &273686927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1137,80 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &275389605
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4595664784719105428, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelCompleteTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105428, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_TagString
+      value: EndingDoorObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -34.039658
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.6849066
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.967436
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80a6b4b0e3125e94fa110399980bef62, type: 3}
 --- !u!1 &311426473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,10 +1400,12 @@ MonoBehaviour:
   - {fileID: 698178116}
   - {fileID: 1448355359}
   - {fileID: 1643903994}
+  LevelCompleteTrggerObj: {fileID: 0}
   ChocoPuzzleObjectsNum: 0
   IsPanelFinished: 0
   ChocolatesPlaced: 0
   currPanels: 0
+  MaxEndingTime: 0
 --- !u!114 &319557172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1710,38 +1792,13 @@ GameObject:
   - component: {fileID: 400609199}
   - component: {fileID: 400609198}
   - component: {fileID: 400609197}
-  - component: {fileID: 400609196}
   m_Layer: 5
   m_Name: Flower Picking Canvas
-  m_TagString: Untagged
+  m_TagString: Flower Picking Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &400609196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400609195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a69e3fcd76e27594f8eef3279f9b2a1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChocoPuzzleCanvas: {fileID: 400609199}
-  charactorController: {fileID: 0}
-  ChocoPuzzleObjects:
-  - {fileID: 2133799505}
-  - {fileID: 777210783}
-  - {fileID: 698178116}
-  - {fileID: 1448355359}
-  - {fileID: 1643903994}
-  ChocoPuzzleObjectsNum: 0
-  IsPanelFinished: 0
-  ChocolatesPlaced: 0
-  currPanels: 0
 --- !u!114 &400609197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3405,7 +3462,7 @@ RectTransform:
   - {fileID: 1082589474}
   - {fileID: 1532680683}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4009,141 +4066,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759549957}
   m_CullTransparentMesh: 1
---- !u!1 &765828950
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 765828951}
-  - component: {fileID: 765828954}
-  - component: {fileID: 765828953}
-  - component: {fileID: 765828952}
-  - component: {fileID: 765828955}
-  m_Layer: 5
-  m_Name: Petal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &765828951
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765828950}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44444445, y: 0.44444445, z: 0.44444445}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2115246153}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80.00002, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &765828952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765828950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9c00b50e04fcb94b838986e01447071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &765828953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765828950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.82092184, b: 0.21733707, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &765828954
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765828950}
-  m_CullTransparentMesh: 1
---- !u!114 &765828955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765828950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 5
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 765828952}
-          m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseDrag
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 765828952}
-          m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &777210783
 GameObject:
   m_ObjectHideFlags: 0
@@ -4557,6 +4479,8 @@ MonoBehaviour:
   CurrentButton: {fileID: 759549960}
   OvenOpenedSprite: {fileID: 21300000, guid: 987e32d566bf55248a3231122955e4d9, type: 3}
   OvenClosedSprite: {fileID: 21300000, guid: 22dc6ae40570ce84997dbdf7c309adf9, type: 3}
+  Chocolatebowl: {fileID: 0}
+  MeltedChocoSprite: {fileID: 0}
   isOpened: 0
   isHeating: 0
   isInOven: 0
@@ -5216,7 +5140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &854865737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5325,10 +5249,12 @@ MonoBehaviour:
   - {fileID: 1448355359}
   - {fileID: 1643903994}
   - {fileID: 689521846}
+  LevelCompleteTrggerObj: {fileID: 0}
   ChocoPuzzleObjectsNum: 0
   IsPanelFinished: 0
   ChocolatesPlaced: 0
   currPanels: 0
+  MaxEndingTime: 0
 --- !u!1 &859691073
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,6 +5330,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2115246153}
+  - {fileID: 1810992338}
+  - {fileID: 2055048084}
+  - {fileID: 1433103600}
+  - {fileID: 1382031451}
+  - {fileID: 1549935342}
+  - {fileID: 991079093}
   m_Father: {fileID: 400609200}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5424,16 +5356,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34731bdd10d4a2e42930ceaff2067648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlowerPickingCanvasObj: {fileID: 400609195}
+  MaxEndingTime: 2
   FlowerPetals:
-  - {fileID: 765828950}
   - {fileID: 991079092}
   - {fileID: 1549935341}
   - {fileID: 1382031450}
+  - {fileID: 1433103599}
   - {fileID: 2055048083}
   - {fileID: 1810992337}
-  - {fileID: 1433103599}
-  - {fileID: 1710860695}
-  PickedFlowerPetals: 0
+  CurrFlowerPetal: 0
+  EndingDoorObj: {fileID: 262772510}
 --- !u!114 &866920496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5454,8 +5387,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 3024a95f8bc904041afd10e471cc083b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5732,7 +5665,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &918120799
 GameObject:
@@ -6317,7 +6250,7 @@ GameObject:
   - component: {fileID: 991079094}
   - component: {fileID: 991079097}
   m_Layer: 5
-  m_Name: Petal (1)
+  m_Name: Petal 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6330,17 +6263,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991079092}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44444445, y: 0.44444445, z: 0.44444445}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2115246153}
-  m_RootOrder: 1
+  m_Father: {fileID: 866920494}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82.666664, y: 0}
+  m_AnchoredPosition: {x: -106, y: -161.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &991079094
@@ -6355,6 +6288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c00b50e04fcb94b838986e01447071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlowerPickingCanvas: {fileID: 400609199}
+  isPickable: 0
 --- !u!114 &991079095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6368,14 +6303,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.82092184, b: 0.21733707, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 21859db6474283f43b157bd5816404f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6412,8 +6347,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 991079094}
           m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseDrag
-          m_Mode: 1
+          m_MethodName: DragHandler
+          m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7859,7 +7794,7 @@ GameObject:
   - component: {fileID: 1382031452}
   - component: {fileID: 1382031455}
   m_Layer: 5
-  m_Name: Petal (3)
+  m_Name: Petal 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7872,17 +7807,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382031450}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44444445, y: 0.44444445, z: 0.44444445}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2115246153}
-  m_RootOrder: 3
+  m_Father: {fileID: 866920494}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -75.6}
+  m_AnchoredPosition: {x: -23, y: 3.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1382031452
@@ -7897,6 +7832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c00b50e04fcb94b838986e01447071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlowerPickingCanvas: {fileID: 400609199}
+  isPickable: 0
 --- !u!114 &1382031453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7910,14 +7847,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.82092184, b: 0.21733707, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7c282327b210d2f459616569a47de47c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7954,8 +7891,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1382031452}
           m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseDrag
-          m_Mode: 1
+          m_MethodName: DragHandler
+          m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8128,7 +8065,7 @@ GameObject:
   - component: {fileID: 1433103601}
   - component: {fileID: 1433103604}
   m_Layer: 5
-  m_Name: Petal (6)
+  m_Name: Petal 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8141,17 +8078,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433103599}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44444445, y: 0.44444445, z: 0.44444445}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2115246153}
-  m_RootOrder: 6
+  m_Father: {fileID: 866920494}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -81.77776, y: 78.22221}
+  m_AnchoredPosition: {x: 117.3, y: -41.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433103601
@@ -8166,6 +8103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c00b50e04fcb94b838986e01447071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlowerPickingCanvas: {fileID: 400609199}
+  isPickable: 0
 --- !u!114 &1433103602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8179,14 +8118,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.82092184, b: 0.21733707, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c97abd8079a74224493b6a517aa822d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8223,8 +8162,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1433103601}
           m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseDrag
-          m_Mode: 1
+          m_MethodName: DragHandler
+          m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8991,7 +8930,7 @@ GameObject:
   - component: {fileID: 1549935343}
   - component: {fileID: 1549935346}
   m_Layer: 5
-  m_Name: Petal (2)
+  m_Name: Petal 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9004,17 +8943,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549935341}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44444445, y: 0.44444445, z: 0.44444445}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2115246153}
-  m_RootOrder: 2
+  m_Father: {fileID: 866920494}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 78.666664}
+  m_AnchoredPosition: {x: -89.1, y: -33.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1549935343
@@ -9029,6 +8968,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c00b50e04fcb94b838986e01447071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlowerPickingCanvas: {fileID: 400609199}
+  isPickable: 0
 --- !u!114 &1549935344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9042,14 +8983,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.82092184, b: 0.21733707, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 97fcf26eb04bd7a4ba25bf3f9d6db127, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9086,8 +9027,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1549935343}
           m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseDrag
-          m_Mode: 1
+          m_MethodName: DragHandler
+          m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10103,141 +10044,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703072808}
   m_CullTransparentMesh: 1
---- !u!1 &1710860695
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1710860696}
-  - component: {fileID: 1710860699}
-  - component: {fileID: 1710860698}
-  - component: {fileID: 1710860697}
-  - component: {fileID: 1710860700}
-  m_Layer: 5
-  m_Name: Petal (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1710860696
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710860695}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44444445, y: 0.44444445, z: 0.44444445}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2115246153}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81.33335, y: 78.22221}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1710860697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710860695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9c00b50e04fcb94b838986e01447071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1710860698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710860695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.82092184, b: 0.21733707, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1710860699
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710860695}
-  m_CullTransparentMesh: 1
---- !u!114 &1710860700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710860695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 5
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1710860697}
-          m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseDrag
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1710860697}
-          m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1723571631
 GameObject:
   m_ObjectHideFlags: 0
@@ -11265,7 +11071,7 @@ GameObject:
   - component: {fileID: 1810992339}
   - component: {fileID: 1810992342}
   m_Layer: 5
-  m_Name: Petal (5)
+  m_Name: Petal 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11278,17 +11084,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810992337}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44444445, y: 0.44444445, z: 0.44444445}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2115246153}
-  m_RootOrder: 5
+  m_Father: {fileID: 866920494}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -81.77776, y: -70.666664}
+  m_AnchoredPosition: {x: 20.8, y: -219.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1810992339
@@ -11303,6 +11109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c00b50e04fcb94b838986e01447071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlowerPickingCanvas: {fileID: 400609199}
+  isPickable: 0
 --- !u!114 &1810992340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11316,14 +11124,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.82092184, b: 0.21733707, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e5ab73e240799fd4ca454c9e59d9979d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11360,8 +11168,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1810992339}
           m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseDrag
-          m_Mode: 1
+          m_MethodName: DragHandler
+          m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12160,7 +11968,7 @@ GameObject:
   - component: {fileID: 2055048085}
   - component: {fileID: 2055048088}
   m_Layer: 5
-  m_Name: Petal (4)
+  m_Name: Petal 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12173,17 +11981,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055048083}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44444445, y: 0.44444445, z: 0.44444445}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2115246153}
-  m_RootOrder: 4
+  m_Father: {fileID: 866920494}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80.8889, y: -70.666664}
+  m_AnchoredPosition: {x: 114.6, y: -78.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2055048085
@@ -12198,6 +12006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9c00b50e04fcb94b838986e01447071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlowerPickingCanvas: {fileID: 400609199}
+  isPickable: 0
 --- !u!114 &2055048086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12211,14 +12021,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.82092184, b: 0.21733707, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b79d2c8fb4b8d354cbcc230554b46324, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12255,8 +12065,8 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2055048085}
           m_TargetAssemblyTypeName: PetalPicking, Assembly-CSharp
-          m_MethodName: OnMouseDrag
-          m_Mode: 1
+          m_MethodName: DragHandler
+          m_Mode: 0
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12386,23 +12196,15 @@ RectTransform:
   m_GameObject: {fileID: 2115246152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.25, y: 2.25, z: 2.25}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 765828951}
-  - {fileID: 991079093}
-  - {fileID: 1549935342}
-  - {fileID: 1382031451}
-  - {fileID: 2055048084}
-  - {fileID: 1810992338}
-  - {fileID: 1433103600}
-  - {fileID: 1710860696}
+  m_Children: []
   m_Father: {fileID: 866920494}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -24, y: -210}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2115246154
@@ -12418,14 +12220,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.990566, g: 0.04360973, b: 0.04360973, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: cac5f17af8b406646a900712aa5a9dab, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
