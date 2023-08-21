@@ -42,6 +42,23 @@ public class StirringChoco : MonoBehaviour
         pressTime = 0;
     }
 
+    IEnumerator Countdown(int seconds)
+    {
+        int counter = seconds;
+        while (counter > 0)
+        {
+            yield return new WaitForSeconds(1);
+            counter--;
+        }
+
+        chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+        chocoPuzzleManager.charactorController.isInteracting = false;
+        chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.FillingTart;
+        theCurrPanel.SetActive(false);
+
+
+    }
+
     void Update()
     {
         //Debug.Log("1");
@@ -52,13 +69,7 @@ public class StirringChoco : MonoBehaviour
             chocoPuzzleManager.charactorController.isInteracting = true;
             theNextPanel.SetActive(true);
             theCurrPanel.SetActive(false);*/
-
-            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
-            MatchaChocoAnimator.speed = 0;
-            //theNextPanel.SetActive(true);
-            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.FillingTart;
-            theCurrPanel.SetActive(false);
+            StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
             Debug.Log("Stirring Choco is finished");
         }
     }

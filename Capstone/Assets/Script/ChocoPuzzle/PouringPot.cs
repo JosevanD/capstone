@@ -75,15 +75,27 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             theNextPanel.SetActive(true);
             theCurrPanel.SetActive(false);*/
 
-            Debug.Log("Mixing Matcha Finished");
-            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
-            //theNextPanel.SetActive(true);
-            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.Oven;
-            theCurrPanel.SetActive(false);
+            StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
 
 
         }
+    }
+
+    IEnumerator Countdown(int seconds)
+    {
+        int counter = seconds;
+        while (counter > 0)
+        {
+            yield return new WaitForSeconds(1);
+            counter--;
+        }
+
+        chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+        chocoPuzzleManager.charactorController.isInteracting = false;
+        chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.Oven;
+        theCurrPanel.SetActive(false);
+
+
     }
 }

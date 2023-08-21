@@ -73,11 +73,7 @@ public class SwitchingOven : MonoBehaviour
             //theNextPanel.SetActive(true);
             theCurrPanel.SetActive(false);*/
 
-            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
-            //theNextPanel.SetActive(true);
-            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.StirringChoco;
-            theCurrPanel.SetActive(false);
+            StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
             isOpened = true;
         }
@@ -112,7 +108,23 @@ public class SwitchingOven : MonoBehaviour
         //ObjMatchaParent.SetActive(true);
     }
 
-    
+    IEnumerator Countdown(int seconds)
+    {
+        int counter = seconds;
+        while (counter > 0)
+        {
+            yield return new WaitForSeconds(1);
+            counter--;
+        }
+
+        chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+        chocoPuzzleManager.charactorController.isInteracting = false;
+        chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.StirringChoco;
+        theCurrPanel.SetActive(false);
+
+
+    }
+
 
     // Update is called once per frame
     void Update()

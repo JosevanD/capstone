@@ -37,19 +37,28 @@ public class DNDForTart : MonoBehaviour
         //pressTime += Time.deltaTime;
     }
 
+    IEnumerator Countdown(int seconds)
+    {
+        int counter = seconds;
+        while (counter > 0)
+        {
+            yield return new WaitForSeconds(1);
+            counter--;
+        }
+
+        chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+        chocoPuzzleManager.charactorController.isInteracting = false;
+        chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.Packing;
+        theCurrPanel.SetActive(false);
+
+
+    }
+
     private void Update()
     {
         if (TartCount >= TotalTartCount)
         {
-            /*chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
-            theNextPanel.SetActive(true);
-            theCurrPenel.SetActive(false);*/
-            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
-            //theNextPanel.SetActive(true);
-            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.Packing;
-            theCurrPanel.SetActive(false);
+            StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
         }
     }

@@ -33,6 +33,8 @@ public class ChocoPuzzleManager : MonoBehaviour
     public bool IsPanelFinished;
     public int ChocolatesPlaced;
     public CurrPanels currPanels;
+    public int MaxEndingTime;
+    //private float EndingTimer;
 
     private void Start()
     {
@@ -45,30 +47,12 @@ public class ChocoPuzzleManager : MonoBehaviour
         Debug.Log("ISPanelfinished " + IsPanelFinished);
         currPanels = CurrPanels.BreakingChoco;
         IsPanelFinished = false;
-        
+        //EndingTimer = 0;
     }
 
     private void Update()
     {
-        /*if (IsPanelFinished == true && ChocoPuzzleObjectsNum <= ChocoPuzzleObjects.Length - 1);
-        {
-            Debug.Log(IsPanelFinished);
 
-            IsPanelFinished = false;
-            Debug.Log("Panel Number 0 is " + ChocoPuzzleObjectsNum);
-            ChocoPuzzleObjectsNum += 1;
-            Debug.Log("Panel Number 1 is " + ChocoPuzzleObjectsNum);
-
-            ChocoPuzzleObjects[ChocoPuzzleObjectsNum].SetActive(true);
-            ChocoPuzzleObjects[ChocoPuzzleObjectsNum - 1].SetActive(false);
-           
-
-        }*/
-        /*if (IsPanelFinished == true)
-        {
-            charactorController.isInteracting = false;
-        
-        }*/
         switch (currPanels)
         {
             case CurrPanels.BreakingChoco:
@@ -97,9 +81,12 @@ public class ChocoPuzzleManager : MonoBehaviour
                 break;
             case CurrPanels.AllFinished:
                 Destroy(ChocoPuzzleObjects[5]);
-                
+                                
                 break;
         }
+
+
+        
 
     }
 
@@ -134,4 +121,23 @@ public class ChocoPuzzleManager : MonoBehaviour
         }
 
     }
-}
+    
+        /*public void PuzzleEndTimer(Canvas ChocoPuzzleCanvas, CharacterController charactorController, CurrPanels currPanels)
+        {
+
+            EndingTimer += Time.deltaTime;
+
+            if (EndingTimer >= MaxEndingTime)
+            {
+                IsPanelFinished = false;
+                EndingTimer = 0;
+                ChocoPuzzleCanvas.enabled = false;
+                charactorController.isInteracting = false;
+                currPanels = ChocoPuzzleManager.CurrPanels.MixingMatcha;
+                theCurrPanel.SetActive(false);
+
+            }
+
+        }*/
+
+    }

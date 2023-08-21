@@ -65,7 +65,7 @@ public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         {
             //isPouringFinished = true;
             StirringChocolatePanel.SetActive(true);
-            moldAnimator.StopPlayback();
+            //moldAnimator.StopPlayback();
             //moldAnimator.speed = 0;
             //moldAnimator.SetBool("isStirring", false);
             gameObject.SetActive(false);

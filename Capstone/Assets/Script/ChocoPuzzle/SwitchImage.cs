@@ -49,20 +49,27 @@ public class SwitchImage : MonoBehaviour
             Debug.Log("Breaking Choco is finished");
 
             //ChocolatePuzzleCanvas.enabled = false;
-            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
-            //theNextPanel.SetActive(true);
-            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.MixingMatcha;
-            theCurrPanel.SetActive(false);
+            StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
+
         }
 
     }
-    private void Update()
+
+    IEnumerator Countdown(int seconds)
     {
+        int counter = seconds;
+        while (counter > 0)
+        {
+            yield return new WaitForSeconds(1);
+            counter--;
+        }
 
-
-
+        chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+        chocoPuzzleManager.charactorController.isInteracting = false;
+        chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.MixingMatcha;
+        theCurrPanel.SetActive(false);
+        
 
     }
-    
+
 }

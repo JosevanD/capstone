@@ -24,6 +24,23 @@ public class PackingManager : MonoBehaviour
         //PackingParent.SetActive(false);
     }
 
+    IEnumerator Countdown(int seconds)
+    {
+        int counter = seconds;
+        while (counter > 0)
+        {
+            yield return new WaitForSeconds(1);
+            counter--;
+        }
+
+        chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
+        chocoPuzzleManager.charactorController.isInteracting = false;
+        chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.AllFinished;
+        theCurrPanel.SetActive(false);
+
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -39,12 +56,8 @@ public class PackingManager : MonoBehaviour
         }
         if (currSpriteNum >= ImageSprites.Length-1)
         {
-            //Debug.Log("Packing Finished");
-            chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
-            //theNextPanel.SetActive(true);
-            chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.AllFinished;
-            theCurrPanel.SetActive(false);
+            StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
+            
         }
     }
 }
