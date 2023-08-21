@@ -20,9 +20,17 @@ public class WaterColorMove : MonoBehaviour
 
     private float scrollMagnitude;
 
-    private float oldPos;
+    //positions X
+    private float oldPosX;
 
-    public float playerPos;
+    public float playerPosX;
+
+    public bool wsPressed;
+    //public float posXDiff; 
+    //positions Z
+    
+
+    private 
     // Start is called before the first frame update
     void Start()
     {
@@ -39,41 +47,67 @@ public class WaterColorMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerPos = playerRB.transform.position.x;
+        
+        playerPosX = playerRB.transform.position.x;
+
+        //playerPosZ = playerRB.transform.position.z;
 
         scrollMagnitude = rb.velocity.magnitude;
 
+        
 
-        if (playerPos > oldPos)
+        if (playerPosX > oldPosX)
         {
             isMovingRight = true;
             isMovingLeft = false;
         }
 
-        if (playerPos < oldPos)
+        if (playerPosX < oldPosX)
         {
             isMovingLeft = true;
             isMovingRight = false;
         }
 
+        KeyCheck();
 
-
-        if (isMovingRight == true)
+        if (isMovingRight == true && wsPressed == false)
         {
             textureMaterial.SetFloat("_Scroll_value", textureMaterial.GetFloat("_Scroll_value") - (scrollMagnitude * scrollAmount));
         }
 
-        if (isMovingLeft == true)
+        if (isMovingLeft == true && wsPressed == false)
         {
             textureMaterial.SetFloat("_Scroll_value", textureMaterial.GetFloat("_Scroll_value") + (scrollMagnitude * scrollAmount));
         }
 
-
+        
 
     }
 
     void LateUpdate()
     {
-        oldPos = playerPos;
+        oldPosX = playerPosX;
+    }
+
+    private void KeyCheck()
+    {
+
+        if ((Input.GetKey(KeyCode.S) == true || Input.GetKey(KeyCode.W) == true) && (Input.GetKey(KeyCode.D) == false && Input.GetKey(KeyCode.A) == false))
+        {
+            wsPressed = true;
+        }
+
+        else
+        {
+            StartCoroutine(keyHold(0.51f));
+            //wsPressed = false;
+        }
+
+    } 
+
+    IEnumerator keyHold(float time)
+    {
+        yield return new WaitForSeconds(time);
+        wsPressed = false;
     }
 }
