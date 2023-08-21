@@ -525,14 +525,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660c6f999c08d034dae48bb96faf0219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDissolve: 0
   mesh: {fileID: 4778339710273683133}
   dissolveRate: 0.0125
   refreshRate: 0.025
+  startToAppear: 0
   appearSound: {fileID: 6432408765095930151}
+  dissolveSound: {fileID: 0}
   doorAnimator: {fileID: 1890413801912751180}
   animDelay: 2
   doorCollider: {fileID: 6045445110456146274}
   frameCollider: {fileID: 2982634679220429727}
+  enterDoorCollider: {fileID: 0}
 --- !u!114 &3738878026473947381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,14 +549,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660c6f999c08d034dae48bb96faf0219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDissolve: 0
   mesh: {fileID: 3205380274258302637}
   dissolveRate: 0.0125
   refreshRate: 0.025
+  startToAppear: 0
   appearSound: {fileID: 6432408765095930151}
+  dissolveSound: {fileID: 0}
   doorAnimator: {fileID: 1890413801912751180}
   animDelay: 2
   doorCollider: {fileID: 6045445110456146274}
   frameCollider: {fileID: 2982634679220429727}
+  enterDoorCollider: {fileID: 0}
 --- !u!82 &6432408765095930151
 AudioSource:
   m_ObjectHideFlags: 0

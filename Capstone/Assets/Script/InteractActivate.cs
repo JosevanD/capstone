@@ -6,7 +6,7 @@ public class InteractActivate : MonoBehaviour
 {
     [Header("Objects")]
     public GameObject objectToActivate;
-    //public GameObject objectToDeActivate;
+    public GameObject objectToDeActivate;
     public GameObject popupUI;
 
     [Header("Interact Conditions")]
@@ -16,7 +16,7 @@ public class InteractActivate : MonoBehaviour
     public bool interactToPlay;
     public float objectDuration;
     public bool objectHasDuration;
-    
+    public bool hasObjectToDeactivate;
 
     private void Start()
     {
@@ -29,7 +29,7 @@ public class InteractActivate : MonoBehaviour
         if (collider.tag == "Player" && interactToPlay == false)
         {
             inTrigger = true;
-            popupUI.SetActive(true);
+            
         }
 
         if (collider.tag == "Player" && interactToPlay == true)
@@ -38,21 +38,32 @@ public class InteractActivate : MonoBehaviour
             popupUI.SetActive(true);
         }
 
+        if (hasObjectToDeactivate == true)
+        {
+            objectToDeActivate.SetActive(false);
+        }
     }
 
     private void OnTriggerExit(Collider collider)
     {
-        if (collider.tag == "Player")
+        if (collider.tag == "Player" && interactToPlay == true)
         {
             inTrigger = false;
             popupUI.SetActive(false);
         }
+
+        if (collider.tag == "Player" && interactToPlay == false)
+        {
+            inTrigger = false;
+            
+        }
+
     }
 
     public void ActivateObject()
     {
         objectToActivate.SetActive(true);
-        popupUI.SetActive(false);
+        
         objectActive = true;
 
         if (objectHasDuration == true)
@@ -60,6 +71,10 @@ public class InteractActivate : MonoBehaviour
             StartCoroutine(ObjectTimer(objectDuration));
         }
 
+        if (interactToPlay == true)
+        {
+            popupUI.SetActive(false);
+        }
 
     }
     

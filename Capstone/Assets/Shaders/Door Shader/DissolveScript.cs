@@ -12,6 +12,7 @@ public class DissolveScript : MonoBehaviour
     public float dissolveRate = 0.0125f;
     public float refreshRate = 0.025f;
     private Material[] meshMaterials;
+    public bool startToAppear;
 
     [Header("Sounds")]
     public AudioSource appearSound;
@@ -46,6 +47,10 @@ public class DissolveScript : MonoBehaviour
             dissolveSound = GetComponent<AudioSource>();
         }
         
+        if (startToAppear == true && isDissolve == false)
+        {
+            DoorAppear();
+        }
     }
 
     // Update is called once per frame

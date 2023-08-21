@@ -6,12 +6,13 @@ public class LevelCompleteTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    GameObject doorWhiteObj;
+    public GameObject doorWhiteObj;
 
     void Start()
     {
-        doorWhiteObj = GameObject.FindGameObjectWithTag("Magic Door");
-        doorWhiteObj.GetComponent<DissolveScript>().DoorAppear();
+        //doorWhiteObj = GameObject.FindGameObjectWithTag("Magic Door");
+        //doorWhiteObj.GetComponent<DissolveScript>().DoorAppear();
+        doorWhiteObj.SetActive(true);
     }
 
     // Update is called once per frame
