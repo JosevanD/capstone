@@ -13,6 +13,7 @@ public class PlayAnimation : MonoBehaviour
     public int animationNo = 0;
     private bool inTrigger;
 
+    public GameObject popupUI;
     private void Start()
     {
         inTrigger = false;
@@ -44,6 +45,7 @@ public class PlayAnimation : MonoBehaviour
     public void PlayAnim(int i)
     {
         animator.SetBool(animatorBoolParameters[i], true);
+
     }
 
     private void Update()
@@ -51,12 +53,13 @@ public class PlayAnimation : MonoBehaviour
          if (inTrigger == true && interactToPlayAnim == true && Input.GetKeyDown(KeyCode.E))
          {
             PlayAnim(animationNo);
+            popupUI.SetActive(false);
          }
         
          if (inTrigger == true && interactToPlayAnim == false)
          {
             PlayAnim(animationNo);
-         }
+        }
 
 
     }
