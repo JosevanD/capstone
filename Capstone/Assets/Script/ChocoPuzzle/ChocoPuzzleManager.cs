@@ -28,6 +28,7 @@ public class ChocoPuzzleManager : MonoBehaviour
     public GameObject MixingMatchaPanel;
     public GameObject OvenPanel;*/
     public GameObject[] ChocoPuzzleObjects;
+    public GameObject LevelCompleteTrggerObj;
 
     public int ChocoPuzzleObjectsNum;
     public bool IsPanelFinished;
@@ -38,6 +39,7 @@ public class ChocoPuzzleManager : MonoBehaviour
 
     private void Start()
     {
+        LevelCompleteTrggerObj.SetActive(false);
         ChocolatesPlaced = 0;
         ChocoPuzzleObjectsNum = 0;
         charactorController = FindObjectOfType<Charactor_Controller>();
@@ -81,7 +83,7 @@ public class ChocoPuzzleManager : MonoBehaviour
                 break;
             case CurrPanels.AllFinished:
                 Destroy(ChocoPuzzleObjects[5]);
-                                
+                LevelCompleteTrggerObj.SetActive(true);
                 break;
         }
 

@@ -15,6 +15,9 @@ public class SwitchingOven : MonoBehaviour
     public Button CurrentButton;
     public Sprite OvenOpenedSprite;
     public Sprite OvenClosedSprite;
+    public GameObject Chocolatebowl;
+    public Sprite MeltedChocoSprite;
+
     public bool isOpened;
     public bool isHeating;
     public bool isInOven;
@@ -66,12 +69,7 @@ public class SwitchingOven : MonoBehaviour
         {
             CurrentButton.image.sprite = OvenOpenedSprite;
             CurrentButton.interactable = false;
-
-            //ObjMatchaParent.SetActive(true);
-            /*chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
-            //theNextPanel.SetActive(true);
-            theCurrPanel.SetActive(false);*/
+            Chocolatebowl.GetComponent<Image>().sprite = MeltedChocoSprite;
 
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
