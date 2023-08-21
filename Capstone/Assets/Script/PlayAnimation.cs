@@ -11,26 +11,53 @@ public class PlayAnimation : MonoBehaviour
     [Header("Animation Paramater")]
     public string[] animatorBoolParameters;
     public int animationNo = 0;
+    private bool inTrigger;
+
+    private void Start()
+    {
+        inTrigger = false;
+    }
 
     private void OnTriggerEnter(Collider collider)
     {
 
         if (collider.tag == "Player" && interactToPlayAnim == false)
         {
-            PlayAnim(animationNo);
+            inTrigger = true;
         }
+
+        if (collider.tag == "Player" && interactToPlayAnim == true)
+        {
+            inTrigger = true;
+        }
+
     }
 
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerExit(Collider collider)
     {
-        if (collider.tag == "Player" && interactToPlayAnim == true && Input.GetKeyDown(KeyCode.E))
+        if (collider.tag == "Player")
         {
-            PlayAnim(animationNo);
+            inTrigger = false;
         }
     }
 
     public void PlayAnim(int i)
     {
         animator.SetBool(animatorBoolParameters[i], true);
+    }
+
+    private void Update()
+    {
+         if (inTrigger == true && interactToPlayAnim == true && Input.GetKeyDown(KeyCode.E))
+         {
+            PlayAnim(animationNo);
+         }
+        
+         if (inTrigger == true && interactToPlayAnim == false)
+         {
+            PlayAnim(animationNo);
+         }
+
+
     }
 }
