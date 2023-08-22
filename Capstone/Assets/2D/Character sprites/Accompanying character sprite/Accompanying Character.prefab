@@ -186,4 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObj: {fileID: 0}
-  followSpeed: 0.004
+  followSpeed: 0.005
+  followSpeedIncrease: 0.008
+  maxDistance: 2
