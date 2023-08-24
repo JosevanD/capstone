@@ -3875,7 +3875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneObject: {fileID: 799815587}
-  cutsceneTime: 14
+  cutsceneTime: 26
   cutscenePlayOnce: 1
   precutsceneAnim: {fileID: 0}
   animPara: 
@@ -5996,6 +5996,7 @@ GameObject:
   - component: {fileID: 1494095688}
   - component: {fileID: 1494095690}
   - component: {fileID: 1494095689}
+  - component: {fileID: 1494095691}
   m_Layer: 0
   m_Name: pPlane32 (1)
   m_TagString: Untagged
@@ -6069,6 +6070,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494095687}
   m_Mesh: {fileID: -4116640523026715387, guid: f7530d5ed2c9f414f847cb8a509e0b71, type: 3}
+--- !u!65 &1494095691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494095687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.070481, y: 7.4974627, z: 0.5539027}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1496749833 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5526174032286777104, guid: d988b4a4d162ba4418f0855e22f79bb5,
@@ -9683,7 +9697,7 @@ PrefabInstance:
     - target: {fileID: 4352006160512580311, guid: ed68235f97b765d439608435d1b87916,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed68235f97b765d439608435d1b87916, type: 3}
@@ -10587,8 +10601,43 @@ PrefabInstance:
         type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: a71d2c45bd9b10244ac09bdb0fb1d279,
+      objectReference: {fileID: 32900000, guid: 192c6c7a382a89b458ee28414465b7b9,
         type: 3}
+    - target: {fileID: 9109822759406880457, guid: 56537f3195e61e340bc524e2484eb48d,
+        type: 3}
+      propertyPath: m_ControlledAudioTrackCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109822759406880457, guid: 56537f3195e61e340bc524e2484eb48d,
+        type: 3}
+      propertyPath: m_DirectAudioMutes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109822759406880457, guid: 56537f3195e61e340bc524e2484eb48d,
+        type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109822759406880457, guid: 56537f3195e61e340bc524e2484eb48d,
+        type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109822759406880457, guid: 56537f3195e61e340bc524e2484eb48d,
+        type: 3}
+      propertyPath: m_TargetAudioSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109822759406880457, guid: 56537f3195e61e340bc524e2484eb48d,
+        type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109822759406880457, guid: 56537f3195e61e340bc524e2484eb48d,
+        type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9109822760143469467, guid: 56537f3195e61e340bc524e2484eb48d,
         type: 3}
       propertyPath: m_Name
