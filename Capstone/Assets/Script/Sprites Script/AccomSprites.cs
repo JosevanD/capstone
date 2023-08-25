@@ -8,16 +8,16 @@ public class AccomSprites : MonoBehaviour
 
     [Header("Animation Stuff")]
 
-    public string[] animPara = { "Flying Left", "Flying Right"};
-    public Animator accomAnimator;
+    [SerializeField] private string[] animPara = { "Flying Left", "Flying Right"};
+    [SerializeField] private Animator accomAnimator;
 
     private float oldPosX;
     private float accomPosX;
 
-    public bool isMovingLeft;
-    public bool isMovingRight;
+    [SerializeField] private bool isMovingLeft;
+    [SerializeField] private bool isMovingRight;
 
-    public bool isNotMoving;
+    [SerializeField] private bool isNotMoving;
 
     
 

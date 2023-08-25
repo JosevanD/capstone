@@ -19,7 +19,12 @@ public class SceneTracker : MonoBehaviour
     public bool magicDoorAppeared = false;
     public GameObject magicDoorPrefab;
     public GameObject triggerDissolveObj;
+    //public string currentSceneName;
+    public string[] sceneNames = {"MenuScene","WhiteHallway","Door3","Door4","Door5"};
+    public bool sceneChanged;
 
+    [Header("Audio Tracker")]
+    public GameObject bgAudioController;
 
     // Start is called before the first frame update
     private void Awake()
@@ -37,7 +42,11 @@ public class SceneTracker : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+    private void Start()
+    {
+        FindBGAudioController();
+    }
 
     void Update()
     {
@@ -63,6 +72,11 @@ public class SceneTracker : MonoBehaviour
             Application.Quit();
         }
 
+        if (sceneChanged == true)
+        {
+            ChangeMusic();
+        }
+        
     }
     public void InWhiteHallway()
     {
@@ -103,6 +117,11 @@ public class SceneTracker : MonoBehaviour
         magicDoorPrefab = GameObject.FindGameObjectWithTag("Magic Door");
     }
 
+    public void FindBGAudioController()
+    {
+        bgAudioController = GameObject.FindGameObjectWithTag("BG Audio Controller");
+    }
+
     public void ActivateMagicDoor()
     {
         //magicDoorPrefab.SetActive(true);
@@ -116,5 +135,45 @@ public class SceneTracker : MonoBehaviour
     {
         triggerDissolveObj = GameObject.Find("TriggerDissolve");
         triggerDissolveObj.GetComponent<TriggerDissolve>().CallDissolve();
+    }
+
+    public void ChangeMusic()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+
+        //whitehallway
+        if (scene.name == sceneNames[1])
+        {
+            bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(0);
+            //pianotrack
+        }
+
+        //door3
+        if (scene.name == sceneNames[2])
+        {
+            bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(2);
+            //ambience
+        }
+
+        //door4
+        if (scene.name == sceneNames[3])
+        {
+            bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(2);
+            //ambience
+        }
+
+        //door5
+        if (scene.name == sceneNames[4])
+        {
+            bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(2);
+            //ambience
+        }
+
+        sceneChanged = false;
+    }
+
+    public void SceneChanged()
+    {
+        sceneChanged = true;
     }
 }

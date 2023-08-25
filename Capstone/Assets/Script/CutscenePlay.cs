@@ -11,19 +11,27 @@ public class CutscenePlay : MonoBehaviour
     
 
     [Header("Animation")]
-    public Animator precutsceneAnim;
-    public string animPara;
-    public bool hasAnimation;
+    [SerializeField] private Animator precutsceneAnim;
+    [SerializeField] private string animPara;
+    [SerializeField] private bool hasAnimation;
    
     [Header("Audio")]
-    public AudioSource cutsceneAudio;
-    public GameObject bgAudioObject;
+    //public AudioSource cutsceneAudio;
+    [SerializeField] private GameObject bgAudioObject;
+
+    [SerializeField] private int audioNo;
 
     [Header("Misc")]
-    public GameObject objToActivate;
-    public GameObject objToDeactivate;
-    public bool hasObjToActivate = false;
-    public bool hasObjToDectivate = false;
+    [SerializeField] private GameObject objToActivate;
+    [SerializeField] private GameObject objToDeactivate;
+    [SerializeField] private bool hasObjToActivate = false;
+    [SerializeField] private bool hasObjToDectivate = false;
+
+    private void Start()
+    {
+        bgAudioObject = GameObject.FindGameObjectWithTag("BG Audio Controller");
+    }
+
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -43,9 +51,9 @@ public class CutscenePlay : MonoBehaviour
     public void CutsceneOn()
     {
         //pauses BG Music, sets cutscene on and cutscene audio on
-        bgAudioObject.GetComponent<BackgroundAudioController>().PauseBGAudio();
+        bgAudioObject.GetComponent<BackgroundAudioController>().ChangeAudio(audioNo);
         cutsceneObject.SetActive(true);
-        cutsceneAudio.enabled = true;
+        //cutsceneAudio.enabled = true;
 
         //starts timer for cutscene music and off
         StartCoroutine(CutsceneOff(cutsceneTime));
@@ -57,9 +65,9 @@ public class CutscenePlay : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         //disable audio, cutscene and resume BG Audio
-        cutsceneAudio.enabled = false;
+        //cutsceneAudio.enabled = false;
         cutsceneObject.SetActive(false);
-        bgAudioObject.GetComponent<BackgroundAudioController>().ResumeBGAudio();
+        //bgAudioObject.GetComponent<BackgroundAudioController>().ResumeBGAudio();
 
         //deactivates an object
         if (hasObjToDectivate == true)

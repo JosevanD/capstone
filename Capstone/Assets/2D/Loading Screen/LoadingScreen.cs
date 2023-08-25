@@ -6,8 +6,8 @@ public class LoadingScreen : MonoBehaviour
 {
     [Header("Loading Screen Parameters")]
     //public GameObject loadingScreenObj;
-    public float loadingScreenTime = 5;
-    public Animator loadingScreenAnimator;
+    [SerializeField] private float loadingScreenTime = 5;
+    [SerializeField] private Animator loadingScreenAnimator;
 
     // Start is called before the first frame update
     void Start()
