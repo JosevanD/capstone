@@ -5,11 +5,16 @@ using UnityEngine;
 public class DNDForTart : MonoBehaviour
 {
     private ChocoPuzzleManager chocoPuzzleManager;
+
+
     public GameObject objectToDrag;
-    //public GameObject theNextPanel;
+    public float DetectionRadius;
+    
     public GameObject theCurrPanel;
     public int TotalTartCount;
+    public GameObject[] Tarts; 
     public int TartCount;
+    public LayerMask UI;
     Vector2 objectInitPos;
 
     //private float pressTime = 0f;
@@ -17,7 +22,7 @@ public class DNDForTart : MonoBehaviour
     private void Start()
     {
         TotalTartCount = GameObject.FindGameObjectsWithTag("Tart").Length;
-
+        Tarts = GameObject.FindGameObjectsWithTag("Tart");
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
 
         objectInitPos = objectToDrag.transform.position;
@@ -56,6 +61,8 @@ public class DNDForTart : MonoBehaviour
 
     private void Update()
     {
+
+        Tarts[TartCount].GetComponent<ChangingTartSprite>().enabled = true;
         if (TartCount >= TotalTartCount)
         {
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
