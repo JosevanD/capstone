@@ -34,6 +34,7 @@ public class Scratch2 : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             isPressed = true;
+            Invoke("Reveal", 10);
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -42,5 +43,11 @@ public class Scratch2 : MonoBehaviour
 
 
 
+    }
+
+    void Reveal()
+    {
+        Destroy(gameObject);
+    
     }
 }
