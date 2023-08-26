@@ -9,9 +9,10 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public Animator potAnimator;
     public Animator bowlAnimator;
+    public AnimationClip bowlAnimationClip;
 
     public ChocoPuzzleManager chocoPuzzleManager;
-    public GameObject theNextPanel;
+    //public GameObject theNextPanel;
     public GameObject theCurrPanel;
    // public GameObject MixingMatchMilkPanel;
    //public GameObject StirringChocolatePanel;
@@ -30,8 +31,8 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        
-        if (playerHoldingTimer <= RequiredTimer) 
+
+        /*if (playerHoldingTimer <= RequiredTimer) 
         {
             isPressingOn = true;
             potAnimator.SetBool("isPouringMilk", true);
@@ -42,7 +43,11 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
 
 
-        }
+        }*/
+        potAnimator.SetBool("isPouringMilk", true);
+        bowlAnimator.SetBool("isFillingMilk", true);
+        StartCoroutine(Countdown( 4 + chocoPuzzleManager.MaxEndingTime));
+        //PlayAndWaitForAnim(bowlAnimator, "FillingMilk");
 
     }
 
@@ -56,7 +61,7 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private void Update()
     {
         //Debug.Log("isPressingon " + isPressingOn);
-        if (isPressingOn)
+        /*if (isPressingOn)
         {
             playerHoldingTimer += Time.deltaTime;
 
@@ -69,17 +74,45 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (playerHoldingTimer >= RequiredTimer)
         {
 
-            //chocoPuzzleManager.IsPanelFinished = true;
-            /*chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = false;
-            theNextPanel.SetActive(true);
-            theCurrPanel.SetActive(false);*/
 
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
 
 
         }
+        */
+
+        //Debug.Log(Mathf.CeilToInt(bowlAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime * bowlAnimationClip.length));
+        if (bowlAnimator.GetCurrentAnimatorStateInfo(0).IsName("FillingMilk"))
+        {
+            Debug.Log("It's finished");
+           
+
+        }
+        
+
+
+    }
+
+    public IEnumerator PlayAndWaitForAnim(Animator targetAnim, string stateName)
+    {
+        targetAnim.Play(stateName);
+
+        //Wait until we enter the current state
+        while (!targetAnim.GetCurrentAnimatorStateInfo(0).IsName(stateName))
+        {
+            yield return null;
+        }
+
+        //Now, Wait until the current state is done playing
+        while ((targetAnim.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.99f)
+        {
+            yield return null;
+        }
+
+        //Done playing. Do something below!
+        Debug.Log("Animation is finished");
+        StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
     }
 
     IEnumerator Countdown(int seconds)

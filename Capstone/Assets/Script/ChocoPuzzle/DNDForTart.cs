@@ -71,10 +71,5 @@ public class DNDForTart : MonoBehaviour
     }
 
 
-    /*public void OnMouseUp()
-    {
-        objectToDrag.transform.position = objectInitPos;
-    }*/
-
 
 }

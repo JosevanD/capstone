@@ -740,22 +740,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 156447625}
-          m_TargetAssemblyTypeName: PouringPot, Assembly-CSharp
-          m_MethodName: OnPointerUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &156447625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -771,7 +755,6 @@ MonoBehaviour:
   potAnimator: {fileID: 156447622}
   bowlAnimator: {fileID: 1023529556}
   chocoPuzzleManager: {fileID: 0}
-  theNextPanel: {fileID: 530695215}
   theCurrPanel: {fileID: 1719654396}
   playerHoldingTimer: 0
   RequiredTimer: 5
@@ -3443,7 +3426,6 @@ MonoBehaviour:
   potAnimator: {fileID: 683932318}
   bowlAnimator: {fileID: 0}
   chocoPuzzleManager: {fileID: 0}
-  theNextPanel: {fileID: 0}
   theCurrPanel: {fileID: 0}
   playerHoldingTimer: 0
   RequiredTimer: 0
@@ -7825,7 +7807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1380229850
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8389,7 +8371,6 @@ MonoBehaviour:
   potAnimator: {fileID: 1446952865}
   bowlAnimator: {fileID: 0}
   chocoPuzzleManager: {fileID: 0}
-  theNextPanel: {fileID: 0}
   theCurrPanel: {fileID: 1106499715}
   playerHoldingTimer: 0
   RequiredTimer: 100
@@ -9821,7 +9802,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 1617803357}
   DetectionRadius: 100
-  MatchaChocoAnimator: {fileID: 1617803359}
   theCurrPanel: {fileID: 1380229849}
   TotalTartCount: 0
   Tarts: []
@@ -10810,7 +10790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1719654397
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11435,7 +11415,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 1749372587}
   DetectionRadius: 0
-  MatchaChocoAnimator: {fileID: 0}
   theCurrPanel: {fileID: 0}
   TotalTartCount: 0
   Tarts: []
