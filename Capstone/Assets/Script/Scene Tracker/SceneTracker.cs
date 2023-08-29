@@ -26,6 +26,9 @@ public class SceneTracker : MonoBehaviour
     [Header("Audio Tracker")]
     public GameObject bgAudioController;
 
+    [Header("Menu Stuff")]
+    public GameObject pauseCanvas;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -46,10 +49,12 @@ public class SceneTracker : MonoBehaviour
     private void Start()
     {
         FindBGAudioController();
+        //pauseMenu = GameObject.FindGameObjectWithTag("Pause Menu");
     }
 
     void Update()
     {
+        
         //Teleports player in front of completed door & start door dissolve
         if (whiteHallway == true && playerFound == true)
         {
@@ -66,15 +71,17 @@ public class SceneTracker : MonoBehaviour
             ActivateMagicDoor();
         }
 
-        //Quit Game
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+        //Pause Game
+        PauseMenu();
 
         if (sceneChanged == true)
         {
             ChangeMusic();
+        }
+
+        if (pauseCanvas == null)
+        {
+            pauseCanvas = GameObject.FindGameObjectWithTag("UI Canvas");
         }
         
     }
@@ -176,4 +183,14 @@ public class SceneTracker : MonoBehaviour
     {
         sceneChanged = true;
     }
+
+    public void PauseMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseCanvas.GetComponent<PauseActivate>().Pause();
+        }
+    }
+
+
 }

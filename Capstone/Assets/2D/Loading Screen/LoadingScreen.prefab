@@ -149,7 +149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4, y: 26.6}
+  m_AnchoredPosition: {x: -0.1, y: 29.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4352006161350044804
@@ -186,9 +186,13 @@ MonoBehaviour:
 
     E to Interact
 
+    Mouse Buttons to Do
+    Puzzles
 
-    Mouse Buttons to
-    Do Puzzles'
+    Esc for Pause Menu
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18ab227605722824a923edc4ac3b7042, type: 2}
   m_sharedMaterial: {fileID: -4534424092797893498, guid: 18ab227605722824a923edc4ac3b7042,
@@ -228,7 +232,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 30.64
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -252,7 +256,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -47.91543, y: 0, z: -83.717445, w: -60.311115}
+  m_margin: {x: -155.00618, y: 0, z: -156.4204, w: -60.311115}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

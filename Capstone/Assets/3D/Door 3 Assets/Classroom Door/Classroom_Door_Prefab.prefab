@@ -237,7 +237,8 @@ AudioSource:
   m_GameObject: {fileID: 2648046240190125758}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5272071122878601282, guid: 647c6750d73f8394db8494b5bdf70df7,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: efe4bc140c354b14d866541e50d5e7cf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -407,10 +408,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutsceneObject: {fileID: 0}
   cutsceneTime: 0
+  cutscenePlayOnce: 1
   precutsceneAnim: {fileID: 2069057610221681943}
   animPara: DoorOpen
-  cutsceneAudio: {fileID: 3839564985067865291}
+  hasAnimation: 0
   bgAudioObject: {fileID: 0}
+  audioNo: 0
+  objToActivate: {fileID: 0}
+  objToDeactivate: {fileID: 0}
+  hasObjToActivate: 0
+  hasObjToDectivate: 0
 --- !u!82 &3839564985067865291
 AudioSource:
   m_ObjectHideFlags: 0

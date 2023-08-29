@@ -592,6 +592,7 @@ MonoBehaviour:
   mesh: {fileID: 4778339710273683133}
   dissolveRate: 0.0125
   refreshRate: 0.025
+  startToAppear: 0
   appearSound: {fileID: 6432408765095930151}
   dissolveSound: {fileID: 6432408765095930151}
   doorAnimator: {fileID: 1890413801912751180}
@@ -615,6 +616,7 @@ MonoBehaviour:
   mesh: {fileID: 3205380274258302637}
   dissolveRate: 0.0125
   refreshRate: 0.025
+  startToAppear: 0
   appearSound: {fileID: 6432408765095930151}
   dissolveSound: {fileID: 6432408765095930151}
   doorAnimator: {fileID: 1890413801912751180}
@@ -631,7 +633,8 @@ AudioSource:
   m_GameObject: {fileID: 8918664182458509677}
   m_Enabled: 0
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5272071122878601282, guid: 647c6750d73f8394db8494b5bdf70df7,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: c1c981ad9dcc836499e113c8c1ed8095, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.394

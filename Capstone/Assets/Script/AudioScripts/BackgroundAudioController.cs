@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using DG.Tweening;
 
 public class BackgroundAudioController : MonoBehaviour
@@ -19,6 +20,12 @@ public class BackgroundAudioController : MonoBehaviour
     [SerializeField] private bool isVolumeSliderActive;
     private bool isVolumeSliderFound;
 
+    [SerializeField] AudioMixer mixer;
+
+    public const string MASTER_KEY = "masterVolume";
+    public const string MUSIC_KEY = "musicVolume";
+    public const string SFX_KEY = "sfxVolume";
+
     private void Awake()
     {
         //ensuring script object is not destroyed through changing scenes
@@ -33,6 +40,8 @@ public class BackgroundAudioController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        LoadVolume();
     }
 
 
@@ -99,4 +108,17 @@ public class BackgroundAudioController : MonoBehaviour
         volumeSlider = GameObject.FindGameObjectWithTag("Volume Slider").GetComponent<Slider>();
         isVolumeSliderFound = true;
     }
+
+    void LoadVolume()
+    {
+        float masterVolume = PlayerPrefs.GetFloat(MASTER_KEY, 1f);
+        float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
+        float sfxVolume = PlayerPrefs.GetFloat(SFX_KEY, 1f);
+
+        mixer.SetFloat(VolumeController.MIXER_MASTER, Mathf.Log10(masterVolume * 20));
+        mixer.SetFloat(VolumeController.MIXER_MUSIC, Mathf.Log10(musicVolume *20));
+        mixer.SetFloat(VolumeController.MIXER_SFX, Mathf.Log10(sfxVolume *20));
+        
+    }
+
 }
