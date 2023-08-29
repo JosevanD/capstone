@@ -15,14 +15,20 @@ public class SpriteSystem : MonoBehaviour
     private bool isWalkLeft;
     //bool isWalking = false;
     //bool audioToggle = true;
-
+    private float leftA;
+    private float backW;
+    private float forwardS;
+    private float rightA;
+    
+    private float horizontalInput;
+    private float verticalInput;
     void Update()
     {
+        MyInput();
 
         Billboard();
 
         SpriteAnim();
-
     }
 
     private void Billboard()
@@ -40,7 +46,7 @@ public class SpriteSystem : MonoBehaviour
 
     private void SpriteAnim()
     {
-        if (Input.GetKey(KeyCode.S))
+        if (verticalInput == -1)
         {
             spriteAnimator.SetBool("FrontWalk", true);
         }
@@ -50,7 +56,7 @@ public class SpriteSystem : MonoBehaviour
             spriteAnimator.SetBool("FrontWalk", false);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (horizontalInput == 1)
         {
             spriteAnimator.SetBool("RightWalk", true);
             isWalkRight = true;
@@ -62,7 +68,7 @@ public class SpriteSystem : MonoBehaviour
             isWalkRight = false;
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (horizontalInput == -1)
         {
             spriteAnimator.SetBool("LeftWalk", true);
             isWalkLeft = true;
@@ -74,7 +80,7 @@ public class SpriteSystem : MonoBehaviour
             isWalkLeft = false;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (verticalInput == 1)
         {
             spriteAnimator.SetBool("BackWalk", true);
         }
@@ -125,5 +131,11 @@ public class SpriteSystem : MonoBehaviour
         {
             return false;
         }
+    }
+
+    private void MyInput()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
     }
 }

@@ -653,8 +653,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteracting: 0
-  moveSpeed: 3
-  groundDrag: 3
+  moveSpeed: 3.5
+  groundDrag: 3.5
   jumpForce: 0
   jumpCooldown: 0
   airMultiplier: 0
@@ -716,8 +716,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5c9bdbce37b06a24fa6ea793bcfd1907, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
-  m_Pitch: 0.75
+  m_Volume: 0.2
+  m_Pitch: 0.7
   Loop: 1
   Mute: 0
   Spatialize: 0

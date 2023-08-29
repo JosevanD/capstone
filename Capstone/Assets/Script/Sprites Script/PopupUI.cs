@@ -7,9 +7,12 @@ public class PopupUI : MonoBehaviour
     // Start is called before the first frame update
     public GameObject popupUI;
     private bool isPopupActive;
+ 
     void Start()
     {
         isPopupActive = false;
+
+        
     }
 
     // Update is called once per frame
@@ -25,10 +28,9 @@ public class PopupUI : MonoBehaviour
             popupUI.SetActive(true);
             isPopupActive = true;
         }
-        
     }
 
-    private void OnTriggerExit(Collider collider)
+    void OnTriggerExit(Collider collider)
     {
         if (collider.tag == "Player" && isPopupActive == true)
         {
@@ -36,4 +38,5 @@ public class PopupUI : MonoBehaviour
             isPopupActive = false;
         }
     }
+    
 }

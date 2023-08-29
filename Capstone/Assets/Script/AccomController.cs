@@ -7,6 +7,7 @@ public class AccomController : MonoBehaviour
     [Header("References")]
 
     [SerializeField] private GameObject targetObj;
+    private GameObject originalTarget;
     private Vector3 targetObjPos;
 
     [Header("Settings")]
@@ -19,13 +20,10 @@ public class AccomController : MonoBehaviour
     //[SerializeField] private bool isFollowing;
 
     [SerializeField] private float maxDistance;
-    //public float accomVelocity;
-
-    //private Rigidbody rb;
-    // Start is called before the first frame update
+    
     void Start()
     {
-        //rb = GetComponent<Rigidbody>();
+        originalTarget = targetObj;
         originalSpeed = followSpeed;
     }
 
@@ -54,5 +52,14 @@ public class AccomController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetObjPos, followSpeed);
     }
     
+    public void SetTarget(GameObject newTarget)
+    {
+        targetObj = newTarget;
 
+    }
+
+    public void ResetTarget()
+    {
+        targetObj = originalTarget;
+    }
 }
