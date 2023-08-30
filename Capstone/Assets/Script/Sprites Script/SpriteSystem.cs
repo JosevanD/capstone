@@ -9,16 +9,14 @@ public class SpriteSystem : MonoBehaviour
 
     [SerializeField] Animator spriteAnimator;
 
-    [SerializeField] GameObject walkAudioObject;
+    //[SerializeField] GameObject walkAudioObject;
+
+ 
 
     private bool isWalkRight;
     private bool isWalkLeft;
     //bool isWalking = false;
     //bool audioToggle = true;
-    private float leftA;
-    private float backW;
-    private float forwardS;
-    private float rightA;
     
     private float horizontalInput;
     private float verticalInput;
@@ -31,6 +29,10 @@ public class SpriteSystem : MonoBehaviour
         SpriteAnim();
     }
 
+    void Start()
+    {
+        
+    }
     private void Billboard()
     {
         if (freezeXZAxis)
@@ -49,6 +51,7 @@ public class SpriteSystem : MonoBehaviour
         if (verticalInput == -1)
         {
             spriteAnimator.SetBool("FrontWalk", true);
+            
         }
 
         else
@@ -60,53 +63,45 @@ public class SpriteSystem : MonoBehaviour
         {
             spriteAnimator.SetBool("RightWalk", true);
             isWalkRight = true;
+            
         }
 
         else
         {
             spriteAnimator.SetBool("RightWalk", false);
             isWalkRight = false;
+            
         }
 
         if (horizontalInput == -1)
         {
             spriteAnimator.SetBool("LeftWalk", true);
             isWalkLeft = true;
+            
         }
 
         else
         {
             spriteAnimator.SetBool("LeftWalk", false);
             isWalkLeft = false;
+            
         }
 
         if (verticalInput == 1)
         {
             spriteAnimator.SetBool("BackWalk", true);
+            
         }
 
         else
         {
             spriteAnimator.SetBool("BackWalk", false);
+            
         }
     }
 
 
-    private void Walking()
-    {
-        if ((Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.D)))
-        {
-            //isWalking = true;
-            walkAudioObject.SetActive(true);
-
-        }
-        else
-        {
-            //walkAudio.SetActive = false;
-            walkAudioObject.SetActive(false);
-        }
-     
-    }
+    
 
     public bool IsWalkRight()
     {

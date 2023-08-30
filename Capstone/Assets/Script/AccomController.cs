@@ -20,11 +20,19 @@ public class AccomController : MonoBehaviour
     //[SerializeField] private bool isFollowing;
 
     [SerializeField] private float maxDistance;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource wingFlaps;
+    [SerializeField] private float stationaryVolume;
+    [SerializeField] private float movingVolume;
+    [SerializeField] private float movingFastVolume;
+
     
     void Start()
     {
         originalTarget = targetObj;
         originalSpeed = followSpeed;
+        wingFlaps.volume = stationaryVolume;
     }
 
     // Update is called once per frame
@@ -39,11 +47,18 @@ public class AccomController : MonoBehaviour
         if (distance >= maxDistance)
         {
             followSpeed = followSpeedIncrease;
+            wingFlaps.volume = movingFastVolume;
         }
 
         if (distance < maxDistance)
         {
             followSpeed = originalSpeed;
+            wingFlaps.volume = movingVolume;
+        }
+
+        if (distance < 1)
+        {
+            wingFlaps.volume = stationaryVolume;
         }
     }
 

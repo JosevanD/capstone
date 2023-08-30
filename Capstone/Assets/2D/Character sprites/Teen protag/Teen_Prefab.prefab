@@ -233,7 +233,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezeXZAxis: 1
   spriteAnimator: {fileID: 6720363443705834859}
-  walkAudioObject: {fileID: 0}
 --- !u!95 &6720363443705834859
 Animator:
   serializedVersion: 4
@@ -717,7 +716,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 5c9bdbce37b06a24fa6ea793bcfd1907, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.4
   m_Pitch: 0.7
   Loop: 1
   Mute: 0

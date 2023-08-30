@@ -12,7 +12,7 @@ public class AccomTarget : MonoBehaviour
     [SerializeField] private float attractTime;
     private bool attractedCheck;
     [SerializeField] private GameObject attractTargetObj;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +41,7 @@ public class AccomTarget : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
 
-        if (collider.tag == "Player" && isTarget == true)
+        if (collider.tag == "Player")
         {
             ResetAttract();
 
@@ -68,7 +68,7 @@ public class AccomTarget : MonoBehaviour
         yield return new WaitForSeconds(time);
 
 
-        if (accomDistance <= attractDistance)
+        if (accomDistance <= attractDistance && isTarget == true)
         {
             accomCharaObject.GetComponent<AccomController>().SetTarget(attractTargetObj);
         }
@@ -78,5 +78,6 @@ public class AccomTarget : MonoBehaviour
     {
         accomCharaObject.GetComponent<AccomController>().ResetTarget();
         isTarget = false;
+        attractTargetObj.SetActive(false);
     }
 }
