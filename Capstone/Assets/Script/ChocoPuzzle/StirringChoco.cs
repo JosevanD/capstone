@@ -17,9 +17,16 @@ public class StirringChoco : MonoBehaviour
 
     public float totalPressTime = 0f;
 
+    [Header("Stirring SFX")]
+    public AudioSource StirringAudioSource;
+    public AudioClip StirringClip;
+
     private void Start()
     {
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        StirringAudioSource = GetComponent<AudioSource>();
+        StirringAudioSource.clip = StirringClip;
+        StirringAudioSource.enabled = false;
         isPressingOn = false;
     }
     public void OnMouseDrag()
@@ -28,6 +35,7 @@ public class StirringChoco : MonoBehaviour
         objectToDrag.transform.position = Input.mousePosition;
         MatchaChocoAnimator.SetBool("isFilling", false);
         MatchaChocoAnimator.SetBool("isStirring", true);
+        StirringAudioSource.enabled = true;
         MatchaChocoAnimator.speed = 1;
         pressTime += Time.deltaTime;
 
@@ -39,6 +47,7 @@ public class StirringChoco : MonoBehaviour
         MatchaChocoAnimator.SetBool("isStirring", false);
         Debug.Log("press Time is " + pressTime);
         MatchaChocoAnimator.speed = 0;
+        StirringAudioSource.enabled = false;
         pressTime = 0;
     }
 
