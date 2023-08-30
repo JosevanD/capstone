@@ -61,13 +61,21 @@ public class DNDForTart : MonoBehaviour
 
     private void Update()
     {
-
-        Tarts[TartCount].GetComponent<ChangingTartSprite>().enabled = true;
         if (TartCount >= TotalTartCount)
         {
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
         }
+        if (TartCount >= TotalTartCount)
+        {
+            TartCount = TotalTartCount;
+        }
+        else
+        {
+            Tarts[TartCount].GetComponent<ChangingTartSprite>().enabled = true;
+        }
+        
+        
     }
 
 
