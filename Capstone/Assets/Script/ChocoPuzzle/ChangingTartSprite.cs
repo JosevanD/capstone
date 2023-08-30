@@ -55,13 +55,20 @@ public class ChangingTartSprite : MonoBehaviour
             float Distance = Vector3.Distance(MatchaChocoBowl.transform.position, gameObject.transform.position);
             if (Distance <= DetectionDistance && !isFinished)
             {
+                if (!DragNDropForTart.BowlAudioSource.isPlaying)
+                {
+                    Debug.Log("DragNDropForTart.BowlAudioSource.isPlaying" + DragNDropForTart.BowlAudioSource.isPlaying);
+                    DragNDropForTart.BowlAudioSource.PlayOneShot(DragNDropForTart.FillingTartClip);
+                }
                 BowlAnimator.SetBool("isFillingTart", true);
                 FillingTimer += Time.deltaTime;
                 Debug.Log("collide" + gameObject);
+
             }
             if (Distance > DetectionDistance)
             {
                 BowlAnimator.SetBool("isFillingTart", false);
+                DragNDropForTart.BowlAudioSource.Stop();
 
             }
             if (Distance <= DetectionDistance && FillingTimer >= MaxFillingTimer)

@@ -17,6 +17,10 @@ public class DNDForTart : MonoBehaviour
     public LayerMask UI;
     Vector2 objectInitPos;
 
+    [Header("Filling Tart SFX")]
+    public AudioSource BowlAudioSource;
+    public AudioClip FillingTartClip;
+
     //private float pressTime = 0f;
     //public float totalPressTime = 0f;
     private void Start()
@@ -24,7 +28,9 @@ public class DNDForTart : MonoBehaviour
         TotalTartCount = GameObject.FindGameObjectsWithTag("Tart").Length;
         Tarts = GameObject.FindGameObjectsWithTag("Tart");
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
-
+        BowlAudioSource = GetComponent<AudioSource>();
+        BowlAudioSource.clip = FillingTartClip;
+        //BowlAudioSource.enabled = false;
         objectInitPos = objectToDrag.transform.position;
     }
 
