@@ -27,10 +27,15 @@ public class SwitchingOven : MonoBehaviour
     //public GameObject OvenDoor;
     private int ImageCount = 0;
 
+    [Header("Microwave SFX")]
+    public AudioSource MicrowaveAudioSource;
+    public AudioClip MicrowaveClip;
+
     // Start is called before the first frame update
     void Start()
     {
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        MicrowaveAudioSource = GetComponent<AudioSource>();
         ObjMatchaParent.SetActive(false);
         isOpened = false;
         isHeating = false;
@@ -60,6 +65,7 @@ public class SwitchingOven : MonoBehaviour
         {
             CurrentButton.image.sprite = OvenClosedSprite;
             CurrentButton.interactable = false;
+            MicrowaveAudioSource.PlayOneShot(MicrowaveClip);
             //ObjMatchaParent.SetActive(true);
             isHeating = true;
             isOpened = false;
