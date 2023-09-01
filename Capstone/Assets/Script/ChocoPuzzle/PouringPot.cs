@@ -22,12 +22,18 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public bool isPouringFinished;
     private bool isPressingOn;
+
+    [Header("Pouring Milk SFX")]
+    public AudioSource PouringMilkAudioSource;
+    public AudioClip PouringMilkClip;
+
     private void Start()
     {
         playerHoldingTimer = 0;
         isPouringFinished = false;
         isPressingOn = false;
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        PouringMilkAudioSource = GetComponent<AudioSource>();
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -46,6 +52,7 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }*/
         potAnimator.SetBool("isPouringMilk", true);
         bowlAnimator.SetBool("isFillingMilk", true);
+        PouringMilkAudioSource.PlayOneShot(PouringMilkClip);
         StartCoroutine(Countdown( 4 + chocoPuzzleManager.MaxEndingTime));
         //PlayAndWaitForAnim(bowlAnimator, "FillingMilk");
 
