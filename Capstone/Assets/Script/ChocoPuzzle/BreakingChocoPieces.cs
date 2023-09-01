@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 using UnityEngine.UI;
 
 public class BreakingChocoPieces : MonoBehaviour
@@ -21,6 +22,11 @@ public class BreakingChocoPieces : MonoBehaviour
     public AudioSource BreakingChocoAudioSource;
     public AudioClip BreakingChocoClip;
 
+    [Header("Screen Shake")]
+    public CinemachineVirtualCamera CinemachineVirtualCamera;
+    private float screenShakerTimer;
+    private float shakeTimerTotal;
+    private float startingIntensity; 
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +42,21 @@ public class BreakingChocoPieces : MonoBehaviour
         {
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
+        }
+
+        if (screenShakerTimer > 0)
+        {
+
+            screenShakerTimer -= Time.deltaTime;
+            if (screenShakerTimer <= 0f)
+            {
+                CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin = CinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
+                cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0f;
+                    //Mathf.Lerp(startingIntensity, 0f, screenShakerTimer / shakeTimerTotal);
+                
+                
+            }
         }
     }
 
@@ -63,4 +84,16 @@ public class BreakingChocoPieces : MonoBehaviour
 
 
     }
+
+    public void ShakeCamera(float intensity, float time)
+    {
+        CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin = CinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+
+        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
+        screenShakerTimer = time;
+        shakeTimerTotal = time;
+        startingIntensity = intensity;
+
+    }
+
 }

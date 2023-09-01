@@ -2567,6 +2567,18 @@ Transform:
   m_Father: {fileID: 1846534937}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &674087863 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4932169066781065763, guid: 30d09a6e580ab5b43a1b869b003504da,
+    type: 3}
+  m_PrefabInstance: {fileID: 471732969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &690233321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +2876,7 @@ GameObject:
   - component: {fileID: 761213741}
   - component: {fileID: 761213740}
   - component: {fileID: 761213739}
-  - component: {fileID: 761213738}
+  - component: {fileID: 761213743}
   - component: {fileID: 761213742}
   m_Layer: 5
   m_Name: Breaking Choco Panel
@@ -2872,7 +2884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &761213737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2902,35 +2914,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &761213738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761213736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 761213739}
-          m_TargetAssemblyTypeName: SwitchImage, Assembly-CSharp
-          m_MethodName: OnPointerDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &761213739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2938,7 +2921,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761213736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c51a0e8d31471241ad039b8e6a3fa60, type: 3}
   m_Name: 
@@ -3087,6 +3070,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &761213743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761213736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc5c3c7380067dc42b13ca278650fa29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalChocolateCount: 0
+  brokenChocolateCount: 0
+  BrokenChocolateSprite: {fileID: 21300000, guid: 7903ebdbf7be4104fb8b160ed856e996,
+    type: 3}
+  theCurrPanel: {fileID: 761213736}
+  ChocolatePuzzleCanvas: {fileID: 1788723045}
+  BreakingChocoAudioSource: {fileID: 761213742}
+  BreakingChocoClip: {fileID: 8300000, guid: ed06eb640835f184fa271b8389f90eaf, type: 3}
+  CinemachineVirtualCamera: {fileID: 674087863}
 --- !u!1 &784643443 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4595664784719105428, guid: 80a6b4b0e3125e94fa110399980bef62,
@@ -6001,6 +6005,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1584828717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4932169064951754626, guid: 30d09a6e580ab5b43a1b869b003504da,
+    type: 3}
+  m_PrefabInstance: {fileID: 471732969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1584828721
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584828717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 5
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1587488916
 GameObject:
   m_ObjectHideFlags: 0
