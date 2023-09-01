@@ -14,11 +14,15 @@ public class SwitchImage : MonoBehaviour
     public GameObject theCurrPanel;
     public Canvas ChocolatePuzzleCanvas;
     private int ImageCount = 0;
+    [Header("BreakingChoco SFX")]
+    public AudioSource BreakingChocoAudioSource;
+    public AudioClip BreakingChocoClip;
 
     private void Start()
     {
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
-
+        BreakingChocoAudioSource = GetComponent<AudioSource>();
+        //BreakingChocoAudioSource.clip = BreakingChocoClip;
         Debug.Log(ChocolateImages.Length);
     }
 
@@ -28,6 +32,8 @@ public class SwitchImage : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                BreakingChocoAudioSource.Stop();
+                BreakingChocoAudioSource.PlayOneShot(BreakingChocoClip);
                 ImageCount++;
                 ChocolateImages[ImageCount].SetActive(true);
 
