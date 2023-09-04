@@ -5,24 +5,28 @@ using UnityEngine.UI;
 
 public class FlowerManager : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] [Header("Flower Picking Canvas")]
     private GameObject FlowerPickingCanvasObj;
     //public Image 
+    [Header("The bools")]
     public int MaxEndingTime;
     public GameObject[] FlowerPetals;
     private int FlowerPetalsCounts;
     public int CurrFlowerPetal;
+    [Header("Player Controller")]
+    public Charactor_Controller charactorController;
 
-    //public int PickedFlowerPetals;
+    [Header("Flower Picking Interactable Object")]
+    public GameObject FlowerPickingObject;
+
+    [Header("The Ending Door")]
     public GameObject EndingDoorObj;
-    private bool isFinished;
-    // Start is called before the first frame update
+
+
     void Start()
     {
+        charactorController = FindObjectOfType<Charactor_Controller>();
         CurrFlowerPetal = 0;
-        isFinished = false;
-        //PickedFlowerPetals = 0;
-        //FlowerPetalsCounts = GameObject.FindGameObjectsWithTag("Flower Petal").Length;
         FlowerPetalsCounts = FlowerPetals.Length;
         foreach (var petalObject in FlowerPetals)
         {
@@ -38,9 +42,11 @@ public class FlowerManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             counter--;
         }
-
+        charactorController.isInteracting = false;
         FlowerPickingCanvasObj.SetActive(false);
+        FlowerPickingObject.SetActive(false);
         EndingDoorObj.SetActive(true);
+        
 
     }
 

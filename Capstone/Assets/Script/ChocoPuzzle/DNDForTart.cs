@@ -30,7 +30,6 @@ public class DNDForTart : MonoBehaviour
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         BowlAudioSource = GetComponent<AudioSource>();
         BowlAudioSource.clip = FillingTartClip;
-        //BowlAudioSource.enabled = false;
         objectInitPos = objectToDrag.transform.position;
     }
 

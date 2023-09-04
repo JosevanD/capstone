@@ -760,6 +760,8 @@ MonoBehaviour:
   playerHoldingTimer: 0
   RequiredTimer: 5
   isPouringFinished: 0
+  PouringMilkAudioSource: {fileID: 0}
+  PouringMilkClip: {fileID: 0}
 --- !u!114 &156447626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,7 +826,7 @@ PrefabInstance:
     - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
         type: 3}
@@ -878,6 +880,121 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80a6b4b0e3125e94fa110399980bef62, type: 3}
+--- !u!1 &286457848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286457849}
+  - component: {fileID: 286457853}
+  - component: {fileID: 286457852}
+  - component: {fileID: 286457851}
+  - component: {fileID: 286457850}
+  m_Layer: 0
+  m_Name: Interactable Object for flower Picking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &286457849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286457848}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5900002, y: 0.42, z: 0.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 920090903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &286457850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286457848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e55f60dc9172947807182660626519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractionDistance: 2
+  PuzzleCanvas: {fileID: 400609199}
+  PuzzlePanel: {fileID: 866920493}
+  PuzzleCanvasObj: {fileID: 400609195}
+  charactorController: {fileID: 1069116053}
+--- !u!65 &286457851
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286457848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &286457852
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286457848}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &286457853
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286457848}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &290855916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4667869911130533420, guid: 1684f26f5528d2c4ca6e66036aaa86eb,
@@ -1272,7 +1389,7 @@ RectTransform:
   m_Children:
   - {fileID: 6761376}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1525,8 +1642,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 866920494}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 920090903}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2683,6 +2800,8 @@ MonoBehaviour:
   isHeating: 0
   isInOven: 0
   TotalWaitingTime: 3
+  MicrowaveAudioSource: {fileID: 0}
+  MicrowaveClip: {fileID: 0}
 --- !u!114 &530695218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2931,7 +3050,7 @@ RectTransform:
   m_Children:
   - {fileID: 922079796}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3419,7 +3538,7 @@ RectTransform:
   - {fileID: 1082589474}
   - {fileID: 1532680683}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3533,6 +3652,8 @@ MonoBehaviour:
   playerHoldingTimer: 0
   RequiredTimer: 0
   isPouringFinished: 0
+  PouringMilkAudioSource: {fileID: 0}
+  PouringMilkClip: {fileID: 0}
 --- !u!95 &683932318
 Animator:
   serializedVersion: 4
@@ -3990,7 +4111,7 @@ GameObject:
   - component: {fileID: 777210785}
   - component: {fileID: 777210784}
   m_Layer: 0
-  m_Name: Interectable Object for Choco  MixingMatch
+  m_Name: Interactable Object for Choco  MixingMatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5147,7 +5268,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &918120799
 GameObject:
@@ -5225,6 +5346,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918120799}
   m_CullTransparentMesh: 1
+--- !u!1 &920090902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920090903}
+  m_Layer: 0
+  m_Name: Flower Picking Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &920090903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920090902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 286457849}
+  - {fileID: 400609200}
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &922079795
 GameObject:
   m_ObjectHideFlags: 0
@@ -6174,6 +6328,8 @@ MonoBehaviour:
   theNextPanel: {fileID: 0}
   theCurrPanel: {fileID: 0}
   ChocolatePuzzleCanvas: {fileID: 0}
+  BreakingChocoAudioSource: {fileID: 0}
+  BreakingChocoClip: {fileID: 0}
 --- !u!114 &1082589476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7102,6 +7258,8 @@ MonoBehaviour:
   theNextPanel: {fileID: 1719654396}
   theCurrPanel: {fileID: 1279855996}
   ChocolatePuzzleCanvas: {fileID: 1285206180}
+  BreakingChocoAudioSource: {fileID: 0}
+  BreakingChocoClip: {fileID: 0}
 --- !u!114 &1279856000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7932,6 +8090,8 @@ MonoBehaviour:
   theCurrPanel: {fileID: 1509476890}
   MatchaChocoAnimator: {fileID: 1584524568}
   totalPressTime: 5
+  StirringAudioSource: {fileID: 0}
+  StirringClip: {fileID: 0}
 --- !u!114 &1364113884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8556,6 +8716,8 @@ MonoBehaviour:
   playerHoldingTimer: 0
   RequiredTimer: 100
   isPouringFinished: 0
+  PouringMilkAudioSource: {fileID: 0}
+  PouringMilkClip: {fileID: 0}
 --- !u!95 &1446952865
 Animator:
   serializedVersion: 4
@@ -9990,6 +10152,8 @@ MonoBehaviour:
   UI:
     serializedVersion: 2
     m_Bits: 32
+  BowlAudioSource: {fileID: 0}
+  FillingTartClip: {fileID: 0}
 --- !u!114 &1617803363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11232,6 +11396,8 @@ MonoBehaviour:
   theCurrPanel: {fileID: 0}
   MatchaChocoAnimator: {fileID: 0}
   totalPressTime: 0
+  StirringAudioSource: {fileID: 0}
+  StirringClip: {fileID: 0}
 --- !u!114 &1732502342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11603,6 +11769,8 @@ MonoBehaviour:
   UI:
     serializedVersion: 2
     m_Bits: 0
+  BowlAudioSource: {fileID: 0}
+  FillingTartClip: {fileID: 0}
 --- !u!114 &1749372590
 MonoBehaviour:
   m_ObjectHideFlags: 0
