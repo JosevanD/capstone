@@ -19,8 +19,8 @@ public class FlowerManager : MonoBehaviour
     [Header("Flower Picking Interactable Object")]
     public GameObject FlowerPickingObject;
 
-    [Header("The Ending Door")]
-    public GameObject EndingDoorObj;
+    [Header("The Level Ending Prefab")]
+    public GameObject levelEndingObj;
 
 
     void Start()
@@ -45,7 +45,7 @@ public class FlowerManager : MonoBehaviour
         charactorController.isInteracting = false;
         FlowerPickingCanvasObj.SetActive(false);
         FlowerPickingObject.SetActive(false);
-        EndingDoorObj.SetActive(true);
+        levelEndingObj.SetActive(true);
         
 
     }
