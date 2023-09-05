@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class ChocoPuzzleManager : MonoBehaviour
@@ -35,6 +36,11 @@ public class ChocoPuzzleManager : MonoBehaviour
     public int ChocolatesPlaced;
     public CurrPanels currPanels;
     public int MaxEndingTime;
+
+    [Header("Text Mesh")]
+    public TMP_Text TextObj;
+
+    public string[] textContents;
     //private float EndingTimer;
 
     private void Start()
@@ -58,30 +64,50 @@ public class ChocoPuzzleManager : MonoBehaviour
         switch (currPanels)
         {
             case CurrPanels.BreakingChoco:
+
+                TextObj.text = textContents[0];
+
                 ChocoPuzzleObjects[0].SetActive(true);
                 break;
             case CurrPanels.MixingMatcha:
-                //ChocoPuzzleObjects[0].SetActive(false);
+
+                TextObj.text = textContents[1];
+
                 Destroy(ChocoPuzzleObjects[0]);
                 ChocoPuzzleObjects[1].SetActive(true);
                 break;
             case CurrPanels.Oven:
+
+                TextObj.text = textContents[2];
+
                 Destroy(ChocoPuzzleObjects[1]);
                 ChocoPuzzleObjects[2].SetActive(true);
                 break;
             case CurrPanels.StirringChoco:
+
+                TextObj.text = textContents[3];
+
                 Destroy(ChocoPuzzleObjects[2]);
                 ChocoPuzzleObjects[3].SetActive(true);
                 break;
             case CurrPanels.FillingTart:
+
+                TextObj.text = textContents[4];
+
                 Destroy(ChocoPuzzleObjects[3]);
                 ChocoPuzzleObjects[4].SetActive(true);
                 break;
             case CurrPanels.Packing:
+
+                TextObj.text = textContents[5];
+
                 Destroy(ChocoPuzzleObjects[4]);
                 ChocoPuzzleObjects[5].SetActive(true);
                 break;
             case CurrPanels.AllFinished:
+
+                TextObj.text = null;
+
                 Destroy(ChocoPuzzleObjects[5]);
                 LevelCompleteTrggerObj.SetActive(true);
                 break;
