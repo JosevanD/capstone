@@ -13,6 +13,8 @@ public class DissolveScript : MonoBehaviour
     public float refreshRate = 0.025f;
     private Material[] meshMaterials;
     public bool startToAppear;
+    public bool hasDissolved;
+    public int doorNo;
 
     [Header("Sounds")]
     public AudioSource appearSound;
@@ -28,8 +30,12 @@ public class DissolveScript : MonoBehaviour
     public MeshCollider frameCollider;
     public BoxCollider enterDoorCollider;
 
+    [Header("Others")]
+    private GameObject sceneTracker;
     void Start()
     {
+        sceneTracker = GameObject.Find("SceneTracker");
+
         if (mesh != null)
         {
             meshMaterials = mesh.materials;
@@ -51,6 +57,8 @@ public class DissolveScript : MonoBehaviour
         {
             DoorAppear();
         }
+
+        
     }
 
     // Update is called once per frame
@@ -59,6 +67,11 @@ public class DissolveScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M) && isDissolve ==  false)
         {
             DoorAppear();
+        }
+
+        if (hasDissolved == true)
+        {
+            Destroy(this);
         }
     }
 
@@ -76,6 +89,8 @@ public class DissolveScript : MonoBehaviour
 
     public void DoorDissolve()
     {
+        
+
         dissolveSound.enabled = true;
         doorCollider.enabled = false;
         frameCollider.enabled = false;
@@ -83,6 +98,7 @@ public class DissolveScript : MonoBehaviour
 
 
         StartCoroutine(DissolveCor());
+        
         Destroy(this, 2);
     }
 
@@ -101,6 +117,7 @@ public class DissolveScript : MonoBehaviour
                     meshMaterials[i].SetFloat("_DissolveAmount", counter);
                 }
                 yield return new WaitForSeconds(refreshRate);
+                sceneTracker.GetComponent<SceneTracker>().CheckDoorDissolved(doorNo);
             }
 
         }
@@ -132,4 +149,8 @@ public class DissolveScript : MonoBehaviour
         doorAnimator.SetBool("DoorOpen", true);
     }
 
+    public void HasDissolved()
+    {
+        hasDissolved = true;
+    }
 }

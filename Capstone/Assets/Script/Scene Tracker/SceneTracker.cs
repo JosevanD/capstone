@@ -29,6 +29,12 @@ public class SceneTracker : MonoBehaviour
     [Header("Menu Stuff")]
     public GameObject pauseCanvas;
 
+    [Header("Door Tracker")]
+    public bool isDoor3Dissolved;
+    public bool isDoor4Dissolved;
+    public bool isDoor5Dissolved;
+
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -60,6 +66,8 @@ public class SceneTracker : MonoBehaviour
         {
             playerPrefab.transform.position = playerSpawnPos[exitDoorNo];
             DoorDissolveActivate();
+            CheckDoorDelete();
+            DeleteLoading();
             whiteHallway = false;
             playerFound = false;
         }
@@ -192,5 +200,49 @@ public class SceneTracker : MonoBehaviour
         }
     }
 
+    public void CheckDoorDissolved(int doorNo)
+    {
+        if (doorNo == 3)
+        {
+            isDoor3Dissolved = true;
+        }
+        if (doorNo == 4)
+        {
+            isDoor4Dissolved = true;
+        }
+        if (doorNo == 5)
+        {
+            isDoor5Dissolved = true;
+        }
+    }
+
+    private void DeleteLoading()
+    {
+        GameObject loadingScreen = GameObject.Find("LoadingScreen");
+        loadingScreen.SetActive(false);
+    }
+    public void CheckDoorDelete()
+    {
+        GameObject doorToDelete;
+
+        if (isDoor3Dissolved == true)
+        {
+            doorToDelete = GameObject.Find("Door 3");
+            doorToDelete.SetActive(false);
+        }
+        if (isDoor4Dissolved == true)
+        {
+            doorToDelete = GameObject.Find("Door 4");
+            doorToDelete.SetActive(false);
+        }
+        if (isDoor5Dissolved == true)
+        {
+            doorToDelete = GameObject.Find("Door 5");
+            doorToDelete.SetActive(false);
+        }
+
+
+    }
+   
 
 }
