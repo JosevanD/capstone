@@ -18,25 +18,40 @@ public class PopupUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isPopupActive == true && Input.GetKeyDown(KeyCode.E))
+        {
+            DeactivatePopup();
+        }
     }
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Player" && isPopupActive == false)
         {
-            popupUI.SetActive(true);
-            isPopupActive = true;
+            ActivatePopup();
         }
+        
+
+        
     }
 
     void OnTriggerExit(Collider collider)
     {
         if (collider.tag == "Player" && isPopupActive == true)
         {
-            popupUI.SetActive(false);
-            isPopupActive = false;
+            DeactivatePopup();
         }
     }
     
+    private void ActivatePopup()
+    {
+        popupUI.SetActive(true);
+        isPopupActive = true;
+    }
+    
+    private void DeactivatePopup()
+    {
+        popupUI.SetActive(false);
+        isPopupActive = false;
+    }
 }
