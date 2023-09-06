@@ -64,9 +64,10 @@ public class SceneTracker : MonoBehaviour
         //Teleports player in front of completed door & start door dissolve
         if (whiteHallway == true && playerFound == true)
         {
+            CheckDoorDelete();
             playerPrefab.transform.position = playerSpawnPos[exitDoorNo];
             DoorDissolveActivate();
-            CheckDoorDelete();
+            
             DeleteLoading();
             whiteHallway = false;
             playerFound = false;
@@ -205,14 +206,17 @@ public class SceneTracker : MonoBehaviour
         if (doorNo == 3)
         {
             isDoor3Dissolved = true;
+            doorNo = 0;
         }
         if (doorNo == 4)
         {
             isDoor4Dissolved = true;
+            doorNo = 0;
         }
         if (doorNo == 5)
         {
             isDoor5Dissolved = true;
+            doorNo = 0;
         }
     }
 
@@ -223,22 +227,38 @@ public class SceneTracker : MonoBehaviour
     }
     public void CheckDoorDelete()
     {
-        GameObject doorToDelete;
+        GameObject door3ToDelete;
+        GameObject door4ToDelete;
+        GameObject door5ToDelete;
+
 
         if (isDoor3Dissolved == true)
         {
-            doorToDelete = GameObject.Find("Door 3");
-            doorToDelete.SetActive(false);
+            door3ToDelete = GameObject.Find("Door 3");
+
+            if (door3ToDelete != null)
+            {
+                door3ToDelete.SetActive(false);
+            }
+            
         }
         if (isDoor4Dissolved == true)
         {
-            doorToDelete = GameObject.Find("Door 4");
-            doorToDelete.SetActive(false);
+            door4ToDelete = GameObject.Find("Door 4");
+
+            if (door4ToDelete != null)
+            {
+                door4ToDelete.SetActive(false);
+            }
         }
         if (isDoor5Dissolved == true)
         {
-            doorToDelete = GameObject.Find("Door 5");
-            doorToDelete.SetActive(false);
+            door5ToDelete = GameObject.Find("Door 5");
+
+            if (door5ToDelete != null)
+            {
+                door5ToDelete.SetActive(false);
+            }
         }
 
 

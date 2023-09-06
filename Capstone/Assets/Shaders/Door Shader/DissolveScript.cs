@@ -29,6 +29,7 @@ public class DissolveScript : MonoBehaviour
     public BoxCollider doorCollider;
     public MeshCollider frameCollider;
     public BoxCollider enterDoorCollider;
+    [SerializeField] BoxCollider blockageCollider;
 
     [Header("Others")]
     private GameObject sceneTracker;
@@ -95,10 +96,10 @@ public class DissolveScript : MonoBehaviour
         doorCollider.enabled = false;
         frameCollider.enabled = false;
         enterDoorCollider.enabled = false;
-
+        blockageCollider.enabled = false;
 
         StartCoroutine(DissolveCor());
-        
+
         Destroy(this, 2);
     }
 
