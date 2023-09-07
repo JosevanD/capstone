@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler
 {
     
     public Animator potAnimator;
@@ -27,7 +27,7 @@ public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (playerHoldingTimer <= RequiredTimer)
+        /*if (playerHoldingTimer <= RequiredTimer)
         {
             isPressingOn = true;
             potAnimator.SetBool("isPouring", true);
@@ -36,20 +36,34 @@ public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             moldAnimator.speed = 1;
             //playerHoldingTimer += Time.deltaTime;
 
-        }
+        }*/
+
+        potAnimator.SetBool("isPouring", true);
+        //moldAnimator.SetBool("isFilling", true);
+        Invoke("nextPanel", 3);
+        
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    /*public void OnPointerUp(PointerEventData eventData)
     {
         potAnimator.SetBool("isPouring", false);
         isPressingOn = false;
         moldAnimator.speed = 0;
+    }*/
+
+    void nextPanel() 
+    {
+        potAnimator.SetBool("isPouring", false);
+        //moldAnimator.SetBool("isFilling", false);
+        StirringChocolatePanel.SetActive(true);
+        gameObject.SetActive(false);
+
     }
 
     private void Update()
     {
         //Debug.Log("isPressingon " + isPressingOn);
-        if (isPressingOn)
+        /*if (isPressingOn)
         {
             playerHoldingTimer += Time.deltaTime;
             moldAnimator.SetBool("isFilling", true);
@@ -70,6 +84,7 @@ public class PouringMatchMilk : MonoBehaviour, IPointerDownHandler, IPointerUpHa
             //moldAnimator.SetBool("isStirring", false);
             gameObject.SetActive(false);
         }
+        */
     }
 }
 
