@@ -11,6 +11,11 @@ public class MovingCamera : MonoBehaviour
     private float CamTimer;
     public float MaxCamTime;
     private bool isCollidePlayer;
+
+    [Header ("Activate Objects")]
+    [SerializeField] GameObject objToActivate;
+    [SerializeField] bool hasObjToActivate;
+    private bool objActivated;
     private void Start()
     {
         isCollidePlayer = false;
@@ -24,6 +29,11 @@ public class MovingCamera : MonoBehaviour
             PlayerCam.Priority = 0;
             TargetCam.Priority = 1;
 
+            if (hasObjToActivate == true && objActivated == false)
+            {
+                StartCoroutine(StartObject(MaxCamTime));
+            }
+            
         }
 
 
@@ -35,6 +45,7 @@ public class MovingCamera : MonoBehaviour
         {
             CamTimer += Time.deltaTime;
             
+
         }
         if (CamTimer >= MaxCamTime)
         {
@@ -56,4 +67,10 @@ public class MovingCamera : MonoBehaviour
 
 
     }*/
+    IEnumerator StartObject(float time)
+    {
+        objActivated = true;
+        yield return new WaitForSeconds(time);
+        objToActivate.SetActive(true);
+    }
 }
