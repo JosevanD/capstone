@@ -60,7 +60,7 @@ public class Scratch2 : MonoBehaviour
             isPressed = false;
         }
 
-        if (DetectionCount >= 16 )
+        if (DetectionCount/ totalDetection >= 0.7f )
         {
             
             Reveal();
