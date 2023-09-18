@@ -6,6 +6,13 @@ using Cinemachine;
 
 public class Scratch2 : MonoBehaviour
 {
+    [SerializeField]
+    [Header("Brushing Puzzle Canvas")]
+    private GameObject BrushingPuzzleCanvasObj;
+    [SerializeField]
+    [Header("Brushing Puzzle interactable object")]
+    private GameObject BrushingPuzzleInteractableObj;
+
     private Charactor_Controller charactorController;
     public int MaxEndingTime;
     public GameObject maskPrefab;
@@ -53,7 +60,7 @@ public class Scratch2 : MonoBehaviour
             isPressed = false;
         }
 
-        if (DetectionCount / totalDetection >= 0.8f )
+        if (DetectionCount >= 16 )
         {
             
             Reveal();
@@ -63,10 +70,10 @@ public class Scratch2 : MonoBehaviour
 
     void Reveal()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
         StartCoroutine(Countdown(MaxEndingTime));
-        MainCam.enabled = true;
-        BrushCam.enabled = false;
+       
     }
 
     IEnumerator Countdown(int seconds)
@@ -77,6 +84,10 @@ public class Scratch2 : MonoBehaviour
             yield return new WaitForSeconds(1);
             counter--;
         }
+        MainCam.enabled = true;
+        BrushCam.enabled = false;
+        BrushingPuzzleCanvasObj.SetActive(false);
+        BrushingPuzzleInteractableObj.SetActive(false);
         charactorController.isInteracting = false;
 
 
