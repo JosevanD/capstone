@@ -18,7 +18,7 @@ public class AccomSprites : MonoBehaviour
     [SerializeField] private bool isMovingRight;
 
     [SerializeField] private bool isNotMoving;
-
+    [SerializeField] private bool isFlipped;
     
 
     //public bool is side
@@ -35,7 +35,17 @@ public class AccomSprites : MonoBehaviour
     {
         accomPosX = transform.position.x;
         Billboard();
-        CheckDirection();
+        if (isFlipped == false)
+        {
+            CheckDirection();
+        }
+        
+        if (isFlipped == true)
+        {
+            CheckDirectionFlipped();
+        }
+        
+
         if (isNotMoving == false)
         {
             MoveLeft();
@@ -77,6 +87,20 @@ public class AccomSprites : MonoBehaviour
         }
     }
 
+    private void CheckDirectionFlipped()
+    {
+        if (accomPosX < oldPosX)
+        {
+            isMovingRight = true;
+            isMovingLeft = false;
+        }
+
+        if (accomPosX > oldPosX)
+        {
+            isMovingLeft = true;
+            isMovingRight = false;
+        }
+    }
 
     private void MoveLeft()
     {
@@ -128,6 +152,11 @@ public class AccomSprites : MonoBehaviour
             
         }
 
+    }
+
+    public void FlipAccom()
+    {
+        isFlipped = true;
     }
 
 }

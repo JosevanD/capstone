@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaterColorMove : MonoBehaviour
 {
-    public MeshRenderer mesh;
+    [SerializeField] MeshRenderer mesh;
 
     private Material textureMaterial;
 
@@ -12,11 +12,11 @@ public class WaterColorMove : MonoBehaviour
 
     private bool isMovingLeft;
 
-    public float scrollAmount;
+    [SerializeField] float scrollAmount;
 
-    public GameObject playerRB;
+    [SerializeField] GameObject playerRB;
 
-    public Rigidbody rb;
+    [SerializeField] Rigidbody rb;
 
     private float scrollMagnitude;
 
@@ -26,9 +26,11 @@ public class WaterColorMove : MonoBehaviour
     public float playerPosX;
 
     public bool wsPressed;
+
+    [SerializeField] bool isFlipped;
     //public float posXDiff; 
     //positions Z
-    
+
 
     private 
     // Start is called before the first frame update
@@ -54,19 +56,16 @@ public class WaterColorMove : MonoBehaviour
 
         scrollMagnitude = rb.velocity.magnitude;
 
-        
-
-        if (playerPosX > oldPosX)
+        if (isFlipped == false)
         {
-            isMovingRight = true;
-            isMovingLeft = false;
+            PosCheck();
         }
 
-        if (playerPosX < oldPosX)
+        if (isFlipped == true)
         {
-            isMovingLeft = true;
-            isMovingRight = false;
+            PosCheckFlipped();
         }
+
 
         KeyCheck();
 
@@ -110,4 +109,40 @@ public class WaterColorMove : MonoBehaviour
         yield return new WaitForSeconds(time);
         wsPressed = false;
     }
+
+    private void PosCheck()
+    {
+        if (playerPosX > oldPosX)
+        {
+            isMovingRight = true;
+            isMovingLeft = false;
+        }
+
+        if (playerPosX < oldPosX)
+        {
+            isMovingLeft = true;
+            isMovingRight = false;
+        }
+    }
+
+    private void PosCheckFlipped()
+    {
+        if (playerPosX < oldPosX)
+        {
+            isMovingRight = true;
+            isMovingLeft = false;
+        }
+
+        if (playerPosX > oldPosX)
+        {
+            isMovingLeft = true;
+            isMovingRight = false;
+        }
+    }
+
+    public void FlipWaterColor()
+    {
+        isFlipped = true;
+    }
+
 }
