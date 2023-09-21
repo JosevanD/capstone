@@ -121,4 +121,14 @@ public class BackgroundAudioController : MonoBehaviour
         
     }
 
+    public void TurnOffSfx()
+    {
+        mixer.SetFloat(VolumeController.MIXER_SFX, -80);
+    }
+
+    public void TurnOnSfx()
+    {
+        float sfxVolume = PlayerPrefs.GetFloat(SFX_KEY, 1f);
+        mixer.SetFloat(VolumeController.MIXER_SFX, Mathf.Log10(sfxVolume * 20));
+    }
 }
