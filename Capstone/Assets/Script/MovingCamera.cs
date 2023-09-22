@@ -56,17 +56,7 @@ public class MovingCamera : MonoBehaviour
         }
 
     }
-    /*private void OnTriggerExit(Collider other)
-    {
-        if (other.transform.tag == "Player")
-        {
-            CurrCam.Priority = 0;
-            TargetCam.Priority = 0;
 
-        }
-
-
-    }*/
     IEnumerator StartObject(float time)
     {
         objActivated = true;

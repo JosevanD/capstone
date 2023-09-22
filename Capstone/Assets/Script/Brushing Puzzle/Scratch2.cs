@@ -7,8 +7,13 @@ using Cinemachine;
 public class Scratch2 : MonoBehaviour
 {
     [SerializeField]
-    [Header("Brushing Puzzle Canvas")]
+    [Header("Brushing UI Image")]    
+    private GameObject BrushingUIImage;
+
+    [SerializeField]
+    [Header("Brushing Puzzle CanvasObj")]
     private GameObject BrushingPuzzleCanvasObj;
+
     [SerializeField]
     [Header("Brushing Puzzle interactable object")]
     private GameObject BrushingPuzzleInteractableObj;
@@ -23,14 +28,26 @@ public class Scratch2 : MonoBehaviour
     //public CinemachineVirtualCamera BrushCam;
     public Camera MainCam;
     public Camera BrushCam;
-     
+
+    [Header("Protagonist Camera")]
+    public CinemachineVirtualCamera ProtagonistCam;
+    [Header("Door Camera")]
+    public CinemachineVirtualCamera TargetCam;
+    [Header("Protagonist Object")]
+    public GameObject ProtagonistObject;
+    [Header("Protagonist Object")]
+    public GameObject SettingProtagonistObject;
+    [Header("Max Time of the door Camera")]
+    public float MaxCamTime;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         totalDetection = DetectionObjs.Length;
         DetectionCount = 0;
         charactorController = FindObjectOfType<Charactor_Controller>();
+        //ProtagonistCam.LookAt = ProtagonistObject.transform;
     }
+
 
     // Update is called once per frame
     void Update()
@@ -71,6 +88,7 @@ public class Scratch2 : MonoBehaviour
     void Reveal()
     {
         //Destroy(gameObject);
+
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         StartCoroutine(Countdown(MaxEndingTime));
        
@@ -84,13 +102,33 @@ public class Scratch2 : MonoBehaviour
             yield return new WaitForSeconds(1);
             counter--;
         }
+
+        ProtagonistCam.Priority = 0;
+        TargetCam.Priority = 1;
+        StartCoroutine(StartObject(MaxCamTime));
+        //turn off the UI
+        BrushingUIImage.SetActive(false);
+        //turn off the Protagonist
+        SettingProtagonistObject.SetActive(false);
         MainCam.enabled = true;
         BrushCam.enabled = false;
+
+    }
+
+    IEnumerator StartObject(float time)
+    {
+        
+        yield return new WaitForSeconds(time);
+
+        ProtagonistCam.LookAt = ProtagonistObject.transform;
+        ProtagonistCam.Priority = 1;
+        TargetCam.Priority = 0;
+
+        ProtagonistObject.SetActive(true);
+        charactorController = FindObjectOfType<Charactor_Controller>();
         BrushingPuzzleCanvasObj.SetActive(false);
         BrushingPuzzleInteractableObj.SetActive(false);
         charactorController.isInteracting = false;
-
-
 
     }
 }
