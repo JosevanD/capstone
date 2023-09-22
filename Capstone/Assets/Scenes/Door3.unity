@@ -2309,6 +2309,9 @@ MonoBehaviour:
   - {fileID: 1835876647}
   CurrFlowerPetal: 0
   charactorController: {fileID: 1848936049}
+  EyesImage: {fileID: 315091216}
+  HappyEyes: {fileID: -1589767853, guid: e8b181da73e2be54d94894b2841778a3, type: 3}
+  SadEyes: {fileID: -265810193, guid: 259d1f5b40496544c86f39192b615fad, type: 3}
   FlowerPickingObject: {fileID: 644246935}
   levelEndingObj: {fileID: 318560613}
 --- !u!114 &176252754
@@ -3157,17 +3160,17 @@ PrefabInstance:
     - target: {fileID: 2829378027490341053, guid: 61dd2cb45be50ce4e8b7f030c2de89d0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2829378027490341053, guid: 61dd2cb45be50ce4e8b7f030c2de89d0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2829378027490341053, guid: 61dd2cb45be50ce4e8b7f030c2de89d0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2829378027490341053, guid: 61dd2cb45be50ce4e8b7f030c2de89d0,
         type: 3}
@@ -3274,7 +3277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &232946498
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16100,6 +16103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dfaffc9a027a2a48a257ea5518ccf9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BrushingUIImage: {fileID: 1836954095}
   BrushingPuzzleCanvasObj: {fileID: 983719582}
   BrushingPuzzleInteractableObj: {fileID: 1331779387}
   MaxEndingTime: 3
@@ -16132,6 +16136,7 @@ MonoBehaviour:
   ProtagonistCam: {fileID: 119010213}
   TargetCam: {fileID: 1330217121}
   ProtagonistObject: {fileID: 130399510}
+  SettingProtagonistObject: {fileID: 275629411}
   MaxCamTime: 5
 --- !u!212 &1759026944
 SpriteRenderer:
@@ -17160,7 +17165,7 @@ PrefabInstance:
     - target: {fileID: 4932169065114147660, guid: 30d09a6e580ab5b43a1b869b003504da,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.07
+      value: 6.023
       objectReference: {fileID: 0}
     - target: {fileID: 4932169065114147660, guid: 30d09a6e580ab5b43a1b869b003504da,
         type: 3}
@@ -17170,7 +17175,7 @@ PrefabInstance:
     - target: {fileID: 4932169065114147660, guid: 30d09a6e580ab5b43a1b869b003504da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.12
+      value: 1.163
       objectReference: {fileID: 0}
     - target: {fileID: 4932169065114147660, guid: 30d09a6e580ab5b43a1b869b003504da,
         type: 3}
@@ -19781,7 +19786,7 @@ PrefabInstance:
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.950654
+      value: 4.9036536
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
@@ -19791,7 +19796,7 @@ PrefabInstance:
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.851472
+      value: 4.894472
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}

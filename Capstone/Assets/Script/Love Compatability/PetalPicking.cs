@@ -56,6 +56,19 @@ public class PetalPicking : MonoBehaviour
 
 
         flowerManager.CurrFlowerPetal++;
+        /*if (flowerManager.EyesImage.sprite == flowerManager.HappyEyes)
+            flowerManager.EyesImage.sprite = flowerManager.SadEyes;
+        if (flowerManager.EyesImage.sprite == flowerManager.SadEyes)
+            flowerManager.EyesImage.sprite = flowerManager.HappyEyes;*/
+        if (flowerManager.CurrFlowerPetal % 2 != 0)
+        {
+            
+            flowerManager.EyesImage.sprite = flowerManager.HappyEyes;
+        }
+        if (flowerManager.CurrFlowerPetal % 2 == 0)
+        {
+            flowerManager.EyesImage.sprite = flowerManager.SadEyes;
+        }
         Destroy(gameObject);
 
 

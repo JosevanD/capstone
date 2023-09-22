@@ -16,11 +16,17 @@ public class FlowerManager : MonoBehaviour
     [Header("Player Controller")]
     public Charactor_Controller charactorController;
 
+    [Header("Eye's Sprtie")]
+    public Image EyesImage;
+    public Sprite HappyEyes;
+    public Sprite SadEyes;
+
     [Header("Flower Picking Interactable Object")]
     public GameObject FlowerPickingObject;
 
     [Header("The Level Ending Prefab")]
     public GameObject levelEndingObj;
+
 
 
     void Start()
