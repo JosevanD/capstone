@@ -39,9 +39,11 @@ public class PetalPicking : MonoBehaviour
             out position
             );
         transform.position = FlowerPickingCanvas.transform.TransformPoint(position);
+        flowerManager.FlowerPickingAudioSource.Stop();
+        flowerManager.FlowerPickingAudioSource.PlayOneShot(flowerManager.FlowerPickingClip);
 
 
-    
+
     }
 
     public void OnMouseDrag()

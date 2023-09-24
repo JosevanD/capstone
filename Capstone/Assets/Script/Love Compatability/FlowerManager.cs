@@ -13,6 +13,12 @@ public class FlowerManager : MonoBehaviour
     public GameObject[] FlowerPetals;
     private int FlowerPetalsCounts;
     public int CurrFlowerPetal;
+
+    [Header("Flower Picking SFX")]
+    public AudioClip FlowerPickingClip;
+    [HideInInspector]
+    public AudioSource FlowerPickingAudioSource;
+
     [Header("Player Controller")]
     public Charactor_Controller charactorController;
 
@@ -34,6 +40,7 @@ public class FlowerManager : MonoBehaviour
         charactorController = FindObjectOfType<Charactor_Controller>();
         CurrFlowerPetal = 0;
         FlowerPetalsCounts = FlowerPetals.Length;
+        FlowerPickingAudioSource = GetComponent<AudioSource>();
         foreach (var petalObject in FlowerPetals)
         {
             petalObject.GetComponent<Image>().raycastTarget = false;
