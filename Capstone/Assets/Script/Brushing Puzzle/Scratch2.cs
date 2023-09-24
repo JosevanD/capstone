@@ -18,6 +18,12 @@ public class Scratch2 : MonoBehaviour
     [Header("Brushing Puzzle interactable object")]
     private GameObject BrushingPuzzleInteractableObj;
 
+    
+    private AudioSource SketchingAudioSource;
+
+    [Header("Sketching SFX")]
+    public AudioClip SketchingClip;
+
     private Charactor_Controller charactorController;
     public int MaxEndingTime;
     public GameObject maskPrefab;
@@ -45,6 +51,9 @@ public class Scratch2 : MonoBehaviour
         totalDetection = DetectionObjs.Length;
         DetectionCount = 0;
         charactorController = FindObjectOfType<Charactor_Controller>();
+        SketchingAudioSource = GetComponent<AudioSource>();
+        SketchingAudioSource.clip = SketchingClip;
+        SketchingAudioSource.enabled = false;
         //ProtagonistCam.LookAt = ProtagonistObject.transform;
     }
 
@@ -70,10 +79,12 @@ public class Scratch2 : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             isPressed = true;
+            SketchingAudioSource.enabled = true;
             //Invoke("Reveal", 10);
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            SketchingAudioSource.enabled = false;
             isPressed = false;
         }
 
