@@ -20,7 +20,7 @@ public class SceneTracker : MonoBehaviour
     public GameObject magicDoorPrefab;
     public GameObject triggerDissolveObj;
     //public string currentSceneName;
-    public string[] sceneNames = {"MenuScene","WhiteHallway","Door3","Door4","Door5"};
+    public string[] sceneNames = {"MenuScene","WhiteHallway", "Door1", "Door2", "Door3", "Door4", "Door5"};
     public bool sceneChanged;
 
     [Header("Audio Tracker")]
@@ -30,6 +30,8 @@ public class SceneTracker : MonoBehaviour
     public GameObject pauseCanvas;
 
     [Header("Door Tracker")]
+    public bool isDoor1Dissolved;
+    public bool isDoor2Dissolved;
     public bool isDoor3Dissolved;
     public bool isDoor4Dissolved;
     public bool isDoor5Dissolved;
@@ -158,28 +160,42 @@ public class SceneTracker : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
 
         //whitehallway
-        if (scene.name == sceneNames[1])
+        if (scene.name == "WhiteHallway")
         {
             bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(0);
             //pianotrack
         }
 
+        //door1
+        if (scene.name == "Door1")
+        {
+            bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(3);
+            //ambience
+        }
+
+        //door2
+        if (scene.name == "Door2")
+        {
+            bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(1);
+            //ambience
+        }
+
         //door3
-        if (scene.name == sceneNames[2])
+        if (scene.name == "Door3")
         {
             bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(2);
             //ambience
         }
 
         //door4
-        if (scene.name == sceneNames[3])
+        if (scene.name == "Door4")
         {
             bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(2);
             //ambience
         }
 
         //door5
-        if (scene.name == sceneNames[4])
+        if (scene.name == "Door5")
         {
             bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(2);
             //ambience
@@ -203,6 +219,16 @@ public class SceneTracker : MonoBehaviour
 
     public void CheckDoorDissolved(int doorNo)
     {
+        if (doorNo == 1)
+        {
+            isDoor1Dissolved = true;
+            doorNo = 0;
+        }
+        if (doorNo == 2)
+        {
+            isDoor2Dissolved = true;
+            doorNo = 0;
+        }
         if (doorNo == 3)
         {
             isDoor3Dissolved = true;
@@ -227,9 +253,32 @@ public class SceneTracker : MonoBehaviour
     }
     public void CheckDoorDelete()
     {
+        GameObject door1ToDelete;
+        GameObject door2ToDelete;
         GameObject door3ToDelete;
         GameObject door4ToDelete;
         GameObject door5ToDelete;
+
+        if (isDoor1Dissolved == true)
+        {
+            door1ToDelete = GameObject.Find("Door 1");
+
+            if (door1ToDelete != null)
+            {
+                door1ToDelete.SetActive(false);
+            }
+
+        }
+        if (isDoor2Dissolved == true)
+        {
+            door2ToDelete = GameObject.Find("Door 2");
+
+            if (door2ToDelete != null)
+            {
+                door2ToDelete.SetActive(false);
+            }
+
+        }
 
 
         if (isDoor3Dissolved == true)

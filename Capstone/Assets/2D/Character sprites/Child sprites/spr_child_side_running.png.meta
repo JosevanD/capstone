@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -66,10 +66,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,7 +126,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_child_side_running_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b42ca94a6e5704f99a46221712cd19
+      internalID: 938286143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_side_running_1
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3186eb0bd91134d8bd7f3acc3af761
+      internalID: 741356064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_side_running_2
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0858fff32e6d120488f5ee5d64d9a7b2
+      internalID: -1716223348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_side_running_3
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ef7b7a8800e5d6448e5942957f78415
+      internalID: 409185833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_side_running_4
+      rect:
+        serializedVersion: 2
+        x: 7560
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9ad07578e21f04682323ce696c457d
+      internalID: 1318483195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_side_running_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20c571777d53c243b12aed5dc463f44
+      internalID: -1012753919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_side_running_6
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2d61b77953c9c4cb18f64d7713a81b
+      internalID: -141636636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_side_running_7
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8399c83787757e4eacd5056e569db38
+      internalID: -1248409347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_side_running_8
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6384b5737bc222e44a258c6d4fa0c1b4
+      internalID: 1016239465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_side_running_9
+      rect:
+        serializedVersion: 2
+        x: 7560
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c654936818ddb1448b1e76439a28dce0
+      internalID: -445835708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -137,7 +347,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_child_side_running_2: -1716223348
+      spr_child_side_running_5: -1012753919
+      spr_child_side_running_0: 938286143
+      spr_child_side_running_3: 409185833
+      spr_child_side_running_7: -1248409347
+      spr_child_side_running_1: 741356064
+      spr_child_side_running_6: -141636636
+      spr_child_side_running_4: 1318483195
+      spr_child_side_running_8: 1016239465
+      spr_child_side_running_9: -445835708
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

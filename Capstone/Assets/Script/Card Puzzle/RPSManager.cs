@@ -32,7 +32,7 @@ public class RPSManager : MonoBehaviour
     private void Start()
     {
         charactorController = FindObjectOfType<Charactor_Controller>();
-        Result.text = "Choose Your Card";
+        Result.text = "Choose Your Card From The Right Pile";
         CurrWinedRound = 0;
         isAIWon = false;
         

@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -66,10 +66,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,7 +126,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_child_back_running_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f417d09662aac4aa798c69cc6b1c18
+      internalID: 1274164875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_back_running_1
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2634896b425305b4798d1bc7786f8aad
+      internalID: 2078458266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_back_running_2
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701023097151719459dcc2ad7ee46440
+      internalID: 1857771602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_back_running_3
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea5c222311df5e429502982f74103de
+      internalID: 1789240420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_back_running_4
+      rect:
+        serializedVersion: 2
+        x: 7560
+        y: 1417
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62844e6b32440a46822abbafcfb30d5
+      internalID: 4908748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_back_running_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61a8d6f36fd6d4488e21cf2d52432cb
+      internalID: -180318564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_back_running_6
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857ddce7bbb9ab6478552786929a87bc
+      internalID: -269808823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_back_running_7
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c75576aced91a548a123ed1950eabff
+      internalID: -1739030283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_back_running_8
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aef39458b5e77e4bba064b31a2ec0f8
+      internalID: 1861051627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_child_back_running_9
+      rect:
+        serializedVersion: 2
+        x: 7560
+        y: 0
+        width: 1890
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea984bd75537c34b916d99d8d917b7b
+      internalID: -640428162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -137,7 +347,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_child_back_running_3: 1789240420
+      spr_child_back_running_1: 2078458266
+      spr_child_back_running_5: -180318564
+      spr_child_back_running_9: -640428162
+      spr_child_back_running_6: -269808823
+      spr_child_back_running_7: -1739030283
+      spr_child_back_running_2: 1857771602
+      spr_child_back_running_4: 4908748
+      spr_child_back_running_0: 1274164875
+      spr_child_back_running_8: 1861051627
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
