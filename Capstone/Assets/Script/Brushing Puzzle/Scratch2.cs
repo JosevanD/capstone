@@ -39,6 +39,8 @@ public class Scratch2 : MonoBehaviour
     public CinemachineVirtualCamera ProtagonistCam;
     [Header("Door Camera")]
     public CinemachineVirtualCamera TargetCam;
+    
+
     [Header("Protagonist Object")]
     public GameObject ProtagonistObject;
     [Header("Protagonist Object")]
@@ -54,6 +56,7 @@ public class Scratch2 : MonoBehaviour
         SketchingAudioSource = GetComponent<AudioSource>();
         SketchingAudioSource.clip = SketchingClip;
         SketchingAudioSource.enabled = false;
+        BrushCam.transform.position = ProtagonistCam.transform.position;
         //ProtagonistCam.LookAt = ProtagonistObject.transform;
     }
 
@@ -88,7 +91,7 @@ public class Scratch2 : MonoBehaviour
             isPressed = false;
         }
 
-        if (DetectionCount/ totalDetection >= 0.7f )
+        if (DetectionCount/ totalDetection >= 0.5f )
         {
             
             Reveal();
@@ -132,6 +135,7 @@ public class Scratch2 : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         ProtagonistCam.LookAt = ProtagonistObject.transform;
+        ProtagonistCam.Follow = ProtagonistObject.transform;
         ProtagonistCam.Priority = 1;
         TargetCam.Priority = 0;
 
