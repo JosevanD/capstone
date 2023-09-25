@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class DragNDropCard : MonoBehaviour
 {
@@ -11,14 +13,45 @@ public class DragNDropCard : MonoBehaviour
     public GameObject objectDragToPos;
     private bool isLocked;
     public float DropDistance;
-    
+
+    [Header("Card Puzzle Canvas")]
+    public Canvas RPSCanvas;
     
     Vector2 objectInitPos;
 
     public void Start()
     {
+        isLocked = false;
         rpsManager = FindObjectOfType<RPSManager>();
         objectInitPos = objectToDrag.transform.position;
+    }
+    public void DragObject(BaseEventData data)
+    {
+
+        PointerEventData pointerData = (PointerEventData)data;
+        Vector2 position;
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)RPSCanvas.transform,
+            pointerData.position,
+            RPSCanvas.worldCamera,
+            out position
+            );
+        if (!isLocked)
+        {
+
+            transform.position = RPSCanvas.transform.TransformPoint(position);
+
+        }
+        
+        //Debug.Log("Dragging");
+        /*if (!isLocked)
+        {
+
+            objectToDrag.transform.position = Input.mousePosition;
+
+        }*/
+
+
     }
     public void DragObject()
     {
@@ -32,7 +65,6 @@ public class DragNDropCard : MonoBehaviour
 
 
     }
-
     public void DropObject()
     {
         float Distance = Vector3.Distance(objectToDrag.transform.position, objectDragToPos.transform.position);
