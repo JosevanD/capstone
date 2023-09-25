@@ -6,28 +6,34 @@ using TMPro;
 
 public class RPSManager : MonoBehaviour
 {
-    [SerializeField]
-    private TMP_Text Result;
+    
+    public TMP_Text Result;
     public Image AIChoice;
 
     public string[] Choices;
-    public Sprite Rock, Paper, Scissors;
+    public Sprite Rock, Paper, Scissors, AIRock, AIPaper, AIScissors;
 
     [SerializeField]
     private int TotalWinedRound;
     private int CurrWinedRound;
 
+    [Header("The Waiting Time for Each Round")]
+    public int WaitForSeconds;
+
+
     private bool isAIWined;
     private void Start()
     {
+        Result.text = "Choose Your Card";
         CurrWinedRound = 0;
         isAIWined = false;
+        
     }
     private void Update()
     {
         if (CurrWinedRound >= TotalWinedRound)
         {
-            //Debug.Log("complete");
+            Debug.Log("complete");
         
         }
     }
@@ -58,7 +64,7 @@ public class RPSManager : MonoBehaviour
 
                     }
 
-                    AIChoice.sprite = Rock;
+                    AIChoice.sprite = AIRock;
                     break;
 
                 case "Paper":
@@ -80,7 +86,7 @@ public class RPSManager : MonoBehaviour
 
                     }
 
-                    AIChoice.sprite = Paper;
+                    AIChoice.sprite = AIPaper;
                     break;
 
                 case "Scissors":
@@ -102,7 +108,7 @@ public class RPSManager : MonoBehaviour
 
                     }
 
-                    AIChoice.sprite = Scissors;
+                    AIChoice.sprite = AIScissors;
                     break;
 
             }
@@ -110,8 +116,8 @@ public class RPSManager : MonoBehaviour
 
         }
 
-        Debug.Log("isWined " + isAIWined);
-        if (isAIWined == true) 
+        //Debug.Log("isWined " + isAIWined);
+        else if (isAIWined == true) 
         {
             
             switch (myChoice)
@@ -119,22 +125,24 @@ public class RPSManager : MonoBehaviour
             case "Rock":
                 Result.text = "The rock destroys the scissors, you win!";
                 CurrWinedRound++;
-                AIChoice.sprite = Scissors;
+                AIChoice.sprite = AIScissors;
                 break;
 
             case "Paper":
                 Result.text = "The paper covers the rock, you win!";
                 CurrWinedRound++;
-                AIChoice.sprite = Rock;
+                AIChoice.sprite = AIRock;
                 break;
 
             case "Scissors":                 
                 Result.text = "The scissors cuts the paper, you win!";
                 CurrWinedRound++;
-                AIChoice.sprite = Paper;
+                AIChoice.sprite = AIPaper;
                 break;
         }
 
         }
     }
+
+   
 }
