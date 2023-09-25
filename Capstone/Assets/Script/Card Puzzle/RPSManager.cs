@@ -17,16 +17,24 @@ public class RPSManager : MonoBehaviour
     private int TotalWinedRound;
     private int CurrWinedRound;
 
+    [Header("Card Puzzle Canvas")]
+    public GameObject CardPuzzleGameobject;
+
     [Header("The Waiting Time for Each Round")]
     public int WaitForSeconds;
 
+    [Header("The Ending Door")]
+    public GameObject TheEndingDoorObj;
 
-    private bool isAIWined;
+    private Charactor_Controller charactorController;
+
+    private bool isAIWon;
     private void Start()
     {
+        charactorController = FindObjectOfType<Charactor_Controller>();
         Result.text = "Choose Your Card";
         CurrWinedRound = 0;
-        isAIWined = false;
+        isAIWon = false;
         
     }
     private void Update()
@@ -34,14 +42,18 @@ public class RPSManager : MonoBehaviour
         if (CurrWinedRound >= TotalWinedRound)
         {
             Debug.Log("complete");
-        
+            Result.text = "You Won the Battle!";
+            CardPuzzleGameobject.SetActive(false);
+            
+            TheEndingDoorObj.SetActive(true);
+            charactorController.isInteracting = false;
         }
     }
     public void Play(string myChoice)
     {
         string randomChoice = Choices[Random.Range(0, Choices.Length)];
 
-        if (isAIWined == false)
+        if (isAIWon == false)
         {
             switch (randomChoice)
             {
@@ -59,7 +71,7 @@ public class RPSManager : MonoBehaviour
 
                         case "Scissors":
                             Result.text = "The rock destroys the scissors, you lose!";
-                            isAIWined = true;
+                            isAIWon = true;
                             break;
 
                     }
@@ -72,7 +84,7 @@ public class RPSManager : MonoBehaviour
                     {
                         case "Rock":
                             Result.text = "The paper covers the rock, you lose!";
-                            isAIWined = true;
+                            isAIWon = true;
                             break;
 
                         case "Paper":
@@ -99,7 +111,7 @@ public class RPSManager : MonoBehaviour
 
                         case "Paper":
                             Result.text = "The scissors cuts the paper, you Lose!";
-                            isAIWined = true;
+                            isAIWon = true;
                             break;
 
                         case "Scissors":
@@ -117,7 +129,7 @@ public class RPSManager : MonoBehaviour
         }
 
         //Debug.Log("isWined " + isAIWined);
-        else if (isAIWined == true) 
+        else if (isAIWon == true) 
         {
             
             switch (myChoice)
