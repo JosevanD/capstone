@@ -17,8 +17,9 @@ public class Scratch2 : MonoBehaviour
     [SerializeField]
     [Header("Brushing Puzzle interactable object")]
     private GameObject BrushingPuzzleInteractableObj;
-
-    
+    [SerializeField]
+    [Header("Percentage of Sketching")]
+    [Range(0,1)]private float SketchingPercentage;
     private AudioSource SketchingAudioSource;
 
     [Header("Sketching SFX")]
@@ -91,7 +92,7 @@ public class Scratch2 : MonoBehaviour
             isPressed = false;
         }
 
-        if (DetectionCount/ totalDetection >= 0.5f )
+        if (DetectionCount/ totalDetection >=SketchingPercentage)
         {
             
             Reveal();
