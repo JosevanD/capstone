@@ -7,7 +7,8 @@ public class PopupUI : MonoBehaviour
     // Start is called before the first frame update
     public GameObject popupUI;
     private bool isPopupActive;
- 
+    [SerializeField] Animator popupAnimator;
+    [SerializeField] bool popupIsFlipped = true;
     void Start()
     {
         isPopupActive = false;
@@ -46,12 +47,27 @@ public class PopupUI : MonoBehaviour
     private void ActivatePopup()
     {
         popupUI.SetActive(true);
+        Flip();
         isPopupActive = true;
     }
     
     private void DeactivatePopup()
     {
         popupUI.SetActive(false);
+        
         isPopupActive = false;
+    }
+
+    private void Flip()
+    {
+        if (popupIsFlipped == true)
+        {
+            popupAnimator.SetBool("Flip", true);
+        }
+
+        if (popupIsFlipped == false)
+        {
+            popupAnimator.SetBool("Flip", false);
+        }
     }
 }

@@ -7,7 +7,7 @@ public class InteractActivate : MonoBehaviour
     [Header("Objects")]
     public GameObject objectToActivate;
     public GameObject objectToDeActivate;
-    public GameObject popupUI;
+    //public GameObject popupUI;
 
     [Header("Interact Conditions")]
     private bool inTrigger;
@@ -35,7 +35,7 @@ public class InteractActivate : MonoBehaviour
         if (collider.tag == "Player" && interactToPlay == true)
         {
             inTrigger = true;
-            popupUI.SetActive(true);
+            //popupUI.SetActive(true);
         }
 
         if (hasObjectToDeactivate == true)
@@ -49,7 +49,7 @@ public class InteractActivate : MonoBehaviour
         if (collider.tag == "Player" && interactToPlay == true)
         {
             inTrigger = false;
-            popupUI.SetActive(false);
+            //popupUI.SetActive(false);
         }
 
         if (collider.tag == "Player" && interactToPlay == false)
@@ -73,7 +73,7 @@ public class InteractActivate : MonoBehaviour
 
         if (interactToPlay == true)
         {
-            popupUI.SetActive(false);
+            //popupUI.SetActive(false);
         }
 
     }
