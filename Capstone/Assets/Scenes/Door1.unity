@@ -563,7 +563,7 @@ PrefabInstance:
     - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4595664784719105430, guid: 80a6b4b0e3125e94fa110399980bef62,
         type: 3}
@@ -2686,7 +2686,7 @@ PrefabInstance:
     - target: {fileID: 1580008214337739138, guid: 4a3023630fcab634b81851a6b812e1d3,
         type: 3}
       propertyPath: currentDoorNumber
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3738878026473947381, guid: 4a3023630fcab634b81851a6b812e1d3,
         type: 3}
@@ -3553,13 +3553,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6386718771915295711, guid: ffdc757efbfead849a4158ee8336922b,
         type: 3}
+      propertyPath: m_Pitch
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386718771915295711, guid: ffdc757efbfead849a4158ee8336922b,
+        type: 3}
       propertyPath: m_Volume
       value: 0.524
       objectReference: {fileID: 0}
     - target: {fileID: 9213430577854085413, guid: ffdc757efbfead849a4158ee8336922b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9213430577854085413, guid: ffdc757efbfead849a4158ee8336922b,
         type: 3}
