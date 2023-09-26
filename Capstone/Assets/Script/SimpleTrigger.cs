@@ -24,13 +24,16 @@ public class SimpleTrigger : MonoBehaviour
         if (collider.tag == "Player" && objToActivate != null)
         {
             objToActivate.SetActive(true);
+            gameObject.SetActive(false);
         }
 
         if (collider.tag == "Player" && objToDeActivate != null)
         {
             objToDeActivate.SetActive(false);
+            gameObject.SetActive(false);
         }
 
+       
     }
 
 }
