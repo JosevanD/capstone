@@ -13,18 +13,28 @@ public class CutsceneClick : MonoBehaviour
     [SerializeField] GameObject objToActivate;
     [SerializeField] bool hasObjToActivate;
     private int arrayLength;
+    [SerializeField] private GameObject playerObj;
 
     [Header("Audio")]
 
     [SerializeField] private GameObject bgAudioObject;
-
     [SerializeField] private int audioNo;
-
     [SerializeField] bool isChangeAudio;
+    [SerializeField] private int previousAudioNo;
 
-    
+    [Header("Fade")]
+
+    [SerializeField] private float fadeOutTime;
+    [SerializeField] private Animator fadeAnimator;
+
     // Start is called before the first frame update
     void Start()
+    {
+        
+        
+        
+    }
+    private void OnEnable()
     {
         //Audio
         if (isChangeAudio == true)
@@ -37,7 +47,6 @@ public class CutsceneClick : MonoBehaviour
         //Set Array and Timer
         arrayLength = cutsceneObjects.Length;
         StartCoroutine(CutsceneCounter(cutsceneTimes[i]));
-        
     }
 
     // Update is called once per frame
@@ -76,7 +85,51 @@ public class CutsceneClick : MonoBehaviour
             }
             bgAudioObject.GetComponent<BackgroundAudioController>().TurnOnSfx();
             advanceUI.SetActive(false);
-            gameObject.SetActive(false);
+
+            StartCoroutine(CutsceneFadeOut(fadeOutTime));
+            
+        }
+    }
+
+    IEnumerator CutsceneFadeOut(float time)
+    {
+        fadeAnimator.SetBool("fadeout", true);
+        yield return new WaitForSeconds(time);
+        CutsceneReset();
+        changeBackAudio();
+        gameObject.SetActive(false);
+    }
+
+    public void CutsceneStopPlayer()
+    {
+        if (playerObj != null)
+        {
+            playerObj.SetActive(false);
+        }
+        
+    }
+
+    public void CustceneActivatePlayer()
+    {
+        if (playerObj != null)
+        {
+            playerObj.SetActive(true);
+        }
+    }
+
+    private void CutsceneReset()
+    {
+        canClick = false;
+        cutsceneObjects[i].SetActive(false);
+        i = 0;
+        cutsceneObjects[i].SetActive(true);
+    }
+
+    private void changeBackAudio()
+    {
+        if (isChangeAudio == true)
+        {
+            bgAudioObject.GetComponent<BackgroundAudioController>().ChangeAudio(previousAudioNo);
         }
     }
 }
