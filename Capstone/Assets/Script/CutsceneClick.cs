@@ -13,16 +13,19 @@ public class CutsceneClick : MonoBehaviour
     [SerializeField] GameObject objToActivate;
     [SerializeField] bool hasObjToActivate;
     private int arrayLength;
+    [SerializeField] private GameObject playerObj;
 
     [Header("Audio")]
 
     [SerializeField] private GameObject bgAudioObject;
-
     [SerializeField] private int audioNo;
-
     [SerializeField] bool isChangeAudio;
 
-    
+    [Header("Fade")]
+
+    [SerializeField] private float fadeOutTime;
+    [SerializeField] private Animator fadeAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,7 +79,26 @@ public class CutsceneClick : MonoBehaviour
             }
             bgAudioObject.GetComponent<BackgroundAudioController>().TurnOnSfx();
             advanceUI.SetActive(false);
-            gameObject.SetActive(false);
+
+            StartCoroutine(CutsceneFadeOut(fadeOutTime));
+            
         }
+    }
+
+    IEnumerator CutsceneFadeOut(float time)
+    {
+        fadeAnimator.SetBool("fadeout", true);
+        yield return new WaitForSeconds(time);
+        gameObject.SetActive(false);
+    }
+
+    public void CutsceneStopPlayer()
+    {
+        playerObj.SetActive(false);
+    }
+
+    public void CustceneActivatePlayer()
+    {
+        playerObj.SetActive(true);
     }
 }

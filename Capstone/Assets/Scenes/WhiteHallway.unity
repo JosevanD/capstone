@@ -3336,6 +3336,8 @@ MonoBehaviour:
   bgAudioObject: {fileID: 0}
   audioNo: 1
   isChangeAudio: 1
+  fadeOutTime: 1
+  fadeAnimator: {fileID: 2004746426}
 --- !u!1 &1582322935
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,6 +5729,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56537f3195e61e340bc524e2484eb48d, type: 3}
+--- !u!95 &2004746426 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8987654984963209823, guid: 56537f3195e61e340bc524e2484eb48d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2004746425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2129313166 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3295059863554056564, guid: 56537f3195e61e340bc524e2484eb48d,

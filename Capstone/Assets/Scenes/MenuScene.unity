@@ -611,6 +611,12 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!95 &1490014165 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7887959173366874865, guid: ec23715fa500fdd40a3e33f74b3d6b6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1282744709334897633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1647527964 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8928614412244743282, guid: ec23715fa500fdd40a3e33f74b3d6b6b,
@@ -714,6 +720,11 @@ PrefabInstance:
     - target: {fileID: 1282744708947752396, guid: ec23715fa500fdd40a3e33f74b3d6b6b,
         type: 3}
       propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282744708956607750, guid: ec23715fa500fdd40a3e33f74b3d6b6b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1282744709738256945, guid: ec23715fa500fdd40a3e33f74b3d6b6b,
@@ -845,6 +856,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1282744709867606936, guid: ec23715fa500fdd40a3e33f74b3d6b6b,
+        type: 3}
+      propertyPath: m_text
+      value: "by team 100%g\n\n\n\nCalista Reyner\n~\nNarrative \nAnimation\r\nConcept
+        Art\nIllustration\r\nTech art\r\n\n\n\nHoang Tri Cuong Nguyen (Owen)\n~\n2D
+        Concept Art\nIllustration\nCharacter design\r\n3D Environment\r\n\n\n\nYong
+        Jian Mao (Issac)\n~\nProgrammer\r\nLevel Design\r\nPuzzle Design\r\nTech
+        art\r\n\n\n\nJosevan Danusastra\n~\nProducer\r\nAudio\r\nUnity Developer\nTech
+        Art\n\n\n\nExternal Credits\n\nMusic ~ Timothy Naylor\n\nSounds ~ freesound.org
+        / soundsnap.com\n\nBell Sound ~ Denji Santos @ YT\n\nFootsteps Sound ~ Nox_Sound\n\nSee
+        Through Shader ~ N.I. Alysha\n\nFoliage Shader ~ Quibli\n\n\nSpecial Thanks\n~\nDoug
+        Wilson\nSam Crisp\nAspen Forster\nand All Playtesters\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 2266173249199057944, guid: ec23715fa500fdd40a3e33f74b3d6b6b,
         type: 3}
@@ -1024,6 +1048,8 @@ MonoBehaviour:
   bgAudioObject: {fileID: 954834197}
   audioNo: 0
   isChangeAudio: 0
+  fadeOutTime: 1
+  fadeAnimator: {fileID: 1490014165}
 --- !u!1 &1282744709334897638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 731963205991120214, guid: ec23715fa500fdd40a3e33f74b3d6b6b,
