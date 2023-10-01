@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 199027667}
   - component: {fileID: 199027666}
   m_Layer: 5
-  m_Name: Choco Piece (2)
+  m_Name: choco_whole_2
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1053,7 +1053,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 761213737}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1886,7 +1886,7 @@ RectTransform:
   - {fileID: 841015506}
   - {fileID: 1269453948}
   m_Father: {fileID: 1788723046}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2126,7 +2126,7 @@ RectTransform:
   m_Children:
   - {fileID: 1374729238}
   m_Father: {fileID: 1788723046}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3234,18 +3234,18 @@ RectTransform:
   m_GameObject: {fileID: 761213736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 903475651}
-  - {fileID: 1525157895}
   - {fileID: 199027665}
-  - {fileID: 1339415347}
   - {fileID: 1946386464}
-  - {fileID: 1589626228}
   - {fileID: 1970959639}
-  - {fileID: 1811589320}
   - {fileID: 1375594698}
+  - {fileID: 1525157895}
+  - {fileID: 1339415347}
+  - {fileID: 1589626228}
+  - {fileID: 1811589320}
   - {fileID: 1610177077}
   - {fileID: 814243085}
   - {fileID: 1607547741}
@@ -3255,7 +3255,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1509, y: 1155}
+  m_SizeDelta: {x: 1531, y: 1175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761213740
 MonoBehaviour:
@@ -3277,7 +3277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 184169292, guid: 01373e9c875b6af40aa77bcb7f509bba, type: 3}
+  m_Sprite: {fileID: 1054389515, guid: 01373e9c875b6af40aa77bcb7f509bba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3443,7 +3443,7 @@ GameObject:
   - component: {fileID: 814243087}
   - component: {fileID: 814243086}
   m_Layer: 5
-  m_Name: Chocolate Bowl
+  m_Name: bowl_empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3467,7 +3467,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 524, y: -26}
-  m_SizeDelta: {x: 379, y: 302}
+  m_SizeDelta: {x: 324, y: 258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &814243086
 MonoBehaviour:
@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1839171001, guid: 773ba90657cdcd34dbc4601efaa38daa, type: 3}
+  m_Sprite: {fileID: -1332679146, guid: 340e1520b44aa464ba4789a9a5f023f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3649,7 +3649,7 @@ GameObject:
   - component: {fileID: 903475653}
   - component: {fileID: 903475652}
   m_Layer: 5
-  m_Name: Choco Piece (1)
+  m_Name: choco_whole_1
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4008,7 +4008,7 @@ RectTransform:
   - {fileID: 758627512}
   - {fileID: 1569087100}
   m_Father: {fileID: 1788723046}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5042,7 +5042,7 @@ GameObject:
   - component: {fileID: 1339415349}
   - component: {fileID: 1339415348}
   m_Layer: 5
-  m_Name: Broken Piece 2
+  m_Name: choco_break_2
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5061,11 +5061,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 761213737}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124, y: -50}
+  m_AnchoredPosition: {x: -124, y: -48}
   m_SizeDelta: {x: 444, y: 276}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339415348
@@ -5173,7 +5173,7 @@ GameObject:
   - component: {fileID: 1375594700}
   - component: {fileID: 1375594699}
   m_Layer: 5
-  m_Name: Choco Piece (5)
+  m_Name: choco_whole_5
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5192,11 +5192,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 761213737}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199, y: -266}
+  m_AnchoredPosition: {x: -196, y: -263}
   m_SizeDelta: {x: 327, y: 268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375594699
@@ -5269,7 +5269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1389290487
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5283,7 +5283,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1788723046}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6331,7 +6331,7 @@ GameObject:
   - component: {fileID: 1525157897}
   - component: {fileID: 1525157896}
   m_Layer: 5
-  m_Name: Broken Piece
+  m_Name: choco_break_1
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6350,11 +6350,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 761213737}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86, y: -211}
+  m_AnchoredPosition: {x: 88, y: -209}
   m_SizeDelta: {x: 405, y: 295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525157896
@@ -7095,7 +7095,7 @@ GameObject:
   - component: {fileID: 1589626230}
   - component: {fileID: 1589626229}
   m_Layer: 5
-  m_Name: Broken Piece 3
+  m_Name: choco_break_3
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7114,11 +7114,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 761213737}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 118, y: -50}
+  m_AnchoredPosition: {x: 121, y: -46}
   m_SizeDelta: {x: 380, y: 223}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589626229
@@ -7186,7 +7186,7 @@ GameObject:
   - component: {fileID: 1607547742}
   - component: {fileID: 1607547745}
   m_Layer: 5
-  m_Name: Choco Piece ALL
+  m_Name: choco_break_together
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7209,7 +7209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: -176}
+  m_AnchoredPosition: {x: -126, y: -170.2}
   m_SizeDelta: {x: 880, y: 535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1607547742
@@ -7326,7 +7326,7 @@ GameObject:
   - component: {fileID: 1610177079}
   - component: {fileID: 1610177078}
   m_Layer: 5
-  m_Name: Broken Piece 5
+  m_Name: choco_break_5
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7349,7 +7349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -207, y: -278}
+  m_AnchoredPosition: {x: -208.8, y: -278}
   m_SizeDelta: {x: 410, y: 319}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610177078
@@ -7487,7 +7487,7 @@ RectTransform:
   - {fileID: 263545899}
   - {fileID: 1686355471}
   m_Father: {fileID: 1788723046}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8245,12 +8245,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1389290487}
   - {fileID: 378558101}
   - {fileID: 1656655701}
   - {fileID: 942987311}
   - {fileID: 1796767380}
   - {fileID: 422686940}
-  - {fileID: 1389290487}
   - {fileID: 761213737}
   m_Father: {fileID: 1846534937}
   m_RootOrder: 6
@@ -8293,7 +8293,7 @@ RectTransform:
   - {fileID: 1478501799}
   - {fileID: 131492528}
   m_Father: {fileID: 1788723046}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8362,7 +8362,7 @@ GameObject:
   - component: {fileID: 1811589322}
   - component: {fileID: 1811589321}
   m_Layer: 5
-  m_Name: Broken Piece 4
+  m_Name: choco_break_4
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8381,11 +8381,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 761213737}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -361, y: -146}
+  m_AnchoredPosition: {x: -358, y: -137}
   m_SizeDelta: {x: 401, y: 278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1811589321
@@ -8896,7 +8896,7 @@ GameObject:
   - component: {fileID: 1946386466}
   - component: {fileID: 1946386465}
   m_Layer: 5
-  m_Name: Choco Piece (3)
+  m_Name: choco_whole_3
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8915,11 +8915,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 761213737}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109, y: -48}
+  m_AnchoredPosition: {x: 109, y: -56}
   m_SizeDelta: {x: 273, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1946386465
@@ -8988,7 +8988,7 @@ GameObject:
   - component: {fileID: 1970959641}
   - component: {fileID: 1970959640}
   m_Layer: 5
-  m_Name: Choco Piece (4)
+  m_Name: choco_whole_4
   m_TagString: Choco Pieces
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9007,11 +9007,11 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 761213737}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -392, y: -151}
+  m_AnchoredPosition: {x: -388, y: -145}
   m_SizeDelta: {x: 326, y: 213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970959640
