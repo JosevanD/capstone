@@ -8,23 +8,31 @@ using UnityEngine.EventSystems;
 public class ChocoPieces : MonoBehaviour, IPointerDownHandler
 {
     private BreakingChocoPieces breakingChocoPieces;
+    [Header("Broken Choco Sprite")]
+    public Sprite BrokenChocolateSprite;
+
+    public GameObject BrokenChocolate;
     //private float screenShakerTimer;
 
     //[Header("Screen Shake")]
     //public CinemachineVirtualCamera CinemachineVirtualCamera;
     private void Start()
     {
+        BrokenChocolate.SetActive(false);
         breakingChocoPieces = FindObjectOfType<BreakingChocoPieces>();
         
 
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        breakingChocoPieces.SwitchChocoSprite(gameObject);
+        breakingChocoPieces.SwitchChocoSprite();
         breakingChocoPieces.brokenChocolateCount++;
         breakingChocoPieces.ShakeCamera(2f, 0.1f);
         gameObject.GetComponent<Image>().raycastTarget = false;
-    
+        BrokenChocolate.SetActive(true);
+        gameObject.SetActive(false);
+        //gameObject.GetComponent<Image>().sprite = BrokenChocolateSprite;
+
     }
 
     /*public void ShakeCamera(float intensity, float time)
