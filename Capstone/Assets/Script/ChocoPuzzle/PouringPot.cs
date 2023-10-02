@@ -3,123 +3,108 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 //using UnityEngine.UI;
 
-public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class PouringPot : MonoBehaviour
 {
-    public Animator potAnimator;
-    public Animator bowlAnimator;
-    public AnimationClip bowlAnimationClip;
+    public Animator MatchaBowlAnimator;
+    public Animator MilkBowlAnimator;
+    
 
-    public ChocoPuzzleManager chocoPuzzleManager;
-    //public GameObject theNextPanel;
+    private ChocoPuzzleManager chocoPuzzleManager;
+   
     public GameObject theCurrPanel;
-   // public GameObject MixingMatchMilkPanel;
-   //public GameObject StirringChocolatePanel;
 
-    public float playerHoldingTimer;
-    public float RequiredTimer;
+
+    //public float playerHoldingTimer;
+    //public float RequiredTimer;
 
     public bool isPouringFinished;
-    private bool isPressingOn;
+
+    [Header("Drag N Drop")]
+    public GameObject objectToDrag;
+    public GameObject objectDragToPos;
+    //public float DropDistance;
+
+
+    public bool isLocked = false;
+
+
+    Vector2 objectInitPos;
 
     [Header("Pouring Milk SFX")]
     public AudioSource PouringMilkAudioSource;
     public AudioClip PouringMilkClip;
 
+
+
+    public float MaxFillingTimer;
+    public float FillingTimer;
+    public float DetectionDistance;
+
+    public GameObject MilkBowl;
+    public GameObject MatchaBowl;
+
+    public GameObject EmptyMilkBowl;
+    public GameObject FilledMatchaBowl;
+    private bool isFinished;
+
+
     private void Start()
     {
-        playerHoldingTimer = 0;
+        //playerHoldingTimer = 0;
         isPouringFinished = false;
-        isPressingOn = false;
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         PouringMilkAudioSource = GetComponent<AudioSource>();
-    }
-    public void OnPointerDown(PointerEventData eventData)
-    {
-
-        /*if (playerHoldingTimer <= RequiredTimer) 
-        {
-            isPressingOn = true;
-            potAnimator.SetBool("isPouringMilk", true);
-            //potAnimator.speed = 1;
-            bowlAnimator.SetBool("isFillingMilk", true);
-            bowlAnimator.speed = 1;
-            playerHoldingTimer += Time.deltaTime;
-
-
-
-        }*/
-        potAnimator.SetBool("isPouringMilk", true);
-        bowlAnimator.SetBool("isFillingMilk", true);
-        PouringMilkAudioSource.PlayOneShot(PouringMilkClip);
-        StartCoroutine(Countdown( 4 + chocoPuzzleManager.MaxEndingTime));
-        //PlayAndWaitForAnim(bowlAnimator, "FillingMilk");
-
+        objectInitPos = objectToDrag.transform.position;
     }
 
-    public void OnPointerUp(PointerEventData eventData) 
-    {
-        potAnimator.SetBool("isPouringMilk", false);
-        isPressingOn = false;
-        bowlAnimator.speed = 0;
-    }
+
 
     private void Update()
     {
-        //Debug.Log("isPressingon " + isPressingOn);
-        /*if (isPressingOn)
+        if (isFinished == false)
         {
-            playerHoldingTimer += Time.deltaTime;
+            float Distance = Vector3.Distance(MilkBowl.transform.position, MatchaBowl.transform.position);
+            if (Distance <= DetectionDistance && !isFinished)
+            {
+                if (!PouringMilkAudioSource.isPlaying)
+                {
+                    PouringMilkAudioSource.PlayOneShot(PouringMilkClip);
+                }
+                MilkBowlAnimator.SetBool("isPouring", true);
+                //MatchaBowlAnimator.SetBool("isFillingMilk", true);
+                FillingTimer += Time.deltaTime;
+                //Debug.Log("collide" + gameObject);
+
+            }
+            //not in the range 
+            if (Distance > DetectionDistance)
+            {
+                MilkBowlAnimator.SetBool("isPouring", false);
+                //MatchaBowlAnimator.SetBool("isFillingMilk", false);
+                PouringMilkAudioSource.Stop();
+
+            }
+            //finished
+            if (FillingTimer >= MaxFillingTimer)
+            {
+                MilkBowlAnimator.SetBool("isPouring", false);
+                //MatchaBowlAnimator.SetBool("isFillingMilk", false);
+                isFinished = true;
+                MatchaBowl.GetComponent<Image>().enabled = false;
+                MilkBowl.GetComponent<Image>().enabled = false;
+                FilledMatchaBowl.SetActive(true);
+                EmptyMilkBowl.SetActive(true);
+                StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
+                //Debug.Log("111");
+
+            }
 
         }
-        if (!isPressingOn)
-        {
-            potAnimator.SetBool("isPouringMilk", false);
-
-        }
-        if (playerHoldingTimer >= RequiredTimer)
-        {
 
 
-            StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
-
-
-
-        }
-        */
-
-        //Debug.Log(Mathf.CeilToInt(bowlAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime * bowlAnimationClip.length));
-        if (bowlAnimator.GetCurrentAnimatorStateInfo(0).IsName("FillingMilk"))
-        {
-            Debug.Log("It's finished");
-           
-
-        }
-        
-
-
-    }
-
-    public IEnumerator PlayAndWaitForAnim(Animator targetAnim, string stateName)
-    {
-        targetAnim.Play(stateName);
-
-        //Wait until we enter the current state
-        while (!targetAnim.GetCurrentAnimatorStateInfo(0).IsName(stateName))
-        {
-            yield return null;
-        }
-
-        //Now, Wait until the current state is done playing
-        while ((targetAnim.GetCurrentAnimatorStateInfo(0).normalizedTime) % 1 < 0.99f)
-        {
-            yield return null;
-        }
-
-        //Done playing. Do something below!
-        Debug.Log("Animation is finished");
-        StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
     }
 
     IEnumerator Countdown(int seconds)
@@ -138,4 +123,17 @@ public class PouringPot : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
 
     }
+
+
+    public void DragObject()
+    {
+        if (!isLocked && !isFinished)
+        {
+            objectToDrag.transform.position = Input.mousePosition;
+
+        }
+
+
+    }
+
 }
