@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8733aa24e78f5aa4daf1e7c6480bbf34
+guid: b07316d7c2c427f4695f17414433c519
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bg_0
+      name: pouring_milk_anim_0
       rect:
         serializedVersion: 2
-        x: 191
-        y: 368
-        width: 1509
-        height: 1155
+        x: 0
+        y: 0
+        width: 945
+        height: 1890
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ad5fdab8e1cbcf429f47dce654f4872
-      internalID: -868214921
+      spriteID: 0fe7fd61af0d54741bfe151bd3bbdd62
+      internalID: -2026960918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pouring_milk_anim_1
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 945
+        height: 1890
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66d3b11f865238438c771ed256305d3
+      internalID: 960597782
       vertices: []
       indices: 
       edges: []
@@ -127,7 +148,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b3132228d8bbcd94d91d3b6fbab04639
+    spriteID: dc94bb87d3eef474787fa5eb2733ecd6
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +156,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bg_0: -868214921
+      pouring_milk_anim_0: -2026960918
+      pouring_milk_anim_1: 960597782
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
