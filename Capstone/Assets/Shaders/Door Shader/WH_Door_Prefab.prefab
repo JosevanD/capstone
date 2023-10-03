@@ -593,6 +593,8 @@ MonoBehaviour:
   dissolveRate: 0.0125
   refreshRate: 0.025
   startToAppear: 0
+  hasDissolved: 0
+  doorNo: 0
   appearSound: {fileID: 6432408765095930151}
   dissolveSound: {fileID: 6432408765095930151}
   doorAnimator: {fileID: 1890413801912751180}
@@ -600,6 +602,7 @@ MonoBehaviour:
   doorCollider: {fileID: 6045445110456146274}
   frameCollider: {fileID: 2982634679220429727}
   enterDoorCollider: {fileID: 4244679750804714186}
+  blockageCollider: {fileID: 0}
 --- !u!114 &3738878026473947381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +620,8 @@ MonoBehaviour:
   dissolveRate: 0.0125
   refreshRate: 0.025
   startToAppear: 0
+  hasDissolved: 0
+  doorNo: 0
   appearSound: {fileID: 6432408765095930151}
   dissolveSound: {fileID: 6432408765095930151}
   doorAnimator: {fileID: 1890413801912751180}
@@ -624,6 +629,7 @@ MonoBehaviour:
   doorCollider: {fileID: 6045445110456146274}
   frameCollider: {fileID: 2982634679220429727}
   enterDoorCollider: {fileID: 4244679750804714186}
+  blockageCollider: {fileID: 0}
 --- !u!82 &6432408765095930151
 AudioSource:
   m_ObjectHideFlags: 0
