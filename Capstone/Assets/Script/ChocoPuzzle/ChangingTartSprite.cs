@@ -45,6 +45,7 @@ public class ChangingTartSprite : MonoBehaviour
             }
             if (Distance <= DetectionDistance && FillingTimer >= MaxFillingTimer)
             {
+                BowlAnimator.SetBool("isFillingTart", false);
                 CurrImage.sprite = FilledSprite;
                 DragNDropForTart.TartCount++;
                 gameObject.GetComponent<ChangingTartSprite>().enabled = false;
