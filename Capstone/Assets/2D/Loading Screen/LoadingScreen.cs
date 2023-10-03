@@ -12,6 +12,7 @@ public class LoadingScreen : MonoBehaviour
     [SerializeField] private GameObject chapterNameObj;
     [SerializeField] private GameObject controlsTextObj;
     [SerializeField] private GameObject walkingLoadingAnimObj;
+    [SerializeField] private GameObject pauseButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,19 +26,26 @@ public class LoadingScreen : MonoBehaviour
         chapterNameObj.SetActive(true);
 
         loadingScreenAnimator.SetBool("_LoadingExit", true);
-
-        
-        
     }
 
     public void DestroyLoadingScreen()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void DestroyControlsText()
     {
         controlsTextObj.SetActive(false);
         walkingLoadingAnimObj.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        pauseButton.SetActive(true);
+    }
+
+    public void ChapterNameExit()
+    {
+        loadingScreenAnimator.SetBool("_ChapterExit", true);
     }
 }
