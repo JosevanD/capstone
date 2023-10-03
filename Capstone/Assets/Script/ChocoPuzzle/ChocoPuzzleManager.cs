@@ -52,7 +52,7 @@ public class ChocoPuzzleManager : MonoBehaviour
 
         ChocoPuzzleObjects[ChocoPuzzleObjectsNum].SetActive(true);
         Debug.Log("Panel Number 0 is " + ChocoPuzzleObjectsNum);
-        Debug.Log("ISPanelfinished " + IsPanelFinished);
+        Debug.Log("IsPanelfinished " + IsPanelFinished);
         currPanels = CurrPanels.BreakingChoco;
         IsPanelFinished = false;
         //EndingTimer = 0;

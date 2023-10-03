@@ -376,16 +376,16 @@ RectTransform:
   m_GameObject: {fileID: 57089085}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.25, y: 3.25, z: 0.8125}
+  m_LocalScale: {x: 1, y: 1, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1478501799}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -213.2, y: -154.8}
-  m_SizeDelta: {x: -50, y: -50}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 216, y: 24}
+  m_SizeDelta: {x: 255, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &57089087
 BoxCollider2D:
@@ -428,9 +428,9 @@ MonoBehaviour:
   BowlAnimator: {fileID: 131492529}
   MaxFillingTimer: 3
   FillingTimer: 0
-  FilledSprite: {fileID: 21300000, guid: 122814fbcdf6031449d367f4d8f9fed1, type: 3}
+  FilledSprite: {fileID: 1543068403, guid: f3af3925f75b99b4ca12c185d5bcd960, type: 3}
   CurrImage: {fileID: 57089089}
-  DetectionDistance: 100
+  DetectionDistance: 150
   MatchaChocoBowl: {fileID: 131492527}
 --- !u!114 &57089089
 MonoBehaviour:
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee876162dbdf3f0428d7964a43abbc28, type: 3}
+  m_Sprite: {fileID: 522990018, guid: 7a3078f9737199e409e285ed001f46fd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -680,16 +680,16 @@ RectTransform:
   m_GameObject: {fileID: 131492527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1796767380}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -424, y: 31}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -510, y: 36}
+  m_SizeDelta: {x: 379, y: 305}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &131492529
 Animator:
@@ -701,7 +701,7 @@ Animator:
   m_GameObject: {fileID: 131492527}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 380838d13f6788f4f87220b1768454a7, type: 2}
+  m_Controller: {fileID: 9100000, guid: f783754bfdda2bf43870b9a4204af819, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 131492527}
-  DetectionRadius: 100
+  DetectionRadius: 50
   theCurrPanel: {fileID: 1796767379}
   TotalTartCount: 0
   Tarts: []
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: db5d4adc46cc6d1409060be256bd9fc3, type: 3}
+  m_Sprite: {fileID: 1052903461, guid: 1fe61ac9438142c42914246b64a5fa9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3952,7 +3952,7 @@ RectTransform:
   m_GameObject: {fileID: 936418170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.25, y: 3.25, z: 0.8125}
+  m_LocalScale: {x: 1, y: 1, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1478501799}
@@ -3960,8 +3960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.6, y: -201.1}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 389, y: -95}
+  m_SizeDelta: {x: 271, y: 264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &936418172
 BoxCollider2D:
@@ -4004,9 +4004,9 @@ MonoBehaviour:
   BowlAnimator: {fileID: 131492529}
   MaxFillingTimer: 3
   FillingTimer: 0
-  FilledSprite: {fileID: 21300000, guid: 122814fbcdf6031449d367f4d8f9fed1, type: 3}
+  FilledSprite: {fileID: -41680506, guid: 288e10d126c2a3c4093512cce2bac75c, type: 3}
   CurrImage: {fileID: 936418174}
-  DetectionDistance: 100
+  DetectionDistance: 150
   MatchaChocoBowl: {fileID: 131492527}
 --- !u!114 &936418174
 MonoBehaviour:
@@ -4028,7 +4028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee876162dbdf3f0428d7964a43abbc28, type: 3}
+  m_Sprite: {fileID: 933509902, guid: b87922e7b5287b54c82a0e9684c64c3f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5727,7 +5727,7 @@ RectTransform:
   m_GameObject: {fileID: 1425010513}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.25, y: 3.25, z: 0.8125}
+  m_LocalScale: {x: 1, y: 1, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1478501799}
@@ -5735,8 +5735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 416.9, y: -193.5}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 315, y: -229}
+  m_SizeDelta: {x: 294, y: 277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1425010515
 BoxCollider2D:
@@ -5779,9 +5779,9 @@ MonoBehaviour:
   BowlAnimator: {fileID: 131492529}
   MaxFillingTimer: 3
   FillingTimer: 0
-  FilledSprite: {fileID: 21300000, guid: 122814fbcdf6031449d367f4d8f9fed1, type: 3}
+  FilledSprite: {fileID: 447185371, guid: a8e5b73e9c87dc14d99e2d43c63b4d77, type: 3}
   CurrImage: {fileID: 1425010517}
-  DetectionDistance: 100
+  DetectionDistance: 150
   MatchaChocoBowl: {fileID: 131492527}
 --- !u!114 &1425010517
 MonoBehaviour:
@@ -5803,7 +5803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee876162dbdf3f0428d7964a43abbc28, type: 3}
+  m_Sprite: {fileID: 1944562462, guid: 58200a75b0518e643967cfdf5a153f11, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6890,7 +6890,7 @@ RectTransform:
   m_GameObject: {fileID: 1567997853}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2500002, y: 3.2500002, z: 0.81250006}
+  m_LocalScale: {x: 1, y: 1, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1478501799}
@@ -6898,8 +6898,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 195.7, y: -155.8}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 84, y: -117}
+  m_SizeDelta: {x: 287, y: 264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1567997855
 BoxCollider2D:
@@ -6942,9 +6942,9 @@ MonoBehaviour:
   BowlAnimator: {fileID: 131492529}
   MaxFillingTimer: 3
   FillingTimer: 0
-  FilledSprite: {fileID: 21300000, guid: 122814fbcdf6031449d367f4d8f9fed1, type: 3}
+  FilledSprite: {fileID: -1448699727, guid: f64a4761c168a6f48bb26b362fd86da6, type: 3}
   CurrImage: {fileID: 1567997857}
-  DetectionDistance: 100
+  DetectionDistance: 150
   MatchaChocoBowl: {fileID: 131492527}
 --- !u!114 &1567997857
 MonoBehaviour:
@@ -6966,7 +6966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee876162dbdf3f0428d7964a43abbc28, type: 3}
+  m_Sprite: {fileID: -40068272, guid: fabd4a4556a480c4d8f0852cefc4b366, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7529,7 +7529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1656655701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8335,7 +8335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1796767380
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8353,10 +8353,10 @@ RectTransform:
   m_Father: {fileID: 1788723046}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1531, y: 1175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1796767381
 MonoBehaviour:
@@ -8378,7 +8378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 92bb74c6ed0a1b34cbf1c4bb0389e84b, type: 3}
+  m_Sprite: {fileID: 2048639392, guid: d4be7ef04d2474549b397b19d6b4fb7a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
