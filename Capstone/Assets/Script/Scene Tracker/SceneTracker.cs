@@ -190,7 +190,7 @@ public class SceneTracker : MonoBehaviour
         //door4
         if (scene.name == "Door4")
         {
-            bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(2);
+            bgAudioController.GetComponent<BackgroundAudioController>().ChangeAudio(5);
             //ambience
         }
 
