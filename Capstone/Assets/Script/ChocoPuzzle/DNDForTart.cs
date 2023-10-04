@@ -33,14 +33,7 @@ public class DNDForTart : MonoBehaviour
         objectInitPos = objectToDrag.transform.position;
     }
 
-    /*public void OnMouseDrag()
-    {
-
-        objectToDrag.transform.position = Input.mousePosition;
-        pressTime += Time.deltaTime;
-
-
-    }*/
+    
     public void OnMouseDrag()
     {
         objectToDrag.transform.position = Input.mousePosition;

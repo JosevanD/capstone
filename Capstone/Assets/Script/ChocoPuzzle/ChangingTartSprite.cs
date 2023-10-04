@@ -16,34 +16,6 @@ public class ChangingTartSprite : MonoBehaviour
     private DNDForTart DragNDropForTart;
     private bool isFinished;
 
-    //public Sprite Fi
-
-    /*private void OnTriggerStay2D(Collider2D other)
-    {
-        
-
-        if (other.tag == "Matcha Choco Bowl" && !isFinished)
-        {
-            BowlAnimator.SetBool("isFillingTart", true);
-            FillingTimer += Time.deltaTime;
-            Debug.Log(other);
-        }
-        if (other.tag == null && isFinished)
-        {
-            BowlAnimator.SetBool("isFillingTart", false);
-
-        }
-
-        if (other.tag == "Match Choco Bowl" && FillingTimer >= MaxFillingTimer && !isFinished)
-        {
-            CurrImage.sprite = FilledSprite;
-            DragNDropForTart.TartCount++;
-
-            isFinished = true;
-
-        }
-    }*/
-
     private void Start()
     {
         DragNDropForTart = FindObjectOfType<DNDForTart>();
@@ -73,6 +45,7 @@ public class ChangingTartSprite : MonoBehaviour
             }
             if (Distance <= DetectionDistance && FillingTimer >= MaxFillingTimer)
             {
+                BowlAnimator.SetBool("isFillingTart", false);
                 CurrImage.sprite = FilledSprite;
                 DragNDropForTart.TartCount++;
                 gameObject.GetComponent<ChangingTartSprite>().enabled = false;

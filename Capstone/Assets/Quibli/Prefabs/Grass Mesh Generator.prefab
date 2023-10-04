@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655166c02f85a4db1bd3b960ac1d38e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 93304eade28ce4f809bd90d2aa6736bf, type: 2}
+  material: {fileID: 2100000, guid: 4408a76b5ab694adab5ff0b14505f7be, type: 2}
   patchSize: {x: 0.5, y: 0.5}
   lod0:
     planeCount: 4
