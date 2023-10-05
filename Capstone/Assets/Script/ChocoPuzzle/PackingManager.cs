@@ -11,10 +11,17 @@ public class PackingManager : MonoBehaviour
     public Image PackingBoxImage;
     public GameObject PlacingParent;
     public GameObject theCurrPanel;
+
+    public GameObject LidObj;
+    public GameObject plate;
     public Image BoxCover;
     // public GameObject PackingParent;
     public bool isPlacing;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        
+    }
     void Start()
     {
         currSpriteNum = 0;
@@ -51,11 +58,16 @@ public class PackingManager : MonoBehaviour
         if (currSpriteNum == ImageSprites.Length - 2)
         {
             //Debug.Log("put the cover on");
+            plate.SetActive(false);
+            LidObj.SetActive(true);
             BoxCover.raycastTarget = true;
            
         }
         if (currSpriteNum >= ImageSprites.Length-1)
         {
+            
+            
+
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
             
         }
