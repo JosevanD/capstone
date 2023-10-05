@@ -126,7 +126,7 @@ public class PouringMatchMilk : MonoBehaviour
                 MatchaMilkBowlAnimator.GetComponent<Image>().enabled = false;
                 FilledWhiteChocoBowl.SetActive(true);
                 //EmptyMatchaMilkBowl.SetActive(true);
-                Invoke("nextPanel", 2);
+                Invoke("nextPanel", 1);
                 //Debug.Log("111");
 
             }

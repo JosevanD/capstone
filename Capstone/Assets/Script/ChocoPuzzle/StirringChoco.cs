@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class StirringChoco : MonoBehaviour
 {
-   private ChocoPuzzleManager chocoPuzzleManager;
+    private ChocoPuzzleManager chocoPuzzleManager;
+
+    private PouringMatchMilk pouringMatchMilk;
     public GameObject objectToDrag;
     //public GameObject theNextPanel;
     public GameObject theCurrPanel;
     public Animator MatchaChocoAnimator;
+
 
     private bool isPressingOn;
 
@@ -27,6 +30,7 @@ public class StirringChoco : MonoBehaviour
     private void Start()
     {
         isFinished = false;
+        pouringMatchMilk = FindObjectOfType<PouringMatchMilk>();
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         StirringAudioSource = GetComponent<AudioSource>();
         StirringAudioSource.clip = StirringClip;
@@ -82,11 +86,11 @@ public class StirringChoco : MonoBehaviour
 
         if (pressTime >= totalPressTime)
         {
-            isFinished = true;
             MatchaChocoAnimator.SetBool("isStirring", false);
+            isFinished = true;
             gameObject.GetComponent<Image>().enabled = false;
-            StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
-            Debug.Log("Stirring Choco is finished");
+            StartCoroutine(Countdown(3));
+            
         }
     }
 }
