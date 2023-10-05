@@ -8,8 +8,7 @@ public class DragNDropOven : MonoBehaviour
 {
     public GameObject objectToDrag;
     public GameObject objectDragToPos;
-    //public GameObject theNextPanel;
-    //public GameObject theCurrPanel;
+
     public GameObject ObjParent;
     private SwitchingOven switchingOven;
 
@@ -19,6 +18,7 @@ public class DragNDropOven : MonoBehaviour
 
     public bool isLocked = false;
 
+    public bool isHeated = false;
 
     Vector2 objectInitPos;
 
@@ -52,28 +52,35 @@ public class DragNDropOven : MonoBehaviour
     public void DropObject()
     {
         float Distance = Vector3.Distance(objectToDrag.transform.position, objectDragToPos.transform.position);
-        if (Distance < DropDistance)
+        if (!isHeated)
         {
-            isLocked = true;
-            objectToDrag.transform.position = objectDragToPos.transform.position;
-            //PuzzleCanvas.enabled = false;
-            //chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            //chocoPuzzleManager.charactorController.isInteracting = false;
-            
-            //theNextPanel.SetActive(true);
-            //theCurrPanel.SetActive(false);
-            theOvenButton.interactable = true;
-            switchingOven.isInOven = true;
-            switchingOven.isOpened = true;
-            Debug.Log("Puzzle Solved");
-            ObjParent.SetActive(false);
+            if (Distance < DropDistance)
+            {
+                isLocked = true;
+                objectToDrag.transform.position = objectDragToPos.transform.position;
+                theOvenButton.interactable = true;
+                switchingOven.isInOven = true;
+                switchingOven.isOpened = true;
+                switchingOven.MicrowaveOpenedObj.GetComponent<Image>().sprite = switchingOven.OpenoffFood;
+
+                ObjParent.SetActive(false);
+
+            }
+            else
+            {
+                objectToDrag.transform.position = objectInitPos;
+
+            }
 
         }
-        else 
+        else if (isHeated)
         {
-            objectToDrag.transform.position = objectInitPos;
-        
+            objectDragToPos.transform.position = objectInitPos;
+
+            //if (Distance < DropDistance)
+
         }
+        
     
     }
     private void Update()

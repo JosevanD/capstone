@@ -12,7 +12,7 @@ public class SwitchingOven : MonoBehaviour
     public GameObject theCurrPanel;
     private ChocoPuzzleManager chocoPuzzleManager;
 
-    public Button CurrentButton;
+    
     public Sprite OvenOpenedSprite;
     public Sprite OvenClosedSprite;
     public GameObject Chocolatebowl;
@@ -27,6 +27,21 @@ public class SwitchingOven : MonoBehaviour
     //public GameObject OvenDoor;
     private int ImageCount = 0;
 
+    private DragNDropOven dragNDropOven;
+
+    [Header("Microwave Game objects ")]
+    public GameObject MicrowaveClosedObj;
+    public GameObject MicrowaveOpenedObj;
+
+    [Header("Microwave Images ")]
+    public Sprite CloseOffRed, CloseOnRed, CloseOnGreen, OpenOffRed, OpenoffFood, OpenOnGreen;
+
+
+
+    [Header("Microwave Button")]
+    public Button MicrowaveClosedButton;
+    public Button MicrowaveOpenedButton;
+
     [Header("Microwave SFX")]
     public AudioSource MicrowaveAudioSource;
     public AudioClip MicrowaveClip;
@@ -35,6 +50,7 @@ public class SwitchingOven : MonoBehaviour
     void Start()
     {
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        dragNDropOven = FindObjectOfType<DragNDropOven>();
         MicrowaveAudioSource = GetComponent<AudioSource>();
         ObjMatchaParent.SetActive(false);
         isOpened = false;
@@ -46,25 +62,41 @@ public class SwitchingOven : MonoBehaviour
     public void OnPointerDownPutIN()
     {
         //Sprite CurrentSprite;
+        //opened without food inside
         if (isOpened = true && isInOven == false)
         {
-            CurrentButton.image.sprite = OvenClosedSprite;
-            CurrentButton.interactable = false;
+            //CurrentButton.image.sprite = OvenClosedSprite;
+            MicrowaveOpenedObj.SetActive(false);
+            MicrowaveClosedObj.SetActive(true);
+            MicrowaveClosedObj.GetComponent<Image>().sprite = CloseOffRed;
+            //CurrentButton.interactable = false;
+            //MicrowaveClosedObj.GetComponent<Button>().interactable = false;
             //isHeating = true;
             isOpened = false;
 
         }
         if (isOpened == false && isInOven == false)
         {
-            CurrentButton.image.sprite = OvenOpenedSprite;
-            CurrentButton.interactable = false;
+            //CurrentButton.image.sprite = OvenOpenedSprite;
+            MicrowaveClosedObj.SetActive(false);
+            MicrowaveOpenedObj.SetActive(true);
+           // MicrowaveOpenedObj.GetComponent<Button>().interactable = false;
+            MicrowaveOpenedObj.GetComponent<Image>().sprite = OpenOffRed;
+            //CurrentButton.interactable = false;
             ObjMatchaParent.SetActive(true);
             isOpened = true;
         }
+        
+
         if (isOpened == false && isInOven == true)
         {
-            CurrentButton.image.sprite = OvenClosedSprite;
-            CurrentButton.interactable = false;
+            //CurrentButton.image.sprite = OvenClosedSprite;
+
+            MicrowaveOpenedObj.SetActive(false);
+            MicrowaveClosedObj.SetActive(true);
+            MicrowaveClosedObj.GetComponent<Image>().sprite = CloseOnRed;
+            //MicrowaveClosedObj.GetComponent<Button>().interactable = false;
+            //CurrentButton.interactable = false;
             MicrowaveAudioSource.PlayOneShot(MicrowaveClip);
             //ObjMatchaParent.SetActive(true);
             isHeating = true;
@@ -73,43 +105,21 @@ public class SwitchingOven : MonoBehaviour
         }
         if (isOpened == true && isFinishedHeating)
         {
-            CurrentButton.image.sprite = OvenOpenedSprite;
-            CurrentButton.interactable = false;
-            Chocolatebowl.GetComponent<Image>().sprite = MeltedChocoSprite;
+            //CurrentButton.image.sprite = OvenOpenedSprite;
 
-            StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
+            MicrowaveClosedObj.SetActive(false);
+            MicrowaveOpenedObj.SetActive(true);
+            MicrowaveOpenedObj.GetComponent<Button>().interactable = false;
+
+            MicrowaveOpenedObj.GetComponent<Image>().sprite = OpenoffFood;
+            
+            dragNDropOven.isHeated = true;
+            dragNDropOven.isLocked = false;
+            //StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
             isOpened = true;
         }
 
-        /*if (ImageCount < Images.Length - 1)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                ImageCount++;
-                Images[ImageCount].SetActive(true);
-
-                Debug.Log("Current Image No is " + ImageCount);
-
-                Images[ImageCount - 1].SetActive(false);
-
-                Debug.Log("last Image No is " + ImageCount);
-
-
-
-
-            }
-            if (ImageCount >= Images.Length - 1)
-            {
-                Debug.Log("Oven opened / closed");
-
-                
-            }
-
-        }*/
-        //CurrentSprite = OvenOpenedSprite;
-
-        //ObjMatchaParent.SetActive(true);
     }
 
     IEnumerator Countdown(int seconds)
@@ -146,7 +156,13 @@ public class SwitchingOven : MonoBehaviour
             isHeating = false;
             isInOven = false;
             isFinishedHeating = true;
-            CurrentButton.interactable = true;
+            MicrowaveOpenedObj.SetActive(false);
+            MicrowaveClosedObj.SetActive(true);
+            MicrowaveClosedObj.GetComponent<Image>().sprite = CloseOnGreen;
+            //MicrowaveClosedObj.GetComponent<Button>().interactable = true;
+            //CurrentButton.interactable = true;
+
+
             Debug.Log("Heating Finished " );
         }
     }
