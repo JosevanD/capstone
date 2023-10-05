@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StirringChoco : MonoBehaviour
 {
-    public ChocoPuzzleManager chocoPuzzleManager;
+   private ChocoPuzzleManager chocoPuzzleManager;
     public GameObject objectToDrag;
     //public GameObject theNextPanel;
     public GameObject theCurrPanel;
@@ -17,12 +18,15 @@ public class StirringChoco : MonoBehaviour
 
     public float totalPressTime = 0f;
 
+    private bool isFinished = false;
+
     [Header("Stirring SFX")]
     public AudioSource StirringAudioSource;
     public AudioClip StirringClip;
 
     private void Start()
     {
+        isFinished = false;
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         StirringAudioSource = GetComponent<AudioSource>();
         StirringAudioSource.clip = StirringClip;
@@ -31,13 +35,17 @@ public class StirringChoco : MonoBehaviour
     }
     public void OnMouseDrag()
     {
-        isPressingOn = true;
-        objectToDrag.transform.position = Input.mousePosition;
-        MatchaChocoAnimator.SetBool("isFilling", false);
-        MatchaChocoAnimator.SetBool("isStirring", true);
-        StirringAudioSource.enabled = true;
-        MatchaChocoAnimator.speed = 1;
-        pressTime += Time.deltaTime;
+        if (isFinished == false) 
+        {
+            isPressingOn = true;
+            objectToDrag.transform.position = Input.mousePosition;
+            //MatchaChocoAnimator.SetBool("isFilling", false);
+            MatchaChocoAnimator.SetBool("isStirring", true);
+            StirringAudioSource.enabled = true;
+            MatchaChocoAnimator.speed = 1;
+            pressTime += Time.deltaTime;
+        }
+        
 
 
     }
@@ -45,7 +53,7 @@ public class StirringChoco : MonoBehaviour
     {
         //pressTime = Time.time - pressTime;
         MatchaChocoAnimator.SetBool("isStirring", false);
-        Debug.Log("press Time is " + pressTime);
+        //Debug.Log("press Time is " + pressTime);
         MatchaChocoAnimator.speed = 0;
         StirringAudioSource.enabled = false;
         pressTime = 0;
@@ -74,10 +82,9 @@ public class StirringChoco : MonoBehaviour
 
         if (pressTime >= totalPressTime)
         {
-            /*chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            chocoPuzzleManager.charactorController.isInteracting = true;
-            theNextPanel.SetActive(true);
-            theCurrPanel.SetActive(false);*/
+            isFinished = true;
+            MatchaChocoAnimator.SetBool("isStirring", false);
+            gameObject.GetComponent<Image>().enabled = false;
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
             Debug.Log("Stirring Choco is finished");
         }
