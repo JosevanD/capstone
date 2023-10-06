@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 7155711}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 100
+  DropDistance: 150
   isLocked: 0
 --- !u!114 &7155715
 MonoBehaviour:
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 279823242}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 100
+  DropDistance: 150
   isLocked: 0
 --- !u!114 &279823246
 MonoBehaviour:
@@ -1761,7 +1761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 336426337}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 100
+  DropDistance: 150
   isLocked: 0
 --- !u!114 &336426341
 MonoBehaviour:
@@ -2191,7 +2191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &422686940
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7770,7 +7770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1656655701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9815,7 +9815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 2056741235}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 100
+  DropDistance: 150
   isLocked: 0
 --- !u!114 &2056741239
 MonoBehaviour:
@@ -10145,7 +10145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 2113322999}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 100
+  DropDistance: 150
   isLocked: 0
 --- !u!114 &2113323003
 MonoBehaviour:

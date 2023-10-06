@@ -13,10 +13,7 @@ public class Charactor_Controller : MonoBehaviour
 
     public float groundDrag;
 
-    public float jumpForce;
-    public float jumpCooldown;
     public float airMultiplier;
-    bool readyToJump;
 
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
@@ -53,7 +50,7 @@ public class Charactor_Controller : MonoBehaviour
         rb.freezeRotation = true;
         isInteracting = false;
 
-        readyToJump = true;
+        
 
         FootStepAudioSource = GetComponent<AudioSource>();
         FootStepAudioSource.clip = FootStepClip;
@@ -139,18 +136,7 @@ public class Charactor_Controller : MonoBehaviour
         }
     }
 
-    private void Jump()
-    {
-        // reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
-    private void ResetJump()
-    {
-        readyToJump = true;
-    }
-
+    
 
     IEnumerator StopAudio(float time)
     {
