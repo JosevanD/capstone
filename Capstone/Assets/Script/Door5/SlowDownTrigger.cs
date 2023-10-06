@@ -20,7 +20,6 @@ public class SlowDownTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             CharactorController.moveSpeed = Mathf.Lerp(CharactorController.moveSpeed, MaxSpeed, SlowDownSpeed);
-            Debug.Log("Touched");
 
         }
     }
