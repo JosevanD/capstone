@@ -60,6 +60,7 @@ Material:
   m_ValidKeywords:
   - BILLBOARD_ROTATION_EACH_FACE
   - _USE_FILL_TEXTURE
+  - _WIND
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -75,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Shape_Texture:
-        m_Texture: {fileID: 2800000, guid: 4a194e3d54f6841b985d228129dd4b40, type: 3}
+        m_Texture: {fileID: 2800000, guid: ce42a47cd35914ff38b5fa109e5f0b46, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -143,14 +144,14 @@ Material:
     - BILLBOARD_FACE_CAMERA_POSITION: 0
     - BILLBOARD_ROTATION: 1
     - Billboard_Scale: 1
-    - Clip_Threshold: 0.577
-    - Fill_Impact: 0.5
+    - Clip_Threshold: 0.38
+    - Fill_Impact: 0.33
     - Fill_Scale: 1
     - Fresnel_Power: 1
-    - Fresnel_Sharpness: 0.5
+    - Fresnel_Sharpness: 0.1
     - Offset_Along_Normal: 0
     - Wind: 0
-    - Wind_Speed: 0.1
+    - Wind_Speed: 0.05
     - Wind_Strength: 0.2
     - Wind_Turbulence: 1
     - _AlphaClip: 0
@@ -175,14 +176,14 @@ Material:
     - _QueueControl: -1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ShadowStrength: 0.333
+    - _ShadowStrength: 0.1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
     - _USE_FILL_TEXTURE: 1
-    - _WIND: 0
+    - _WIND: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
