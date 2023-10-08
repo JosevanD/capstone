@@ -12,13 +12,15 @@ public class DragNDropOven : MonoBehaviour
     public GameObject ObjParent;
     private SwitchingOven switchingOven;
 
-    public Button theOvenButton;
+    
     private ChocoPuzzleManager chocoPuzzleManager;
     public float DropDistance;
 
     public bool isLocked = false;
 
     public bool isHeated = false;
+
+    public Vector2 TargetPos2;
 
     Vector2 objectInitPos;
 
@@ -30,8 +32,10 @@ public class DragNDropOven : MonoBehaviour
     void Start()
     {
         objectInitPos = objectToDrag.transform.position;
+        TargetPos2 = objectInitPos;
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         switchingOven = FindObjectOfType<SwitchingOven>();
+
         //charactorController = FindObjectOfType<Charactor_Controller>();
 
     }
@@ -58,27 +62,33 @@ public class DragNDropOven : MonoBehaviour
             {
                 isLocked = true;
                 objectToDrag.transform.position = objectDragToPos.transform.position;
-                theOvenButton.interactable = true;
-                switchingOven.isInOven = true;
-                switchingOven.isOpened = true;
-                switchingOven.MicrowaveOpenedObj.GetComponent<Image>().sprite = switchingOven.OpenoffFood;
-
-                ObjParent.SetActive(false);
-
+               
+                switchingOven.ObjsInPosition++;
+                //ObjParent.SetActive(false);
+                gameObject.SetActive(false);
+                
             }
             else
             {
                 objectToDrag.transform.position = objectInitPos;
-
+               
             }
 
         }
         else if (isHeated)
         {
-            objectDragToPos.transform.position = objectInitPos;
+            
 
             //if (Distance < DropDistance)
+            float Distance2 = Vector3.Distance(objectToDrag.transform.position, TargetPos2);
+            if (Distance2 < DropDistance)
+            {
+                isLocked = true;
+                objectToDrag.transform.position = TargetPos2;
 
+                switchingOven.ObjsInPosition++;
+                gameObject.SetActive(false);
+            }
         }
         
     
@@ -86,5 +96,8 @@ public class DragNDropOven : MonoBehaviour
     private void Update()
     {
         //Debug.Log("is locked" + isLocked);
+
+        if (isHeated)
+            isLocked = false;
     }
 }
