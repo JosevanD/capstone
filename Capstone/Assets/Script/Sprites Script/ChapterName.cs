@@ -6,7 +6,7 @@ public class ChapterName : MonoBehaviour
 {
 
     [SerializeField] private GameObject objToActivate;
-    [SerializeField] private Behaviour compToActivate;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class ChapterName : MonoBehaviour
         if (objToActivate != null)
         {
             objToActivate.SetActive(true);
-            compToActivate.enabled = true;
+            
         }
     }
 
