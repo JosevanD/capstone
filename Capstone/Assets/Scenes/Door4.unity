@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 7155711}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 150
+  DropDistance: 300
   isLocked: 0
 --- !u!114 &7155715
 MonoBehaviour:
@@ -430,7 +430,7 @@ MonoBehaviour:
   FillingTimer: 0
   FilledSprite: {fileID: 1543068403, guid: f3af3925f75b99b4ca12c185d5bcd960, type: 3}
   CurrImage: {fileID: 57089089}
-  DetectionDistance: 150
+  DetectionDistance: 300
   MatchaChocoBowl: {fileID: 131492527}
 --- !u!114 &57089089
 MonoBehaviour:
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 279823242}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 150
+  DropDistance: 300
   isLocked: 0
 --- !u!114 &279823246
 MonoBehaviour:
@@ -1723,7 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 336426337}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 150
+  DropDistance: 300
   isLocked: 0
 --- !u!114 &336426341
 MonoBehaviour:
@@ -3254,7 +3254,7 @@ MonoBehaviour:
   isLocked: 0
   MaxFillingTimer: 3
   FillingTimer: 0
-  DetectionDistance: 175
+  DetectionDistance: 350
   MatchaMilkObj: {fileID: 758627511}
   WhiteChocoObj: {fileID: 1420306392}
   FilledWhiteChocoBowl: {fileID: 926796715}
@@ -3277,7 +3277,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &761213737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4077,7 +4077,7 @@ MonoBehaviour:
   FillingTimer: 0
   FilledSprite: {fileID: -41680506, guid: 288e10d126c2a3c4093512cce2bac75c, type: 3}
   CurrImage: {fileID: 936418174}
-  DetectionDistance: 150
+  DetectionDistance: 300
   MatchaChocoBowl: {fileID: 131492527}
 --- !u!114 &936418174
 MonoBehaviour:
@@ -4890,7 +4890,7 @@ MonoBehaviour:
   PouringMilkClip: {fileID: 8300000, guid: 7b3f80b6179aa954fb78a83e435f6f0a, type: 3}
   MaxFillingTimer: 4
   FillingTimer: 0
-  DetectionDistance: 200
+  DetectionDistance: 350
   MilkBowl: {fileID: 1269453947}
   MatchaBowl: {fileID: 841015502}
   EmptyMilkBowl: {fileID: 2045877070}
@@ -6090,7 +6090,7 @@ MonoBehaviour:
   FillingTimer: 0
   FilledSprite: {fileID: 447185371, guid: a8e5b73e9c87dc14d99e2d43c63b4d77, type: 3}
   CurrImage: {fileID: 1425010517}
-  DetectionDistance: 150
+  DetectionDistance: 300
   MatchaChocoBowl: {fileID: 131492527}
 --- !u!114 &1425010517
 MonoBehaviour:
@@ -7330,7 +7330,7 @@ MonoBehaviour:
   FillingTimer: 0
   FilledSprite: {fileID: -1448699727, guid: f64a4761c168a6f48bb26b362fd86da6, type: 3}
   CurrImage: {fileID: 1567997857}
-  DetectionDistance: 150
+  DetectionDistance: 300
   MatchaChocoBowl: {fileID: 131492527}
 --- !u!114 &1567997857
 MonoBehaviour:
@@ -7576,7 +7576,7 @@ MonoBehaviour:
   ChocolateBowl: {fileID: 814243084}
   FilledChocolateBowl: {fileID: 1451668413, guid: d7d2341d8604d154e8a73ddda74f349b,
     type: 3}
-  DropDistance: 100
+  DropDistance: 300
   isLocked: 0
 --- !u!114 &1607547743
 MonoBehaviour:
@@ -7951,7 +7951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1656655701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8940,6 +8940,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4672271811334000226, guid: 60d011b39b490d24bb51cc6a921ef4bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7673011197902619791, guid: 60d011b39b490d24bb51cc6a921ef4bf,
         type: 3}
       propertyPath: m_text
@@ -10014,7 +10019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 2056741235}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 150
+  DropDistance: 300
   isLocked: 0
 --- !u!114 &2056741239
 MonoBehaviour:
@@ -10420,7 +10425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDrag: {fileID: 2113322999}
   objectDragToPos: {fileID: 1042763882}
-  DropDistance: 150
+  DropDistance: 300
   isLocked: 0
 --- !u!114 &2113323003
 MonoBehaviour:
