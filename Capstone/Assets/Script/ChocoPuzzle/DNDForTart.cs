@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DNDForTart : MonoBehaviour
 {
@@ -61,6 +62,8 @@ public class DNDForTart : MonoBehaviour
     {
         if (TartCount >= TotalTartCount)
         {
+            BowlAudioSource.Stop();
+            gameObject.GetComponent<Image>().enabled = false;
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
         }

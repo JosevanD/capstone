@@ -27,7 +27,7 @@ public class ChocoPieces : MonoBehaviour, IPointerDownHandler
     {
         breakingChocoPieces.SwitchChocoSprite();
         breakingChocoPieces.brokenChocolateCount++;
-        breakingChocoPieces.ShakeCamera(2f, 0.1f);
+        //breakingChocoPieces.ShakeCamera(2f, 0.1f);
         gameObject.GetComponent<Image>().raycastTarget = false;
         BrokenChocolate.SetActive(true);
         gameObject.SetActive(false);

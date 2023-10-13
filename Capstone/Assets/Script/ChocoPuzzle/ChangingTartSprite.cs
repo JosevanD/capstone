@@ -24,7 +24,7 @@ public class ChangingTartSprite : MonoBehaviour
     {
         if (isFinished == false) 
         {
-            float Distance = Vector3.Distance(MatchaChocoBowl.transform.position, gameObject.transform.position);
+            float Distance = Vector2.Distance(MatchaChocoBowl.transform.position, gameObject.transform.position);
             if (Distance <= DetectionDistance && !isFinished)
             {
                 if (!DragNDropForTart.BowlAudioSource.isPlaying)
