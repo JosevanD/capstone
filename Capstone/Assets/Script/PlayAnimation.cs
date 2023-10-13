@@ -13,7 +13,7 @@ public class PlayAnimation : MonoBehaviour
     public int animationNo = 0;
     private bool inTrigger;
 
-    public GameObject popupUI;
+    [SerializeField] private GameObject popupUI;
     private void Start()
     {
         inTrigger = false;

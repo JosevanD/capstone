@@ -9,6 +9,10 @@ public class PopupUI : MonoBehaviour
     private bool isPopupActive;
     [SerializeField] Animator popupAnimator;
     [SerializeField] bool popupIsFlipped = true;
+    [SerializeField] bool isStay = false;
+    //[SerializeField] AudioSource popupSound;
+    [SerializeField] AudioSource lockedSound;
+    [SerializeField] float lockShakeDelay;
     void Start()
     {
         isPopupActive = false;
@@ -19,9 +23,14 @@ public class PopupUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPopupActive == true && Input.GetKeyDown(KeyCode.E))
+        if (isPopupActive == true && Input.GetKeyDown(KeyCode.E) && isStay == false)
         {
             DeactivatePopup();
+        }
+
+        if (isPopupActive == true && Input.GetKeyDown(KeyCode.E) && isStay == true)
+        {
+            LockedPopup();
         }
     }
 
@@ -58,6 +67,14 @@ public class PopupUI : MonoBehaviour
         isPopupActive = false;
     }
 
+    private void LockedPopup()
+    {
+        popupAnimator.SetBool("LockTry", true);
+        lockedSound.enabled = true;
+        StartCoroutine(LockedPopupDelay(lockShakeDelay));
+    }
+   
+
     private void Flip()
     {
         if (popupIsFlipped == true)
@@ -69,5 +86,15 @@ public class PopupUI : MonoBehaviour
         {
             popupAnimator.SetBool("Flip", false);
         }
+    }
+
+    IEnumerator LockedPopupDelay(float time)
+    {
+
+        yield return new WaitForSeconds(time);
+        lockedSound.enabled = false;
+        popupAnimator.SetBool("LockTry", false);
+
+
     }
 }
