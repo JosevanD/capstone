@@ -12429,6 +12429,9 @@ MonoBehaviour:
   popupUI: {fileID: 339205202}
   popupAnimator: {fileID: 339205203}
   popupIsFlipped: 1
+  isStay: 0
+  lockedSound: {fileID: 0}
+  lockShakeDelay: 0
 --- !u!1001 &1857528288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13656,7 +13659,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000126907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13707,7 +13710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000126907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.09, y: 0.563, z: -19.291}
+  m_LocalPosition: {x: 5.54, y: 0.563, z: -19.291}
   m_LocalScale: {x: 3.32, y: 1, z: 2.72}
   m_ConstrainProportionsScale: 0
   m_Children: []

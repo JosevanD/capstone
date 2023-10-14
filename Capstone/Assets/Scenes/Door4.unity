@@ -519,6 +519,9 @@ MonoBehaviour:
   popupUI: {fileID: 747347222}
   popupAnimator: {fileID: 1828855526}
   popupIsFlipped: 0
+  isStay: 0
+  lockedSound: {fileID: 0}
+  lockShakeDelay: 0
 --- !u!65 &74046261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1251,6 +1254,9 @@ MonoBehaviour:
   popupUI: {fileID: 1460469536}
   popupAnimator: {fileID: 1511037344}
   popupIsFlipped: 0
+  isStay: 0
+  lockedSound: {fileID: 0}
+  lockShakeDelay: 0
 --- !u!65 &254422376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1465,6 +1471,9 @@ MonoBehaviour:
   popupUI: {fileID: 1810989152}
   popupAnimator: {fileID: 1810989153}
   popupIsFlipped: 0
+  isStay: 0
+  lockedSound: {fileID: 0}
+  lockShakeDelay: 0
 --- !u!65 &285250545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1611,6 +1620,9 @@ MonoBehaviour:
   popupUI: {fileID: 1241250}
   popupAnimator: {fileID: 1352722873}
   popupIsFlipped: 0
+  isStay: 0
+  lockedSound: {fileID: 0}
+  lockShakeDelay: 0
 --- !u!65 &316298456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1919,8 +1931,8 @@ RectTransform:
   m_GameObject: {fileID: 378558100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 841015506}
   - {fileID: 1269453948}
@@ -2163,8 +2175,8 @@ RectTransform:
   m_GameObject: {fileID: 422686939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1374729238}
   m_Father: {fileID: 1788723046}
@@ -4150,8 +4162,8 @@ RectTransform:
   m_GameObject: {fileID: 942987310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1420306396}
   - {fileID: 926796719}
@@ -4571,7 +4583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 253, y: -362}
+  m_AnchoredPosition: {x: 171, y: -526}
   m_SizeDelta: {x: 253, y: 204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1221758967
@@ -6173,7 +6185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -241, y: -359}
+  m_AnchoredPosition: {x: -171, y: -523}
   m_SizeDelta: {x: 254, y: 204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1462643927
@@ -6368,6 +6380,9 @@ MonoBehaviour:
   popupUI: {fileID: 1786903840}
   popupAnimator: {fileID: 1937226084}
   popupIsFlipped: 0
+  isStay: 0
+  lockedSound: {fileID: 0}
+  lockShakeDelay: 0
 --- !u!65 &1478534315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7786,6 +7801,9 @@ MonoBehaviour:
   popupUI: {fileID: 407048103}
   popupAnimator: {fileID: 1878283162}
   popupIsFlipped: 0
+  isStay: 0
+  lockedSound: {fileID: 0}
+  lockShakeDelay: 0
 --- !u!65 &1640836809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7961,7 +7979,7 @@ RectTransform:
   m_GameObject: {fileID: 1656655700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1279583027}
@@ -8794,8 +8812,8 @@ RectTransform:
   m_GameObject: {fileID: 1796767379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1478501799}
   - {fileID: 131492528}
