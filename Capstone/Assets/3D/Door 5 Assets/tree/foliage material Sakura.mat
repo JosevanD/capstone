@@ -59,6 +59,7 @@ Material:
     type: 3}
   m_ValidKeywords:
   - BILLBOARD_ROTATION_EACH_FACE
+  - _FRESNEL
   - _USE_FILL_TEXTURE
   - _WIND
   m_InvalidKeywords: []
@@ -145,7 +146,7 @@ Material:
     - BILLBOARD_ROTATION: 1
     - Billboard_Scale: 1
     - Clip_Threshold: 0.38
-    - Fill_Impact: 0.33
+    - Fill_Impact: 0
     - Fill_Scale: 1
     - Fresnel_Power: 1
     - Fresnel_Sharpness: 0.1
@@ -165,7 +166,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FRESNEL: 0
+    - _FRESNEL: 1
     - _FresnelToggleUpgrade: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -176,7 +177,7 @@ Material:
     - _QueueControl: -1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ShadowStrength: 0.1
+    - _ShadowStrength: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
