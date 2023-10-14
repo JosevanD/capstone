@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BreakingChocoPieces : MonoBehaviour
 {
@@ -29,7 +30,14 @@ public class BreakingChocoPieces : MonoBehaviour
     public CinemachineVirtualCamera CinemachineVirtualCamera;
     private float screenShakerTimer;
     private float shakeTimerTotal;
-    private float startingIntensity; 
+    private float startingIntensity;
+
+    [Header("Instruction")]
+    public TMP_Text TextObj;
+    public string Instruction_1;
+    public string Instruction_2;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +45,7 @@ public class BreakingChocoPieces : MonoBehaviour
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         BreakingChocoAudioSource = GetComponent<AudioSource>();
         totalChocolateCount = GameObject.FindGameObjectsWithTag("Choco Pieces").Length;
+        chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
     }
 
     // Update is called once per frame
@@ -49,6 +58,7 @@ public class BreakingChocoPieces : MonoBehaviour
             {
                 BrokenPice.SetActive(false);
             }
+            chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_2);
             BrokenChocoPiecesAll.SetActive(true);
             //StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
@@ -106,5 +116,7 @@ public class BreakingChocoPieces : MonoBehaviour
         startingIntensity = intensity;
 
     }
+
+
 
 }

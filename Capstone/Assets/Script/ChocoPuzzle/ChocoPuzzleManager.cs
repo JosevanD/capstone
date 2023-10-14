@@ -65,41 +65,41 @@ public class ChocoPuzzleManager : MonoBehaviour
         {
             case CurrPanels.BreakingChoco:
 
-                TextObj.text = textContents[0];
+                //TextObj.text = textContents[0];
 
                 ChocoPuzzleObjects[0].SetActive(true);
                 break;
             case CurrPanels.MixingMatcha:
 
-                TextObj.text = textContents[1];
+                //TextObj.text = textContents[1];
 
                 Destroy(ChocoPuzzleObjects[0]);
                 ChocoPuzzleObjects[1].SetActive(true);
                 break;
             case CurrPanels.Oven:
 
-                TextObj.text = textContents[2];
+                //TextObj.text = textContents[2];
 
                 Destroy(ChocoPuzzleObjects[1]);
                 ChocoPuzzleObjects[2].SetActive(true);
                 break;
             case CurrPanels.StirringChoco:
 
-                TextObj.text = textContents[3];
+                //TextObj.text = textContents[3];
 
                 Destroy(ChocoPuzzleObjects[2]);
                 ChocoPuzzleObjects[3].SetActive(true);
                 break;
             case CurrPanels.FillingTart:
 
-                TextObj.text = textContents[4];
+                //TextObj.text = textContents[4];
 
                 Destroy(ChocoPuzzleObjects[3]);
                 ChocoPuzzleObjects[4].SetActive(true);
                 break;
             case CurrPanels.Packing:
 
-                TextObj.text = textContents[5];
+                //TextObj.text = textContents[5];
 
                 Destroy(ChocoPuzzleObjects[4]);
                 ChocoPuzzleObjects[5].SetActive(true);
@@ -149,23 +149,37 @@ public class ChocoPuzzleManager : MonoBehaviour
         }
 
     }
-    
-        /*public void PuzzleEndTimer(Canvas ChocoPuzzleCanvas, CharacterController charactorController, CurrPanels currPanels)
+
+    /*public void PuzzleEndTimer(Canvas ChocoPuzzleCanvas, CharacterController charactorController, CurrPanels currPanels)
+    {
+
+        EndingTimer += Time.deltaTime;
+
+        if (EndingTimer >= MaxEndingTime)
         {
+            IsPanelFinished = false;
+            EndingTimer = 0;
+            ChocoPuzzleCanvas.enabled = false;
+            charactorController.isInteracting = false;
+            currPanels = ChocoPuzzleManager.CurrPanels.MixingMatcha;
+            theCurrPanel.SetActive(false);
 
-            EndingTimer += Time.deltaTime;
+        }
 
-            if (EndingTimer >= MaxEndingTime)
-            {
-                IsPanelFinished = false;
-                EndingTimer = 0;
-                ChocoPuzzleCanvas.enabled = false;
-                charactorController.isInteracting = false;
-                currPanels = ChocoPuzzleManager.CurrPanels.MixingMatcha;
-                theCurrPanel.SetActive(false);
+    }*/
 
-            }
+    public void SwitchInstruction(TMP_Text TextObj, string newText)
+    {
+        TextObj.text = newText;
 
-        }*/
 
     }
+
+    /*public void SwitchInstruction(string newText)
+    {
+        TextObj.text = newText;
+
+
+    }*/
+
+}

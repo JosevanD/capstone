@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 //using UnityEngine.UI;
 
 public class PouringPot : MonoBehaviour
@@ -50,6 +51,10 @@ public class PouringPot : MonoBehaviour
     public GameObject FilledMatchaBowl;
     private bool isFinished;
 
+    [Header("Instruction")]
+    public TMP_Text TextObj;
+    public string Instruction_1;
+    public string Instruction_2;
 
     private void Start()
     {
@@ -58,6 +63,7 @@ public class PouringPot : MonoBehaviour
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         PouringMilkAudioSource = GetComponent<AudioSource>();
         objectInitPos = objectToDrag.transform.position;
+        chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
     }
 
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SwitchingOven : MonoBehaviour
 {
@@ -61,6 +62,14 @@ public class SwitchingOven : MonoBehaviour
     public AudioSource MicrowaveAudioSource;
     public AudioClip MicrowaveClip;
 
+    [Header("Instruction")]
+    public TMP_Text TextObj;
+    public string Instruction_1;
+    public string Instruction_2;
+    public string Instruction_3;
+    public string Instruction_4;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +84,7 @@ public class SwitchingOven : MonoBehaviour
         isFinishedHeating = false;
         isFinished = false;
         isTwoObjInPosition = true;
+        chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
 
     }
 
@@ -97,7 +107,7 @@ public class SwitchingOven : MonoBehaviour
         if (isOpened == false && isInOven == false)
         {
             Debug.Log("2");
-            //CurrentButton.image.sprite = OvenOpenedSprite;
+            chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_2);
             MicrowaveClosedObj.SetActive(false);
             MicrowaveOpenedObj.SetActive(true);
            // MicrowaveOpenedObj.GetComponent<Button>().interactable = false;
@@ -110,6 +120,7 @@ public class SwitchingOven : MonoBehaviour
 
         if (isOpened == false && isInOven == true && isHeating == false && ObjsInPosition == 2)
         {
+            chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_3);
             //CurrentButton.image.sprite = OvenClosedSprite;
             Debug.Log("3");
             MicrowaveOpenedObj.SetActive(false);
@@ -163,6 +174,7 @@ public class SwitchingOven : MonoBehaviour
         }
         if (CurrWaitingTime >= TotalWaitingTime && isFinishedHeating == true)
         {
+            chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_4);
             ObjChoco.GetComponent<Image>().sprite = hotChoco;
             ObjMatcha.GetComponent<Image>().sprite = hotMatcha;
             ObjChoco.GetComponent<Image>().SetNativeSize();

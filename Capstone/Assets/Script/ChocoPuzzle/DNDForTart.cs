@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DNDForTart : MonoBehaviour
 {
@@ -22,8 +23,11 @@ public class DNDForTart : MonoBehaviour
     public AudioSource BowlAudioSource;
     public AudioClip FillingTartClip;
 
-    //private float pressTime = 0f;
-    //public float totalPressTime = 0f;
+    [Header("Instruction")]
+    public TMP_Text TextObj;
+    public string Instruction_1;
+    public string Instruction_2;
+
     private void Start()
     {
         TotalTartCount = GameObject.FindGameObjectsWithTag("Tart").Length;
@@ -32,13 +36,14 @@ public class DNDForTart : MonoBehaviour
         BowlAudioSource = GetComponent<AudioSource>();
         BowlAudioSource.clip = FillingTartClip;
         objectInitPos = objectToDrag.transform.position;
+        chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
     }
 
     
     public void OnMouseDrag()
     {
         objectToDrag.transform.position = Input.mousePosition;
-        //pressTime += Time.deltaTime;
+        
     }
 
     IEnumerator Countdown(int seconds)

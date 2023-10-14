@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class PouringMatchMilk : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PouringMatchMilk : MonoBehaviour
     public Animator MatchaMilkBowlAnimator;
     public Animator WhiteChocoBowlAnimator;
 
-    //public ChocoPuzzleManager chocoPuzzleManager;
+    private ChocoPuzzleManager chocoPuzzleManager;
     public GameObject StirringChocolatePanel;
     //public GameObject 
 
@@ -35,31 +36,26 @@ public class PouringMatchMilk : MonoBehaviour
     public GameObject MatchaMilkObj;
     public GameObject WhiteChocoObj;
 
-    //public GameObject EmptyMatchaMilkBowl;
     public GameObject FilledWhiteChocoBowl;
+
+    [Header("Instruction")]
+    public TMP_Text TextObj;
+    public string Instruction_1;
+    public string Instruction_2;
+
 
     private void Start()
     {
         //isPouringFinished = false;
         isPressingOn = false;
-        //chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
+        chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         StirringChocolatePanel.SetActive(false);
+        chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
     }
     public void OnPointerDown()
     {
-        /*if (playerHoldingTimer <= RequiredTimer)
-        {
-            isPressingOn = true;
-            potAnimator.SetBool("isPouring", true);
-            //potAnimator.speed = 1;
-            moldAnimator.SetBool("isFilling", true);
-            moldAnimator.speed = 1;
-            //playerHoldingTimer += Time.deltaTime;
-
-        }*/
 
         MatchaMilkBowlAnimator.SetBool("isPouring", true);
-        //moldAnimator.SetBool("isFilling", true);
         Invoke("nextPanel", 3);
         
     }
@@ -74,18 +70,9 @@ public class PouringMatchMilk : MonoBehaviour
     }
 
 
-
-    /*public void OnPointerUp(PointerEventData eventData)
-    {
-        potAnimator.SetBool("isPouring", false);
-        isPressingOn = false;
-        moldAnimator.speed = 0;
-    }*/
-
     void nextPanel() 
     {
         MatchaMilkBowlAnimator.SetBool("isPouring", false);
-        //moldAnimator.SetBool("isFilling", false);
         StirringChocolatePanel.SetActive(true);
         gameObject.SetActive(false);
 
@@ -98,34 +85,29 @@ public class PouringMatchMilk : MonoBehaviour
             float Distance = Vector3.Distance(MatchaMilkObj.transform.position, WhiteChocoObj.transform.position);
             if (Distance <= DetectionDistance && !isFinished)
             {
-                /* if (!PouringMilkAudioSource.isPlaying)
-                 {
-                     PouringMilkAudioSource.PlayOneShot(PouringMilkClip);
-                 }*/
                 MatchaMilkBowlAnimator.SetBool("isPouring", true);
-                //MatchaBowlAnimator.SetBool("isFillingMilk", true);
+                
                 FillingTimer += Time.deltaTime;
-                //Debug.Log("collide" + gameObject);
+                
 
             }
             //not in the range 
             if (Distance > DetectionDistance)
             {
                 MatchaMilkBowlAnimator.SetBool("isPouring", false);
-                //MatchaBowlAnimator.SetBool("isFillingMilk", false);
-                //PouringMilkAudioSource.Stop();
+                
 
             }
             //finished
             if (FillingTimer >= MaxFillingTimer)
             {
                 MatchaMilkBowlAnimator.SetBool("isPouring", false);
-                //MatchaBowlAnimator.SetBool("isFillingMilk", false);
+                
                 isFinished = true;
                 WhiteChocoObj.GetComponent<Image>().enabled = false;
                 MatchaMilkBowlAnimator.GetComponent<Image>().enabled = false;
                 FilledWhiteChocoBowl.SetActive(true);
-                //EmptyMatchaMilkBowl.SetActive(true);
+                chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_2);
                 Invoke("nextPanel", 1);
                 //Debug.Log("111");
 
