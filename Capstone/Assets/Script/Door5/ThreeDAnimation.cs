@@ -8,6 +8,7 @@ public class ThreeDAnimation : MonoBehaviour
     [SerializeField] Animator threeDCutsceneAnimator;
     [SerializeField] GameObject player;
     [SerializeField] Vector3 teleportTransform;
+    [SerializeField] private GameObject bgAudioObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class ThreeDAnimation : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         threeDCutsceneAnimator.SetBool("CutsceneOn", true);
+        bgAudioObject.GetComponent<BackgroundAudioController>().ChangeAudio(1);
     }
 
     public void PlayerTeleportDoorFive()
