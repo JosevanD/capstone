@@ -31,4 +31,14 @@ public class ThreeDAnimation : MonoBehaviour
     {
         player.transform.position = teleportTransform;
     }
+
+    public void DisablePlayerThreeD()
+    {
+        player.SetActive(false);
+    }
+
+    public void EnablePlayerThreeD()
+    {
+        player.SetActive(true);
+    }
 }
