@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-
+using TMPro;
 
 public class Scratch2 : MonoBehaviour
 {
@@ -48,6 +48,11 @@ public class Scratch2 : MonoBehaviour
     public GameObject SettingProtagonistObject;
     [Header("Max Time of the door Camera")]
     public float MaxCamTime;
+
+    [Header("Instruction")]
+    public TMP_Text TextObj;
+    public string Instruction_1;
+    public string Instruction_2;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -58,7 +63,7 @@ public class Scratch2 : MonoBehaviour
         SketchingAudioSource.clip = SketchingClip;
         SketchingAudioSource.enabled = false;
         BrushCam.transform.position = ProtagonistCam.transform.position;
-        //ProtagonistCam.LookAt = ProtagonistObject.transform;
+        SwitchInstruction(TextObj, Instruction_1);
     }
 
 
@@ -147,4 +152,12 @@ public class Scratch2 : MonoBehaviour
         charactorController.isInteracting = false;
 
     }
+
+    private void SwitchInstruction(TMP_Text TextObj, string newText)
+    {
+        TextObj.text = newText;
+
+
+    }
+
 }

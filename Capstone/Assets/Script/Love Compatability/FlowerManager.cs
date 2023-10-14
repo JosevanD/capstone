@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class FlowerManager : MonoBehaviour
 {
     [SerializeField] [Header("Flower Picking Canvas")]
@@ -33,7 +33,10 @@ public class FlowerManager : MonoBehaviour
     [Header("The Level Ending Prefab")]
     public GameObject levelEndingObj;
 
-
+    [Header("Instruction")]
+    public TMP_Text TextObj;
+    public string Instruction_1;
+    public string Instruction_2;
 
     void Start()
     {
@@ -45,7 +48,8 @@ public class FlowerManager : MonoBehaviour
         {
             petalObject.GetComponent<Image>().raycastTarget = false;
         }
-        
+
+        SwitchInstruction(TextObj, Instruction_1);
     }
     IEnumerator Countdown(int seconds)
     {
@@ -78,4 +82,13 @@ public class FlowerManager : MonoBehaviour
             //FlowerPetals[CurrFlowerPetal].GetComponent<PetalPicking>().isPickable = true;
             FlowerPetals[CurrFlowerPetal].GetComponent<Image>().raycastTarget = true;
     }
+
+
+    private void SwitchInstruction(TMP_Text TextObj, string newText)
+    {
+        TextObj.text = newText;
+
+
+    }
+
 }
