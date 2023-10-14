@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PackingManager : MonoBehaviour
 {
@@ -17,7 +18,12 @@ public class PackingManager : MonoBehaviour
     public Image BoxCover;
     // public GameObject PackingParent;
     public bool isPlacing;
-    // Start is called before the first frame update
+
+    [Header("Instruction")]
+    public TMP_Text TextObj;
+    public string Instruction_1;
+    public string Instruction_2;
+
     private void Awake()
     {
         
@@ -28,7 +34,7 @@ public class PackingManager : MonoBehaviour
         isPlacing = true;
         BoxCover.raycastTarget = false;
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
-        //PackingParent.SetActive(false);
+        chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
     }
 
     IEnumerator Countdown(int seconds)
@@ -57,6 +63,7 @@ public class PackingManager : MonoBehaviour
         
         if (currSpriteNum == ImageSprites.Length - 2)
         {
+            chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_2);
             //Debug.Log("put the cover on");
             plate.SetActive(false);
             LidObj.SetActive(true);
