@@ -20,10 +20,11 @@ public class Scratch2 : MonoBehaviour
     [SerializeField]
     [Header("Percentage of Sketching")]
     [Range(0,1)]private float SketchingPercentage;
-    private AudioSource SketchingAudioSource;
+    
 
     [Header("Sketching SFX")]
     public AudioClip SketchingClip;
+    private AudioSource SketchingAudioSource;
 
     private Charactor_Controller charactorController;
     public int MaxEndingTime;
@@ -54,7 +55,11 @@ public class Scratch2 : MonoBehaviour
     public string Instruction_1;
     public string Instruction_2;
 
-    
+    [Header("Ending SFX")]
+    //public AudioSource EndingAudioSource;
+    public AudioClip EndingClip;
+
+
 
     // Start is called before the first frame update
     private void Awake()
@@ -102,7 +107,8 @@ public class Scratch2 : MonoBehaviour
 
         if (DetectionCount/ totalDetection >=SketchingPercentage)
         {
-            
+            SketchingAudioSource.Stop();
+            SketchingAudioSource.PlayOneShot(EndingClip);
             Reveal();
         }
 
@@ -113,6 +119,7 @@ public class Scratch2 : MonoBehaviour
         //Destroy(gameObject);
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
         StartCoroutine(Countdown(MaxEndingTime));
        
     }

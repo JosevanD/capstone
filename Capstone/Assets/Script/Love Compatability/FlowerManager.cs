@@ -38,6 +38,10 @@ public class FlowerManager : MonoBehaviour
     public string Instruction_1;
     public string Instruction_2;
 
+    [Header("Ending SFX")]
+    //public AudioSource EndingAudioSource;
+    public AudioClip EndingClip;
+
     void Start()
     {
         charactorController = FindObjectOfType<Charactor_Controller>();
@@ -73,7 +77,8 @@ public class FlowerManager : MonoBehaviour
         if (CurrFlowerPetal >= FlowerPetalsCounts)
         {
             //puzzle ends
-            
+            FlowerPickingAudioSource.Stop();
+            FlowerPickingAudioSource.PlayOneShot(EndingClip);
             StartCoroutine(Countdown(MaxEndingTime));
             Debug.Log("Flower Picking Finished");
         
