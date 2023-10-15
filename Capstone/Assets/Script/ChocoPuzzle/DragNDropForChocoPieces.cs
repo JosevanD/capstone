@@ -50,7 +50,9 @@ public class DragNDropForChocoPieces : MonoBehaviour
             isLocked = true;
             objectToDrag.transform.position = objectDragToPos.transform.position;
             ChocolateBowl.GetComponent<Image>().sprite = FilledChocolateBowl;
-            
+            chocoPuzzleManager.EndingAudioSource.Stop();
+            chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
+
             StartCoroutine(breakingChocoPieces.Countdown(chocoPuzzleManager.MaxEndingTime));
             gameObject.GetComponent<Image>().enabled = false;
             //Destroy(gameObject);

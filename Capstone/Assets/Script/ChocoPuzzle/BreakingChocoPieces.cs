@@ -60,7 +60,7 @@ public class BreakingChocoPieces : MonoBehaviour
             }
             chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_2);
             BrokenChocoPiecesAll.SetActive(true);
-            //StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
+
 
         }
 

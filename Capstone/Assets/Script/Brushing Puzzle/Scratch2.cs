@@ -53,6 +53,9 @@ public class Scratch2 : MonoBehaviour
     public TMP_Text TextObj;
     public string Instruction_1;
     public string Instruction_2;
+
+    
+
     // Start is called before the first frame update
     private void Awake()
     {

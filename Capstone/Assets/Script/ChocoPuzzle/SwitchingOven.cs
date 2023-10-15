@@ -223,6 +223,8 @@ public class SwitchingOven : MonoBehaviour
 
         if (isFinished == true)
         {
+            chocoPuzzleManager.EndingAudioSource.Stop();
+            chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
 
         }

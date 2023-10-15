@@ -72,9 +72,9 @@ public class PackingManager : MonoBehaviour
         }
         if (currSpriteNum >= ImageSprites.Length-1)
         {
-            
-            
 
+            chocoPuzzleManager.EndingAudioSource.Stop();
+            chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
             
         }

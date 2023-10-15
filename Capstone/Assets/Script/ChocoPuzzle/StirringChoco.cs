@@ -86,6 +86,8 @@ public class StirringChoco : MonoBehaviour
 
         if (pressTime >= totalPressTime)
         {
+            chocoPuzzleManager.EndingAudioSource.Stop();
+            chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
             MatchaChocoAnimator.SetBool("isStirring", false);
             isFinished = true;
             gameObject.GetComponent<Image>().enabled = false;

@@ -96,6 +96,8 @@ public class PouringPot : MonoBehaviour
             //finished
             if (FillingTimer >= MaxFillingTimer)
             {
+                chocoPuzzleManager.EndingAudioSource.Stop();
+                chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
                 MilkBowlAnimator.SetBool("isPouring", false);
                 //MatchaBowlAnimator.SetBool("isFillingMilk", false);
                 isFinished = true;

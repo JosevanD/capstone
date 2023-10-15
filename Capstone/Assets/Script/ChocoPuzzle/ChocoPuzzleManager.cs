@@ -41,7 +41,13 @@ public class ChocoPuzzleManager : MonoBehaviour
     public TMP_Text TextObj;
 
     public string[] textContents;
-    //private float EndingTimer;
+
+    
+   
+
+    [Header("Ending SFX")]
+    public AudioSource EndingAudioSource;
+    public AudioClip EndingClip;
 
     private void Start()
     {
@@ -150,24 +156,6 @@ public class ChocoPuzzleManager : MonoBehaviour
 
     }
 
-    /*public void PuzzleEndTimer(Canvas ChocoPuzzleCanvas, CharacterController charactorController, CurrPanels currPanels)
-    {
-
-        EndingTimer += Time.deltaTime;
-
-        if (EndingTimer >= MaxEndingTime)
-        {
-            IsPanelFinished = false;
-            EndingTimer = 0;
-            ChocoPuzzleCanvas.enabled = false;
-            charactorController.isInteracting = false;
-            currPanels = ChocoPuzzleManager.CurrPanels.MixingMatcha;
-            theCurrPanel.SetActive(false);
-
-        }
-
-    }*/
-
     public void SwitchInstruction(TMP_Text TextObj, string newText)
     {
         TextObj.text = newText;
@@ -175,11 +163,6 @@ public class ChocoPuzzleManager : MonoBehaviour
 
     }
 
-    /*public void SwitchInstruction(string newText)
-    {
-        TextObj.text = newText;
-
-
-    }*/
+    
 
 }

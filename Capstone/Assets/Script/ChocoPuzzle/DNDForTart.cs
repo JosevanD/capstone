@@ -67,6 +67,8 @@ public class DNDForTart : MonoBehaviour
     {
         if (TartCount >= TotalTartCount)
         {
+            chocoPuzzleManager.EndingAudioSource.Stop();
+            chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
             BowlAudioSource.Stop();
             gameObject.GetComponent<Image>().enabled = false;
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));
