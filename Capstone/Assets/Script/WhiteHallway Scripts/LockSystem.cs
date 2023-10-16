@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class LockSystem : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject unlockObj; //object that will unlock door if pressed E
+
+    [SerializeField] private GameObject unlockObj; //object that will unlock door if pressed E
+    [SerializeField] private GameObject prevDoorUnlock; //popup ui of previous door
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,10 @@ public class LockSystem : MonoBehaviour
     private void OnDisable()
     {
         unlockObj.SetActive(true);
-
+        if (prevDoorUnlock != null)
+        {
+            prevDoorUnlock.SetActive(false);
+        }
+        
     }
 }

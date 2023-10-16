@@ -8,12 +8,17 @@ public class TriggerVolumeChange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator.SetBool("VolumeChange", true);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnEnable()
+    {
+        animator.SetBool("VolumeChange", true);
     }
 }

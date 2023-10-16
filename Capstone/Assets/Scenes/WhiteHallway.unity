@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+  m_AmbientSkyColor: {r: 0.8773585, g: 0.8558661, b: 0.8061766, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -928,6 +928,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 120177661051802864, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
+--- !u!1 &184042463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6953873381995468022, guid: 4db05069fdd699447966d3fad85239c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 184042462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &276203309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,6 +1183,7 @@ GameObject:
   - component: {fileID: 452541343}
   - component: {fileID: 452541342}
   - component: {fileID: 452541341}
+  - component: {fileID: 452541344}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1248,22 +1255,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BackToMenu, Assembly-CSharp
-        m_MethodName: BackToMenuScene
+      - m_Target: {fileID: 452541344}
+        m_TargetAssemblyTypeName: ExitGame, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 452541339}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1310,6 +1305,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452541339}
   m_CullTransparentMesh: 1
+--- !u!114 &452541344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452541339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1c87741e77b104a868205691709417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &471013238
 GameObject:
   m_ObjectHideFlags: 0
@@ -3032,6 +3039,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.19518825
       objectReference: {fileID: 0}
+    - target: {fileID: 6256743500148375853, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: prevDoorUI
+      value: 
+      objectReference: {fileID: 184042463}
+    - target: {fileID: 6256743500148375853, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: prevDoorUnlock
+      value: 
+      objectReference: {fileID: 184042463}
     - target: {fileID: 6748399397799489538, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_RootOrder
@@ -3040,7 +3057,7 @@ PrefabInstance:
     - target: {fileID: 6953873381995468022, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
@@ -3060,7 +3077,7 @@ PrefabInstance:
     - target: {fileID: 7867629760617491476, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8918664182458509677, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
@@ -3078,6 +3095,12 @@ Transform:
 --- !u!1 &1179439337 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7867629760617491476, guid: 4db05069fdd699447966d3fad85239c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1179439335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1179439338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6953873381995468022, guid: 4db05069fdd699447966d3fad85239c7,
     type: 3}
   m_PrefabInstance: {fileID: 1179439335}
   m_PrefabAsset: {fileID: 0}
@@ -3806,6 +3829,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6256743500148375853, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: prevDoorUI
+      value: 
+      objectReference: {fileID: 1923148360}
     - target: {fileID: 6953873381995468022, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_IsActive
@@ -6166,6 +6194,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.19518825
       objectReference: {fileID: 0}
+    - target: {fileID: 6256743500148375853, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: prevDoorUI
+      value: 
+      objectReference: {fileID: 1179439338}
     - target: {fileID: 6748399397799489538, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_RootOrder
@@ -6203,6 +6236,12 @@ Transform:
 --- !u!1 &1923148359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7867629760617491476, guid: 4db05069fdd699447966d3fad85239c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1923148357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923148360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6953873381995468022, guid: 4db05069fdd699447966d3fad85239c7,
     type: 3}
   m_PrefabInstance: {fileID: 1923148357}
   m_PrefabAsset: {fileID: 0}
