@@ -30,8 +30,8 @@ public class ThreeDAnimation : MonoBehaviour
 
     public void PlayerTeleportDoorFive()
     {
-        player.transform.position = teleportTransform;
-        //rb.MovePosition(teleportTransform);
+        player.transform.localPosition = teleportTransform;
+        
     }
 
     public void DisablePlayerThreeD()
