@@ -2256,22 +2256,22 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 3.6
+  - time: 3.6666667
     functionName: DisablePlayerThreeD
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 29.766666
-    functionName: EnablePlayerThreeD
+  - time: 30.033333
+    functionName: PlayerTeleportDoorFive
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 32
-    functionName: PlayerTeleportDoorFive
+  - time: 31.766666
+    functionName: EnablePlayerThreeD
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

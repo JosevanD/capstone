@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.7924528, g: 0.74885345, b: 0.49640438, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 368a9e6029352214c80c49211e956e2e, type: 2}
   m_HaloStrength: 0.5
@@ -768,7 +768,7 @@ PrefabInstance:
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: doorNo
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
@@ -898,7 +898,7 @@ PrefabInstance:
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: doorNo
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
@@ -2690,6 +2690,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
       propertyPath: isDissolve
       value: 1
       objectReference: {fileID: 0}
@@ -2775,6 +2780,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
       propertyPath: blockageCollider
       value: 
       objectReference: {fileID: 1991335269}
@@ -2801,7 +2811,7 @@ PrefabInstance:
     - target: {fileID: 8918664182458509677, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
@@ -2880,7 +2890,7 @@ PrefabInstance:
     - target: {fileID: 1580008214337739138, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1580008214337739138, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
@@ -2915,7 +2925,7 @@ PrefabInstance:
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: doorNo
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
@@ -3027,6 +3037,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6953873381995468022, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: doorNo
@@ -3042,6 +3057,11 @@ PrefabInstance:
       propertyPath: blockageCollider
       value: 
       objectReference: {fileID: 1918959176}
+    - target: {fileID: 7867629760617491476, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8918664182458509677, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_Name
@@ -6039,7 +6059,7 @@ PrefabInstance:
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: doorNo
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
@@ -6276,8 +6296,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
         type: 3}
+      propertyPath: playerSpawnPos.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
       propertyPath: playerSpawnPos.Array.data[0].x
-      value: -20.23
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[0].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[0].z
+      value: 3.19
       objectReference: {fileID: 0}
     - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
         type: 3}
@@ -6297,7 +6332,7 @@ PrefabInstance:
     - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
         type: 3}
       propertyPath: playerSpawnPos.Array.data[2].x
-      value: 0.33
+      value: 5.59
       objectReference: {fileID: 0}
     - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
         type: 3}
@@ -6327,12 +6362,17 @@ PrefabInstance:
     - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
         type: 3}
       propertyPath: playerSpawnPos.Array.data[4].x
-      value: 7.66
+      value: 5.59
       objectReference: {fileID: 0}
     - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
         type: 3}
       propertyPath: playerSpawnPos.Array.data[4].y
-      value: 0
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[4].z
+      value: 3.19
       objectReference: {fileID: 0}
     - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
         type: 3}
@@ -6680,8 +6720,13 @@ PrefabInstance:
     - target: {fileID: 4352006160512580311, guid: ed68235f97b765d439608435d1b87916,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4352006160512580332, guid: ed68235f97b765d439608435d1b87916,
+        type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 21720739}
     - target: {fileID: 4352006161350044811, guid: ed68235f97b765d439608435d1b87916,
         type: 3}
       propertyPath: m_fontColor.a

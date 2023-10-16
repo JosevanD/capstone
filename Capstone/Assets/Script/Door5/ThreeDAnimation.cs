@@ -7,6 +7,7 @@ public class ThreeDAnimation : MonoBehaviour
 
     [SerializeField] Animator threeDCutsceneAnimator;
     [SerializeField] GameObject player;
+    //[SerializeField] Rigidbody rb;
     [SerializeField] Vector3 teleportTransform;
     [SerializeField] private GameObject bgAudioObject;
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class ThreeDAnimation : MonoBehaviour
     public void PlayerTeleportDoorFive()
     {
         player.transform.position = teleportTransform;
+        //rb.MovePosition(teleportTransform);
     }
 
     public void DisablePlayerThreeD()

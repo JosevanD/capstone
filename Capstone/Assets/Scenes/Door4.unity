@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.8773585, g: 0.8422642, b: 0.78962266, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.7924528, g: 0.74885345, b: 0.49640438, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 368a9e6029352214c80c49211e956e2e, type: 2}
   m_HaloStrength: 0.5
@@ -826,7 +826,7 @@ MonoBehaviour:
   BowlAudioSource: {fileID: 131492535}
   FillingTartClip: {fileID: 8300000, guid: 6d3517703db303944a08b30cdf3b53d2, type: 3}
   TextObj: {fileID: 792044186}
-  Instruction_1: Pour MatchaChocolate Into Tarts
+  Instruction_1: Pour Matcha Into Tarts
   Instruction_2: 
 --- !u!114 &131492533
 MonoBehaviour:
@@ -2203,6 +2203,101 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTracker
       objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[0].x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[0].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[0].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[1].x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[1].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[1].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[2].x
+      value: 5.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[2].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[2].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[3].x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[3].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[3].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[4].x
+      value: 5.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[4].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[4].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[5].x
+      value: 10.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[5].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[5].z
+      value: 3.19
+      objectReference: {fileID: 0}
     - target: {fileID: 2191939263375804256, guid: 85f3378415358ba4491a12b2169842b7,
         type: 3}
       propertyPath: m_RootOrder
@@ -2342,8 +2437,8 @@ MonoBehaviour:
   BoxCover: {fileID: 7155715}
   isPlacing: 0
   TextObj: {fileID: 1957025706}
-  Instruction_1: Put the Tarts Into Box
-  Instruction_2: Put the Lid on Top
+  Instruction_1: Drag the Tarts Into the Box
+  Instruction_2: Drag the Lid to the Top
 --- !u!114 &422686942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3727,8 +3822,8 @@ MonoBehaviour:
   WhiteChocoObj: {fileID: 1420306392}
   FilledWhiteChocoBowl: {fileID: 926796715}
   TextObj: {fileID: 455954322}
-  Instruction_1: Pour the Matchamilk Into Chocolate
-  Instruction_2: Stir With Whisk
+  Instruction_1: Pour the Matcha Into Chocolate
+  Instruction_2: Drag Whisk to Stir
 --- !u!1 &761213736
 GameObject:
   m_ObjectHideFlags: 0
@@ -4991,6 +5086,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942987310}
   m_CullTransparentMesh: 1
+--- !u!1 &980825007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 37294413, guid: 60d011b39b490d24bb51cc6a921ef4bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1820068981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1008004267
 GameObject:
   m_ObjectHideFlags: 0
@@ -5831,7 +5932,7 @@ MonoBehaviour:
   EmptyMilkBowl: {fileID: 2045877070}
   FilledMatchaBowl: {fileID: 181648997}
   TextObj: {fileID: 1266154404}
-  Instruction_1: Pour Milk To Bowl
+  Instruction_1: Drag Milk to Pour
   Instruction_2: 
 --- !u!114 &1269453953
 MonoBehaviour:
@@ -9075,10 +9176,10 @@ MonoBehaviour:
   MicrowaveAudioSource: {fileID: 1656655705}
   MicrowaveClip: {fileID: 8300000, guid: 5e2f41bfb7dcdd9468a77691457fc598, type: 3}
   TextObj: {fileID: 2040003054}
-  Instruction_1: Open the Microwave
-  Instruction_2: Drag Both Ingridient In
+  Instruction_1: Click To Open Oven
+  Instruction_2: Drag Ingredients In
   Instruction_3: Wait For Them To Heat
-  Instruction_4: Drag Both Ingridient Out
+  Instruction_4: Drag Ingredients Out
 --- !u!114 &1656655703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9839,7 +9940,8 @@ AudioSource:
   m_GameObject: {fileID: 1788723041}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5272071122878601282, guid: 647c6750d73f8394db8494b5bdf70df7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -10103,17 +10205,37 @@ PrefabInstance:
     - target: {fileID: 4672271811334000226, guid: 60d011b39b490d24bb51cc6a921ef4bf,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700245856191600146, guid: 60d011b39b490d24bb51cc6a921ef4bf,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4700245856965623884, guid: 60d011b39b490d24bb51cc6a921ef4bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700245856965623927, guid: 60d011b39b490d24bb51cc6a921ef4bf,
+        type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 980825007}
     - target: {fileID: 7673011197902619791, guid: 60d011b39b490d24bb51cc6a921ef4bf,
         type: 3}
       propertyPath: m_text
-      value: Valentine's Matcha
+      value: Something Sweet
       objectReference: {fileID: 0}
     - target: {fileID: 7823587888454636573, guid: 60d011b39b490d24bb51cc6a921ef4bf,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183603873529415735, guid: 60d011b39b490d24bb51cc6a921ef4bf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -97
       objectReference: {fileID: 0}
     - target: {fileID: 9034166150131072402, guid: 60d011b39b490d24bb51cc6a921ef4bf,
         type: 3}
@@ -11238,7 +11360,8 @@ AudioSource:
   m_GameObject: {fileID: 2019372523}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5272071122878601282, guid: 647c6750d73f8394db8494b5bdf70df7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

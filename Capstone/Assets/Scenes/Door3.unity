@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.8962264, g: 0.8573899, b: 0.8066038, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.7924528, g: 0.74885345, b: 0.49640438, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 368a9e6029352214c80c49211e956e2e, type: 2}
   m_HaloStrength: 0.5
@@ -1258,6 +1258,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 4.767
       objectReference: {fileID: 0}
+    - target: {fileID: 2241308278599386189, guid: cc3eceaf411808041bc9b0c4acc75717,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2498990029122361258, guid: cc3eceaf411808041bc9b0c4acc75717,
         type: 3}
       propertyPath: m_IsActive
@@ -1806,7 +1811,7 @@ MonoBehaviour:
   TextObj: {fileID: 59473473}
   Instruction_1: Drag the Petals
   Instruction_2: 
-  EndingClip: {fileID: 0}
+  EndingClip: {fileID: 8300000, guid: 91218f20323c30845ace5ea4ff72032f, type: 3}
 --- !u!114 &176252754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1854,7 +1859,8 @@ AudioSource:
   m_GameObject: {fileID: 176252751}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5272071122878601282, guid: 647c6750d73f8394db8494b5bdf70df7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.75
@@ -13348,6 +13354,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 154594327481697975, guid: bf5ae067c4eed984e9aadb4926608a0e,
         type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 154594327481697975, guid: bf5ae067c4eed984e9aadb4926608a0e,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 154594327481697975, guid: bf5ae067c4eed984e9aadb4926608a0e,
+        type: 3}
       propertyPath: m_Color.b
       value: 0.8509804
       objectReference: {fileID: 0}
@@ -13443,6 +13459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1993478135752263927, guid: bf5ae067c4eed984e9aadb4926608a0e,
         type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993478135752263927, guid: bf5ae067c4eed984e9aadb4926608a0e,
+        type: 3}
       propertyPath: m_Color.b
       value: 0.8509804
       objectReference: {fileID: 0}
@@ -13505,6 +13526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239801649842807182, guid: bf5ae067c4eed984e9aadb4926608a0e,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5239801649842807182, guid: bf5ae067c4eed984e9aadb4926608a0e,
         type: 3}
@@ -14847,9 +14873,9 @@ MonoBehaviour:
   SettingProtagonistObject: {fileID: 275629411}
   MaxCamTime: 5
   TextObj: {fileID: 1529351269}
-  Instruction_1: 'Drag To Paint '
+  Instruction_1: Drag To Draw
   Instruction_2: 
-  EndingClip: {fileID: 0}
+  EndingClip: {fileID: 8300000, guid: 91218f20323c30845ace5ea4ff72032f, type: 3}
 --- !u!212 &1759026944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14911,7 +14937,8 @@ AudioSource:
   m_GameObject: {fileID: 1759026941}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5272071122878601282, guid: 647c6750d73f8394db8494b5bdf70df7,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -20312,43 +20339,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5471848231104614598, guid: 355b3fdd70c066f40858dc9c2e410455,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.432
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471848231104614598, guid: 355b3fdd70c066f40858dc9c2e410455,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.538
       objectReference: {fileID: 0}
     - target: {fileID: 5471848231104614598, guid: 355b3fdd70c066f40858dc9c2e410455,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.97560453
+      value: 0.97362703
       objectReference: {fileID: 0}
     - target: {fileID: 5471848231104614598, guid: 355b3fdd70c066f40858dc9c2e410455,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.114978306
+      value: 0.0664102
       objectReference: {fileID: 0}
     - target: {fileID: 5471848231104614598, guid: 355b3fdd70c066f40858dc9c2e410455,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.18573286
+      value: 0.20813714
       objectReference: {fileID: 0}
     - target: {fileID: 5471848231104614598, guid: 355b3fdd70c066f40858dc9c2e410455,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.021889247
+      value: 0.06572048
       objectReference: {fileID: 0}
     - target: {fileID: 5471848231104614598, guid: 355b3fdd70c066f40858dc9c2e410455,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 12.487
+      value: 5.852
       objectReference: {fileID: 0}
     - target: {fileID: 5471848231104614598, guid: 355b3fdd70c066f40858dc9c2e410455,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 22.107
+      value: 24.595
       objectReference: {fileID: 0}
     - target: {fileID: 5471848231104614598, guid: 355b3fdd70c066f40858dc9c2e410455,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 5.019
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5471848231549339522, guid: 355b3fdd70c066f40858dc9c2e410455,
         type: 3}

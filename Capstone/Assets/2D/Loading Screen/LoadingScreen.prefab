@@ -255,6 +255,7 @@ MonoBehaviour:
   chapterNameObj: {fileID: 1629499746350250077}
   controlsTextObj: {fileID: 4352006161350044809}
   walkingLoadingAnimObj: {fileID: 4352006162102756557}
+  pauseButton: {fileID: 0}
 --- !u!1 &4352006161350044809
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
