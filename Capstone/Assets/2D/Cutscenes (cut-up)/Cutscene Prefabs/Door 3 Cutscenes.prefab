@@ -105,7 +105,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644335354837889768}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: a8458f23105fdb042a11985e43641bb4, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: b6947275dbfee584fb00d0ae31302989, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 1644335356647280574}
   - component: {fileID: 1644335356647280573}
   - component: {fileID: 1443365561647828607}
-  - component: {fileID: 3647445548142419956}
+  - component: {fileID: 3125204841455764124}
   m_Layer: 5
   m_Name: Door 3 Cutscenes
   m_TagString: Untagged
@@ -229,7 +229,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3647445548142419956
+--- !u!114 &3125204841455764124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,18 +238,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1644335356647280571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f720302ff85660d42a2b2fc7f6548287, type: 3}
+  m_Script: {fileID: 11500000, guid: 52f96ce6ac9d03641931e4f3e58df8d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutsceneObjects:
-  - {fileID: 1644335354837889768}
-  - {fileID: 9040170522777553052}
-  - {fileID: 187105849084999932}
-  - {fileID: 5850181137814540109}
+  cutsceneObject: {fileID: 1644335356647280571}
   cutsceneTimes:
+  - 1
+  - 1
   - 2
-  - 3
-  - 3
   - 2
   i: 0
   canClick: 0
@@ -257,10 +253,12 @@ MonoBehaviour:
   objToActivate: {fileID: 0}
   hasObjToActivate: 0
   playerObj: {fileID: 0}
+  videoPlayer: {fileID: 1644335354837889769}
   bgAudioObject: {fileID: 0}
-  audioNo: 3
+  audioNo: 0
   isChangeAudio: 1
-  fadeOutTime: 1
+  previousAudioNo: 3
+  fadeOutTime: 0.75
   fadeAnimator: {fileID: 1443365561647828607}
 --- !u!1 &5850181137814540109
 GameObject:
