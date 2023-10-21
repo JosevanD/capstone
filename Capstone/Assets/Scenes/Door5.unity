@@ -1729,7 +1729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &353280918
 Transform:
   m_ObjectHideFlags: 0
@@ -9867,6 +9867,96 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTracker
       objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[0].x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[0].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[0].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[1].x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[1].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[1].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[2].x
+      value: 5.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[2].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[2].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[3].x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[3].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[3].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[4].x
+      value: 5.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[4].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[4].z
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[5].x
+      value: 10.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[5].y
+      value: 1.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 2191939263375804255, guid: 85f3378415358ba4491a12b2169842b7,
+        type: 3}
+      propertyPath: playerSpawnPos.Array.data[5].z
+      value: 3.19
+      objectReference: {fileID: 0}
     - target: {fileID: 2191939263375804256, guid: 85f3378415358ba4491a12b2169842b7,
         type: 3}
       propertyPath: m_RootOrder
@@ -17259,7 +17349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &8259231268325363686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17343,7 +17433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &8259231268672986757
 SpriteRenderer:
   m_ObjectHideFlags: 0

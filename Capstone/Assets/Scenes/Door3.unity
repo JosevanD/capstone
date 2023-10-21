@@ -8225,6 +8225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objToActivate: {fileID: 2616466236523726276}
   objToDeActivate: {fileID: 1355105481}
+  hasDeactivateDelay: 0
+  delay: 0
 --- !u!1 &970488140
 GameObject:
   m_ObjectHideFlags: 0
@@ -9299,6 +9301,12 @@ Transform:
   m_Father: {fileID: 148408275}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1143441339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5608421023147847531, guid: 34f9a9d1fadb37e4c90ee0f20db5e948,
+    type: 3}
+  m_PrefabInstance: {fileID: 5608421023264805946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1146865523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 618823370268268529, guid: 3047bb69868815b44a86b2bc3d4d04c8,
@@ -16110,6 +16118,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1848936047}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1848936051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4932169065114147663, guid: 30d09a6e580ab5b43a1b869b003504da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1848936047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1861348874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20115,6 +20129,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3125204841455764124, guid: dea6f304b15d55046935472f6c217741,
+        type: 3}
+      propertyPath: advanceUI
+      value: 
+      objectReference: {fileID: 423529568}
+    - target: {fileID: 3125204841455764124, guid: dea6f304b15d55046935472f6c217741,
+        type: 3}
+      propertyPath: playerObj
+      value: 
+      objectReference: {fileID: 1848936051}
+    - target: {fileID: 3125204841455764124, guid: dea6f304b15d55046935472f6c217741,
+        type: 3}
+      propertyPath: bgAudioObject
+      value: 
+      objectReference: {fileID: 1143441339}
     - target: {fileID: 3647445548142419956, guid: dea6f304b15d55046935472f6c217741,
         type: 3}
       propertyPath: advanceUI
