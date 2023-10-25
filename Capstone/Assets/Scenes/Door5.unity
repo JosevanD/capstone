@@ -16310,6 +16310,31 @@ PrefabInstance:
       propertyPath: objToActivate
       value: 
       objectReference: {fileID: 1545144655}
+    - target: {fileID: 3736094761985602516, guid: 33a65af3edab07642b06e0f588fdff9e,
+        type: 3}
+      propertyPath: advanceUI
+      value: 
+      objectReference: {fileID: 3589332805752398601}
+    - target: {fileID: 3736094761985602516, guid: 33a65af3edab07642b06e0f588fdff9e,
+        type: 3}
+      propertyPath: playerObj
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736094761985602516, guid: 33a65af3edab07642b06e0f588fdff9e,
+        type: 3}
+      propertyPath: bgAudioObject
+      value: 
+      objectReference: {fileID: 698745474}
+    - target: {fileID: 3736094761985602516, guid: 33a65af3edab07642b06e0f588fdff9e,
+        type: 3}
+      propertyPath: objToActivate
+      value: 
+      objectReference: {fileID: 1545144655}
+    - target: {fileID: 3736094761985602516, guid: 33a65af3edab07642b06e0f588fdff9e,
+        type: 3}
+      propertyPath: hasObjToActivate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5738510219376430571, guid: 33a65af3edab07642b06e0f588fdff9e,
         type: 3}
       propertyPath: m_Name
@@ -16422,6 +16447,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33a65af3edab07642b06e0f588fdff9e, type: 3}
+--- !u!1 &3589332805752398601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3589332804522383918, guid: 33a65af3edab07642b06e0f588fdff9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3589332805752398600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!222 &3595829443317308540
 CanvasRenderer:
   m_ObjectHideFlags: 0

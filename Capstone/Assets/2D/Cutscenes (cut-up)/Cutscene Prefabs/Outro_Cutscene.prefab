@@ -40,7 +40,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98206670203715537}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 9fa86c4094d0f734e8c5e9db5160dc16, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 5fa207b49934e4144bc571c7a60efd1e, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 98206670407664260}
   - component: {fileID: 255264189577659206}
   - component: {fileID: 9164950563279388273}
+  - component: {fileID: 5009916047261124923}
   m_Layer: 5
   m_Name: Outro_Cutscene
   m_TagString: Untagged
@@ -181,7 +182,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98206670407664258}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f720302ff85660d42a2b2fc7f6548287, type: 3}
   m_Name: 
@@ -225,6 +226,44 @@ MonoBehaviour:
   isChangeAudio: 1
   previousAudioNo: 0
   fadeOutTime: 1
+  fadeAnimator: {fileID: 255264189577659206}
+--- !u!114 &5009916047261124923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98206670407664258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f96ce6ac9d03641931e4f3e58df8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutsceneObject: {fileID: 98206670407664258}
+  cutsceneTimes:
+  - 2
+  - 3
+  - 2.5
+  - 4
+  - 2
+  - 3
+  - 3
+  - 6
+  - 5
+  - 5
+  - 6
+  i: 0
+  canClick: 0
+  advanceUI: {fileID: 0}
+  objToActivate: {fileID: 0}
+  hasObjToActivate: 0
+  playerObj: {fileID: 0}
+  videoPlayer: {fileID: 98206670203715536}
+  bgAudioObject: {fileID: 0}
+  audioNo: 1
+  isChangeAudio: 1
+  previousAudioNo: 3
+  fadeOutTime: 0.75
   fadeAnimator: {fileID: 255264189577659206}
 --- !u!1 &1519269976290194885
 GameObject:

@@ -493,6 +493,21 @@ PrefabInstance:
       propertyPath: m_WaitForFirstFrame
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4691154640911108321, guid: 697c81cd2a2cd3242a003801ef08f7d2,
+        type: 3}
+      propertyPath: advanceUI
+      value: 
+      objectReference: {fileID: 443784498}
+    - target: {fileID: 4691154640911108321, guid: 697c81cd2a2cd3242a003801ef08f7d2,
+        type: 3}
+      propertyPath: fadeAnimator
+      value: 
+      objectReference: {fileID: 132536167}
+    - target: {fileID: 4691154640911108321, guid: 697c81cd2a2cd3242a003801ef08f7d2,
+        type: 3}
+      propertyPath: bgAudioObject
+      value: 
+      objectReference: {fileID: 954834197}
     - target: {fileID: 6084407485544802860, guid: 697c81cd2a2cd3242a003801ef08f7d2,
         type: 3}
       propertyPath: advanceUI
@@ -660,6 +675,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 697c81cd2a2cd3242a003801ef08f7d2, type: 3}
+--- !u!95 &132536167 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8280326879575473063, guid: 697c81cd2a2cd3242a003801ef08f7d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 132536166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &134844177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,6 +1246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: cutsceneTimes.Array.data[0]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125204841455764124, guid: dea6f304b15d55046935472f6c217741,
+        type: 3}
+      propertyPath: cutsceneTimes.Array.data[3]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3647445548142419956, guid: dea6f304b15d55046935472f6c217741,
         type: 3}
@@ -5597,6 +5623,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5009916047261124923, guid: bc6261c56fa93854daafb52a8c334dd1,
+        type: 3}
+      propertyPath: audioNo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009916047261124923, guid: bc6261c56fa93854daafb52a8c334dd1,
+        type: 3}
+      propertyPath: advanceUI
+      value: 
+      objectReference: {fileID: 443784498}
+    - target: {fileID: 5009916047261124923, guid: bc6261c56fa93854daafb52a8c334dd1,
+        type: 3}
+      propertyPath: bgAudioObject
+      value: 
+      objectReference: {fileID: 954834197}
     - target: {fileID: 9164950563279388273, guid: bc6261c56fa93854daafb52a8c334dd1,
         type: 3}
       propertyPath: advanceUI
@@ -7206,6 +7247,11 @@ PrefabInstance:
       propertyPath: hasObjToActivate
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3736094761985602516, guid: 33a65af3edab07642b06e0f588fdff9e,
+        type: 3}
+      propertyPath: advanceUI
+      value: 
+      objectReference: {fileID: 443784498}
     - target: {fileID: 5738510219376430571, guid: 33a65af3edab07642b06e0f588fdff9e,
         type: 3}
       propertyPath: m_Name
@@ -8793,6 +8839,21 @@ PrefabInstance:
       propertyPath: m_WaitForFirstFrame
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4691154640911108321, guid: 697c81cd2a2cd3242a003801ef08f7d2,
+        type: 3}
+      propertyPath: advanceUI
+      value: 
+      objectReference: {fileID: 443784498}
+    - target: {fileID: 4691154640911108321, guid: 697c81cd2a2cd3242a003801ef08f7d2,
+        type: 3}
+      propertyPath: fadeAnimator
+      value: 
+      objectReference: {fileID: 1813086038194592269}
+    - target: {fileID: 4691154640911108321, guid: 697c81cd2a2cd3242a003801ef08f7d2,
+        type: 3}
+      propertyPath: bgAudioObject
+      value: 
+      objectReference: {fileID: 954834197}
     - target: {fileID: 6084407485544802860, guid: 697c81cd2a2cd3242a003801ef08f7d2,
         type: 3}
       propertyPath: advanceUI
@@ -8955,6 +9016,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 697c81cd2a2cd3242a003801ef08f7d2, type: 3}
+--- !u!95 &1813086038194592269 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8280326879575473063, guid: 697c81cd2a2cd3242a003801ef08f7d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1813086038194592268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1898582894777665608
 RectTransform:
   m_ObjectHideFlags: 0

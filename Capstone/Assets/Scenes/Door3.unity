@@ -20131,6 +20131,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3125204841455764124, guid: dea6f304b15d55046935472f6c217741,
         type: 3}
+      propertyPath: audioNo
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125204841455764124, guid: dea6f304b15d55046935472f6c217741,
+        type: 3}
       propertyPath: advanceUI
       value: 
       objectReference: {fileID: 423529568}
@@ -20144,6 +20149,11 @@ PrefabInstance:
       propertyPath: bgAudioObject
       value: 
       objectReference: {fileID: 1143441339}
+    - target: {fileID: 3125204841455764124, guid: dea6f304b15d55046935472f6c217741,
+        type: 3}
+      propertyPath: previousAudioNo
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3647445548142419956, guid: dea6f304b15d55046935472f6c217741,
         type: 3}
       propertyPath: advanceUI
