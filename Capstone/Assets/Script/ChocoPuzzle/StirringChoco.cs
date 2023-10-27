@@ -36,9 +36,11 @@ public class StirringChoco : MonoBehaviour
         StirringAudioSource.clip = StirringClip;
         StirringAudioSource.enabled = false;
         isPressingOn = false;
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
     }
     public void OnMouseDrag()
     {
+        chocoPuzzleManager.cursorManager.ChangeToGrab();
         if (isFinished == false) 
         {
             isPressingOn = true;
@@ -61,6 +63,7 @@ public class StirringChoco : MonoBehaviour
         MatchaChocoAnimator.speed = 0;
         StirringAudioSource.enabled = false;
         pressTime = 0;
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
     }
 
     IEnumerator Countdown(int seconds)
@@ -86,6 +89,7 @@ public class StirringChoco : MonoBehaviour
 
         if (pressTime >= totalPressTime)
         {
+            chocoPuzzleManager.cursorManager.SetCursorDefault();
             chocoPuzzleManager.EndingAudioSource.Stop();
             chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
             MatchaChocoAnimator.SetBool("isStirring", false);

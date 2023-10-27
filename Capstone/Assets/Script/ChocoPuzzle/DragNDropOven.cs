@@ -14,6 +14,7 @@ public class DragNDropOven : MonoBehaviour
 
     
     private ChocoPuzzleManager chocoPuzzleManager;
+
     public float DropDistance;
 
     public bool isLocked = false;
@@ -26,9 +27,7 @@ public class DragNDropOven : MonoBehaviour
 
     public Charactor_Controller charactorController;
 
-    //[Header("The Puzzle Canvas")]
-    //public Canvas PuzzleCanvas;
-    // Start is called before the first frame update
+
     void Start()
     {
         objectInitPos = objectToDrag.transform.position;
@@ -42,6 +41,7 @@ public class DragNDropOven : MonoBehaviour
 
     public void DragObject()
     {
+        chocoPuzzleManager.cursorManager.ChangeToGrab();
         //Debug.Log("Dragging");
         if (!isLocked)
         {
@@ -55,6 +55,7 @@ public class DragNDropOven : MonoBehaviour
 
     public void DropObject()
     {
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
         float Distance = Vector3.Distance(objectToDrag.transform.position, objectDragToPos.transform.position);
         if (!isHeated)
         {

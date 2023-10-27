@@ -85,6 +85,7 @@ public class SwitchingOven : MonoBehaviour
         isFinished = false;
         isTwoObjInPosition = true;
         chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
+        chocoPuzzleManager.cursorManager.SetCursorDefault();
 
     }
 
@@ -115,6 +116,7 @@ public class SwitchingOven : MonoBehaviour
             //CurrentButton.interactable = false;
             ObjMatchaParent.SetActive(true);
             isOpened = true;
+            chocoPuzzleManager.cursorManager.ChangeToPalm();
         }
         
 
@@ -223,6 +225,7 @@ public class SwitchingOven : MonoBehaviour
 
         if (isFinished == true)
         {
+            chocoPuzzleManager.cursorManager.SetCursorDefault();
             chocoPuzzleManager.EndingAudioSource.Stop();
             chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));

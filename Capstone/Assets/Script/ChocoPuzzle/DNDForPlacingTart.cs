@@ -7,7 +7,8 @@ public class DNDForPlacingTart : MonoBehaviour
 {
     public GameObject objectToDrag;
     public GameObject objectDragToPos;
-    //public GameObject ObjParent;
+
+
     private ChocoPuzzleManager chocoPuzzleManager;
     private PackingManager packingManager;
     public float DropDistance;
@@ -16,7 +17,7 @@ public class DNDForPlacingTart : MonoBehaviour
 
 
     Vector2 objectInitPos;
-    // Start is called before the first frame update
+
     void Start()
     {
         packingManager = FindObjectOfType<PackingManager>();
@@ -24,7 +25,6 @@ public class DNDForPlacingTart : MonoBehaviour
         objectInitPos = objectToDrag.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -32,10 +32,10 @@ public class DNDForPlacingTart : MonoBehaviour
 
     public void DragObject()
     {
-        //Debug.Log("Dragging");
+
         if (!isLocked)
         {
-
+            chocoPuzzleManager.cursorManager.ChangeToGrab();
             objectToDrag.transform.position = Input.mousePosition;
 
         }
@@ -45,19 +45,12 @@ public class DNDForPlacingTart : MonoBehaviour
 
     public void DropObject()
     {
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
         float Distance = Vector3.Distance(objectToDrag.transform.position, objectDragToPos.transform.position);
         if (Distance < DropDistance)
         {
             isLocked = true;
             objectToDrag.transform.position = objectDragToPos.transform.position;
-            //PuzzleCanvas.enabled = false;
-            //chocoPuzzleManager.ChocoPuzzleCanvas.enabled = false;
-            //chocoPuzzleManager.charactorController.isInteracting = false;
-
-            //theNextPanel.SetActive(true);
-            //theCurrPanel.SetActive(false);
-            //Debug.Log("Puzzle Solved");
-            //ObjParent.SetActive(false);
             Debug.Log("in position");
             packingManager.currSpriteNum++;
             Destroy(gameObject);

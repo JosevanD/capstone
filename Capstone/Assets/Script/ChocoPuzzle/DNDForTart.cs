@@ -37,13 +37,21 @@ public class DNDForTart : MonoBehaviour
         BowlAudioSource.clip = FillingTartClip;
         objectInitPos = objectToDrag.transform.position;
         chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
     }
 
     
     public void OnMouseDrag()
     {
+        chocoPuzzleManager.cursorManager.ChangeToGrab();
         objectToDrag.transform.position = Input.mousePosition;
         
+    }
+    public void OnMouseUp()
+    {
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
+        
+
     }
 
     IEnumerator Countdown(int seconds)
@@ -67,6 +75,8 @@ public class DNDForTart : MonoBehaviour
     {
         if (TartCount >= TotalTartCount)
         {
+            chocoPuzzleManager.cursorManager.SetCursorDefault();
+            chocoPuzzleManager.cursorManager.SetCursorDefault();
             chocoPuzzleManager.EndingAudioSource.Stop();
             chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
             BowlAudioSource.Stop();

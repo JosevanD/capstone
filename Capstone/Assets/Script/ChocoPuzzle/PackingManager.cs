@@ -24,10 +24,7 @@ public class PackingManager : MonoBehaviour
     public string Instruction_1;
     public string Instruction_2;
 
-    private void Awake()
-    {
-        
-    }
+
     void Start()
     {
         currSpriteNum = 0;
@@ -35,6 +32,7 @@ public class PackingManager : MonoBehaviour
         BoxCover.raycastTarget = false;
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
     }
 
     IEnumerator Countdown(int seconds)
@@ -72,7 +70,7 @@ public class PackingManager : MonoBehaviour
         }
         if (currSpriteNum >= ImageSprites.Length-1)
         {
-
+            chocoPuzzleManager.cursorManager.SetCursorDefault();
             chocoPuzzleManager.EndingAudioSource.Stop();
             chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
             StartCoroutine(Countdown(chocoPuzzleManager.MaxEndingTime));

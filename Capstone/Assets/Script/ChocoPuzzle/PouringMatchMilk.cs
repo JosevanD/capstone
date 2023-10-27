@@ -51,6 +51,7 @@ public class PouringMatchMilk : MonoBehaviour
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         StirringChocolatePanel.SetActive(false);
         chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
+
     }
     public void OnPointerDown()
     {
@@ -63,12 +64,18 @@ public class PouringMatchMilk : MonoBehaviour
 
     public void DragObject()
     {
+        chocoPuzzleManager.cursorManager.ChangeToGrab();
         objectToDrag.transform.position = Input.mousePosition;
 
 
 
     }
+    public void OnMouseUp()
+    {
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
 
+
+    }
 
     void nextPanel() 
     {
@@ -109,6 +116,7 @@ public class PouringMatchMilk : MonoBehaviour
                 FilledWhiteChocoBowl.SetActive(true);
                 chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_2);
                 Invoke("nextPanel", 1);
+                chocoPuzzleManager.cursorManager.ChangeToPalm();
                 //Debug.Log("111");
 
             }

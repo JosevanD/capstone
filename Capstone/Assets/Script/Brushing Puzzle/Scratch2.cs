@@ -27,6 +27,8 @@ public class Scratch2 : MonoBehaviour
     private AudioSource SketchingAudioSource;
 
     private Charactor_Controller charactorController;
+    private CursorManager cursorManager;
+
     public int MaxEndingTime;
     public GameObject maskPrefab;
     public GameObject[] DetectionObjs;
@@ -67,6 +69,8 @@ public class Scratch2 : MonoBehaviour
         totalDetection = DetectionObjs.Length;
         DetectionCount = 0;
         charactorController = FindObjectOfType<Charactor_Controller>();
+        cursorManager = FindObjectOfType<CursorManager>();
+
         SketchingAudioSource = GetComponent<AudioSource>();
         SketchingAudioSource.clip = SketchingClip;
         SketchingAudioSource.enabled = false;
@@ -82,6 +86,7 @@ public class Scratch2 : MonoBehaviour
         {
             //MainCam.enabled = false;
             BrushCam.enabled = true;
+            cursorManager.ChangeToDraw();
         }
         var mousePos = Input.mousePosition;
         mousePos.z = 5;
@@ -117,7 +122,7 @@ public class Scratch2 : MonoBehaviour
     void Reveal()
     {
         //Destroy(gameObject);
-
+        cursorManager.SetCursorDefault();
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
         StartCoroutine(Countdown(MaxEndingTime));

@@ -29,12 +29,15 @@ public class DragNDropForChocoPieces : MonoBehaviour
         //charactorController = FindObjectOfType<Charactor_Controller>();
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         breakingChocoPieces = FindObjectOfType<BreakingChocoPieces>();
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
     }
 
     public void DragObject()
     {
+        chocoPuzzleManager.cursorManager.ChangeToGrab();
         if (!isLocked)
         {
+            
             objectToDrag.transform.position = Input.mousePosition;
 
         }
@@ -44,9 +47,11 @@ public class DragNDropForChocoPieces : MonoBehaviour
 
     public void DropObject()
     {
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
         float Distance = Vector3.Distance(objectToDrag.transform.position, objectDragToPos.transform.position);
         if (Distance < DropDistance)
         {
+            chocoPuzzleManager.cursorManager.SetCursorDefault();
             isLocked = true;
             objectToDrag.transform.position = objectDragToPos.transform.position;
             ChocolateBowl.GetComponent<Image>().sprite = FilledChocolateBowl;

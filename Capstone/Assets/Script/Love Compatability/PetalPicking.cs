@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class PetalPicking : MonoBehaviour
 {
     FlowerManager flowerManager;
+    CursorManager cursorManager;
 
     [SerializeField]
     private Canvas FlowerPickingCanvas;
@@ -17,19 +18,14 @@ public class PetalPicking : MonoBehaviour
     void Start()
     {
         flowerManager = FindObjectOfType<FlowerManager>();
-        //isPickable = false;
+        cursorManager = FindObjectOfType<CursorManager>();
+        cursorManager.ChangeToPalm();
     }
 
-    /*public void OnPointerDown(PointerEventData eventData)
-    {
-        flowerManager.PickedFlowerPetals++;
-        
-        Destroy(gameObject);
     
-    }*/
     public void DragHandler(BaseEventData data)
     {
-        
+        cursorManager.ChangeToGrab();
         PointerEventData pointerData = (PointerEventData)data;
         Vector2 position;
 
@@ -41,7 +37,7 @@ public class PetalPicking : MonoBehaviour
         transform.position = FlowerPickingCanvas.transform.TransformPoint(position);
         flowerManager.FlowerPickingAudioSource.Stop();
         flowerManager.FlowerPickingAudioSource.PlayOneShot(flowerManager.FlowerPickingClip);
-
+        
 
 
     }
@@ -56,7 +52,7 @@ public class PetalPicking : MonoBehaviour
     public void OnMouseUp()
     {
 
-
+        cursorManager.ChangeToPalm();
         flowerManager.CurrFlowerPetal++;
         /*if (flowerManager.EyesImage.sprite == flowerManager.HappyEyes)
             flowerManager.EyesImage.sprite = flowerManager.SadEyes;

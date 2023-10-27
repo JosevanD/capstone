@@ -23,11 +23,12 @@ public class ChocoPuzzleManager : MonoBehaviour
 
 
     public Canvas ChocoPuzzleCanvas;
+    [HideInInspector]
     public Charactor_Controller charactorController;
+    [HideInInspector]
+    public CursorManager cursorManager;
 
-    /*public GameObject BreakingChocoPanel;
-    public GameObject MixingMatchaPanel;
-    public GameObject OvenPanel;*/
+
     public GameObject[] ChocoPuzzleObjects;
     public GameObject LevelCompleteTrggerObj;
 
@@ -55,13 +56,13 @@ public class ChocoPuzzleManager : MonoBehaviour
         ChocolatesPlaced = 0;
         ChocoPuzzleObjectsNum = 0;
         charactorController = FindObjectOfType<Charactor_Controller>();
-
+        cursorManager = FindObjectOfType<CursorManager>();
         ChocoPuzzleObjects[ChocoPuzzleObjectsNum].SetActive(true);
         Debug.Log("Panel Number 0 is " + ChocoPuzzleObjectsNum);
         Debug.Log("IsPanelfinished " + IsPanelFinished);
         currPanels = CurrPanels.BreakingChoco;
         IsPanelFinished = false;
-        //EndingTimer = 0;
+        
     }
 
     private void Update()

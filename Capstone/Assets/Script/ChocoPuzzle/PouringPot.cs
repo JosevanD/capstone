@@ -64,6 +64,7 @@ public class PouringPot : MonoBehaviour
         PouringMilkAudioSource = GetComponent<AudioSource>();
         objectInitPos = objectToDrag.transform.position;
         chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
     }
 
 
@@ -80,9 +81,9 @@ public class PouringPot : MonoBehaviour
                     PouringMilkAudioSource.PlayOneShot(PouringMilkClip);
                 }
                 MilkBowlAnimator.SetBool("isPouring", true);
-                //MatchaBowlAnimator.SetBool("isFillingMilk", true);
+                
                 FillingTimer += Time.deltaTime;
-                //Debug.Log("collide" + gameObject);
+                
 
             }
             //not in the range 
@@ -96,6 +97,7 @@ public class PouringPot : MonoBehaviour
             //finished
             if (FillingTimer >= MaxFillingTimer)
             {
+                chocoPuzzleManager.cursorManager.SetCursorDefault();
                 chocoPuzzleManager.EndingAudioSource.Stop();
                 chocoPuzzleManager.EndingAudioSource.PlayOneShot(chocoPuzzleManager.EndingClip);
                 MilkBowlAnimator.SetBool("isPouring", false);
@@ -137,9 +139,17 @@ public class PouringPot : MonoBehaviour
     {
         if (!isLocked && !isFinished)
         {
+            chocoPuzzleManager.cursorManager.ChangeToGrab();
             objectToDrag.transform.position = Input.mousePosition;
 
         }
+
+
+    }
+
+    public void OnMouseUp()
+    {
+        chocoPuzzleManager.cursorManager.ChangeToPalm();
 
 
     }

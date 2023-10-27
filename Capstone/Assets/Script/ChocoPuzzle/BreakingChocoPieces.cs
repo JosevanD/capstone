@@ -38,14 +38,14 @@ public class BreakingChocoPieces : MonoBehaviour
     public string Instruction_2;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         BrokenChocoPiecesAll.SetActive(false);
         chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         BreakingChocoAudioSource = GetComponent<AudioSource>();
         totalChocolateCount = GameObject.FindGameObjectsWithTag("Choco Pieces").Length;
         chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_1);
+        chocoPuzzleManager.cursorManager.SetCursorDefault();
     }
 
     // Update is called once per frame
@@ -58,6 +58,7 @@ public class BreakingChocoPieces : MonoBehaviour
             {
                 BrokenPice.SetActive(false);
             }
+            //chocoPuzzleManager.cursorManager.ChangeToPalm();
             chocoPuzzleManager.SwitchInstruction(TextObj, Instruction_2);
             BrokenChocoPiecesAll.SetActive(true);
 

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 public class FlowerManager : MonoBehaviour
 {
+    private CursorManager cursorManager;
+
     [SerializeField] [Header("Flower Picking Canvas")]
     private GameObject FlowerPickingCanvasObj;
     //public Image 
@@ -45,6 +47,7 @@ public class FlowerManager : MonoBehaviour
     void Start()
     {
         charactorController = FindObjectOfType<Charactor_Controller>();
+        cursorManager = FindObjectOfType<CursorManager>();
         CurrFlowerPetal = 0;
         FlowerPetalsCounts = FlowerPetals.Length;
         FlowerPickingAudioSource = GetComponent<AudioSource>();
@@ -80,7 +83,8 @@ public class FlowerManager : MonoBehaviour
             FlowerPickingAudioSource.Stop();
             FlowerPickingAudioSource.PlayOneShot(EndingClip);
             StartCoroutine(Countdown(MaxEndingTime));
-            Debug.Log("Flower Picking Finished");
+            cursorManager.SetCursorDefault();
+            //Debug.Log("Flower Picking Finished");
         
         }
         if (CurrFlowerPetal < FlowerPetalsCounts)
