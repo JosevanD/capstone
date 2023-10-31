@@ -60,7 +60,6 @@ Material:
   m_ValidKeywords:
   - BILLBOARD_ROTATION_EACH_FACE
   - _USE_FILL_TEXTURE
-  - _WIND
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -183,7 +182,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _USE_FILL_TEXTURE: 1
-    - _WIND: 1
+    - _WIND: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
