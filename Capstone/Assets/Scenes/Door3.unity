@@ -2696,6 +2696,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1536402211}
+    - target: {fileID: 5101340301729994835, guid: 4f6ef3ed3626dda4580b91735c889935,
+        type: 3}
+      propertyPath: trigCollider
+      value: 
+      objectReference: {fileID: 1536402214}
     - target: {fileID: 5911799534807912855, guid: 4f6ef3ed3626dda4580b91735c889935,
         type: 3}
       propertyPath: hasAnimation
@@ -10394,7 +10399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1240806018
 Transform:
   m_ObjectHideFlags: 0
@@ -12522,6 +12527,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1462098896}
+    - target: {fileID: 5101340301729994835, guid: 4f6ef3ed3626dda4580b91735c889935,
+        type: 3}
+      propertyPath: trigCollider
+      value: 
+      objectReference: {fileID: 1462098902}
     - target: {fileID: 5911799534807912855, guid: 4f6ef3ed3626dda4580b91735c889935,
         type: 3}
       propertyPath: hasAnimation
@@ -12587,6 +12597,12 @@ MonoBehaviour:
   isStay: 0
   lockedSound: {fileID: 0}
   lockShakeDelay: 0
+--- !u!65 &1462098902 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5961551261500666715, guid: 4f6ef3ed3626dda4580b91735c889935,
+    type: 3}
+  m_PrefabInstance: {fileID: 1462098892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1492830277
 GameObject:
   m_ObjectHideFlags: 0
@@ -13171,6 +13187,12 @@ MonoBehaviour:
 --- !u!95 &1536402211 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2069057610221681943, guid: 4f6ef3ed3626dda4580b91735c889935,
+    type: 3}
+  m_PrefabInstance: {fileID: 228065905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1536402214 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5961551261500666715, guid: 4f6ef3ed3626dda4580b91735c889935,
     type: 3}
   m_PrefabInstance: {fileID: 228065905}
   m_PrefabAsset: {fileID: 0}
@@ -14672,6 +14694,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1673877508}
+    - target: {fileID: 5101340301729994835, guid: 4f6ef3ed3626dda4580b91735c889935,
+        type: 3}
+      propertyPath: trigCollider
+      value: 
+      objectReference: {fileID: 1673877515}
     - target: {fileID: 5911799534807912855, guid: 4f6ef3ed3626dda4580b91735c889935,
         type: 3}
       propertyPath: hasAnimation
@@ -14720,6 +14747,12 @@ MonoBehaviour:
   isStay: 0
   lockedSound: {fileID: 0}
   lockShakeDelay: 0
+--- !u!65 &1673877515 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5961551261500666715, guid: 4f6ef3ed3626dda4580b91735c889935,
+    type: 3}
+  m_PrefabInstance: {fileID: 1673877505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1680268572
 GameObject:
   m_ObjectHideFlags: 0
@@ -16755,6 +16788,11 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1506981982}
+    - target: {fileID: 5101340301729994835, guid: 4f6ef3ed3626dda4580b91735c889935,
+        type: 3}
+      propertyPath: trigCollider
+      value: 
+      objectReference: {fileID: 1884182484}
     - target: {fileID: 5911799534807912855, guid: 4f6ef3ed3626dda4580b91735c889935,
         type: 3}
       propertyPath: hasAnimation
@@ -16770,6 +16808,12 @@ PrefabInstance:
 --- !u!4 &1884182481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8312829009536802150, guid: 4f6ef3ed3626dda4580b91735c889935,
+    type: 3}
+  m_PrefabInstance: {fileID: 1884182480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1884182484 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5961551261500666715, guid: 4f6ef3ed3626dda4580b91735c889935,
     type: 3}
   m_PrefabInstance: {fileID: 1884182480}
   m_PrefabAsset: {fileID: 0}
@@ -21612,6 +21656,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.08399999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800876028883769623, guid: bf5ae067c4eed984e9aadb4926608a0e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7188488009736208549, guid: bf5ae067c4eed984e9aadb4926608a0e,
         type: 3}
