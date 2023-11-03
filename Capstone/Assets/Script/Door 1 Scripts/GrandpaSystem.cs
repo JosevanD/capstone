@@ -55,5 +55,9 @@ public class GrandpaSystem : MonoBehaviour
         following = false;
     }
 
-
+    public Vector3 GrandpaTargetPos()
+    {
+        Vector3 pos = targetObjPos;
+        return pos;
+    }
 }
