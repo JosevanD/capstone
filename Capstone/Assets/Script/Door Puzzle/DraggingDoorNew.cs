@@ -92,6 +92,12 @@ public class DraggingDoorNew : MonoBehaviour
                     transform.localEulerAngles = new Vector3(0, yRot, 0);
                 }
             }
+            if (yRot <= 5f)
+            {
+                yRot = 0;
+                moveDoor = false;
+            
+            }
             else
             {
                 if (!stoppedBefore)
