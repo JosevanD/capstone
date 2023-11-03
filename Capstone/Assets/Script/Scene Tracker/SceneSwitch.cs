@@ -39,4 +39,18 @@ public class SceneSwitch : MonoBehaviour
     {
         SceneManager.LoadScene(TargetSceneName);
     }
+
+    public void TriggerSceneSwitch()
+    {
+        if (fromWhiteHallway == false)
+        {
+            sceneTrackerObj.GetComponent<SceneTracker>().InWhiteHallway();
+
+            sceneTrackerObj.GetComponent<SceneTracker>().FromSceneNo(currentDoorNumber);
+
+
+            SceneManager.LoadScene(TargetSceneName);
+        }
+
+    }
 }

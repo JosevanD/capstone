@@ -542,10 +542,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1890413801912751180}
   interactToPlayAnim: 1
+  animationPlayOnce: 0
   animatorBoolParameters:
   - DoorOpen
   animationNo: 0
   popupUI: {fileID: 6953873381995468022}
+  trigCollider: {fileID: 5738895775263952811}
+  objToDisable: {fileID: 0}
+  isDisableObj: 0
 --- !u!1 &7867629760617491476
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockObj: {fileID: 6953873381995468022}
+  prevDoorUnlock: {fileID: 0}
 --- !u!82 &4045304740368746579
 AudioSource:
   m_ObjectHideFlags: 0
