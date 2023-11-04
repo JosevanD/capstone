@@ -257,13 +257,13 @@ public class SceneTracker : MonoBehaviour
     }
     public void CheckDoorDelete()
     {
-        //GameObject door1ToDelete;
-        //GameObject door2ToDelete;
+        GameObject door1ToDelete;
+        GameObject door2ToDelete;
         GameObject door3ToDelete;
         GameObject door4ToDelete;
         GameObject door5ToDelete;
 
-        /*
+       
         if (isDoor1Dissolved == true)
         {
             door1ToDelete = GameObject.Find("Door 1");
@@ -285,7 +285,7 @@ public class SceneTracker : MonoBehaviour
 
         }
 
-        */
+        
         if (isDoor3Dissolved == true)
         {
             door3ToDelete = GameObject.Find("Door 3");

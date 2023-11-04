@@ -10,8 +10,11 @@ public class MovingCamera : MonoBehaviour
     public CinemachineVirtualCamera TargetCam;
     private float CamTimer;
     public float MaxCamTime;
+    
     private bool isCollidePlayer;
 
+    [SerializeField] bool usingTrigger = true;
+    [SerializeField] bool isRepeatable = false;
     [Header ("Activate Objects")]
     [SerializeField] GameObject objToActivate;
     [SerializeField] bool hasObjToActivate;
@@ -19,11 +22,12 @@ public class MovingCamera : MonoBehaviour
     private void Start()
     {
         isCollidePlayer = false;
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == "Player" && usingTrigger == true)
         {
             isCollidePlayer = true;
             PlayerCam.Priority = 0;
@@ -52,7 +56,10 @@ public class MovingCamera : MonoBehaviour
             PlayerCam.Priority = 1;
             TargetCam.Priority = 0;
             //Destroy(gameObject);
-
+            if (isRepeatable == true)
+            {
+                CamTimer = 0;
+            }
         }
 
     }
@@ -62,5 +69,18 @@ public class MovingCamera : MonoBehaviour
         objActivated = true;
         yield return new WaitForSeconds(time);
         objToActivate.SetActive(true);
+    }
+
+    public void CameraMove()
+    {
+        isCollidePlayer = true;
+        PlayerCam.Priority = 0;
+        TargetCam.Priority = 1;
+
+        if (hasObjToActivate == true && objActivated == false)
+        {
+            StartCoroutine(StartObject(MaxCamTime));
+        }
+
     }
 }
