@@ -8,7 +8,8 @@ public class ThreeDAnimation : MonoBehaviour
     [SerializeField] Animator threeDCutsceneAnimator;
     [SerializeField] GameObject player;
     //[SerializeField] Rigidbody rb;
-    [SerializeField] Vector3 teleportTransform;
+    [SerializeField] GameObject teleportObj;
+    //[SerializeField] Vector3 teleportTransform;
     [SerializeField] private GameObject bgAudioObject;
     // Start is called before the first frame update
     void Start()
@@ -30,8 +31,7 @@ public class ThreeDAnimation : MonoBehaviour
 
     public void PlayerTeleportDoorFive()
     {
-        player.transform.localPosition = teleportTransform;
-        
+        player.transform.position = teleportObj.transform.position;
     }
 
     public void DisablePlayerThreeD()
