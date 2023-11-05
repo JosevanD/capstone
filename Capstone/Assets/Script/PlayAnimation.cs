@@ -93,4 +93,9 @@ public class PlayAnimation : MonoBehaviour
 
 
     }
+
+    public void AnimDisableObj()
+    {
+        objToDisable.SetActive(false);
+    }
 }
