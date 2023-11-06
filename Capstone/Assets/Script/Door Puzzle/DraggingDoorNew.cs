@@ -14,11 +14,21 @@ public class DraggingDoorNew : MonoBehaviour
     bool moveDoor = false;
     DoorCollision doorCollision = DoorCollision.NONE;
 
+    private DoorPuzzleManager doorPuzzleManager;
+
+    SceneSwitch sceneSwitch;
+
 
     // Use this for initialization
+    private void Awake()
+    {
+        doorPuzzleManager = FindObjectOfType<DoorPuzzleManager>();
+        sceneSwitch = FindObjectOfType<SceneSwitch>();
+    }
     void Start()
     {
         StartCoroutine(doorMover());
+        
     }
 
     // Update is called once per frame
@@ -96,7 +106,8 @@ public class DraggingDoorNew : MonoBehaviour
             {
                 yRot = 0;
                 moveDoor = false;
-            
+                StartCoroutine(Countdown(3));
+
             }
             else
             {
@@ -109,6 +120,22 @@ public class DraggingDoorNew : MonoBehaviour
 
             yield return null;
         }
+
+    }
+
+    IEnumerator Countdown(int seconds)
+    {
+        int counter = seconds;
+        while (counter > 0)
+        {
+            yield return new WaitForSeconds(1);
+            counter--;
+        }
+
+        Debug.Log("complete");
+        sceneSwitch.TriggerSceneSwitch();
+        doorPuzzleManager.DoorPuzzleCanvas.SetActive(false);
+
 
     }
 
