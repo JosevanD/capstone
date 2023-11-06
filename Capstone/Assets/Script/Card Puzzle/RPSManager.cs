@@ -43,7 +43,7 @@ public class RPSManager : MonoBehaviour
     {
         CardAudioSource = GetComponent<AudioSource>();
         charactorController = FindObjectOfType<Charactor_Controller>();
-        Result.text = "Choose Your Card From The Right Pile";
+        Result.text = "First to Get 3 points Wins";
         CurrWinedRound = 0;
         isAIWon = false;
         playerWinCount = 0;
@@ -82,13 +82,13 @@ public class RPSManager : MonoBehaviour
                             break;
 
                         case "Paper":
-                            Result.text = "The paper covers the rock, you win!";
+                            Result.text = "you win!";
                             playerWinCount++;
                             CurrWinedRound++;
                             break;
 
                         case "Scissors":
-                            Result.text = "The rock destroys the scissors, you lose!";
+                            Result.text = "you lose!";
                             enemyWinCount++;
                             isAIWon = true;
                             break;
@@ -102,7 +102,7 @@ public class RPSManager : MonoBehaviour
                     switch (myChoice)
                     {
                         case "Rock":
-                            Result.text = "The paper covers the rock, you lose!";
+                            Result.text = "you lose!";
                             enemyWinCount++;
                             isAIWon = true;
                             break;
@@ -112,7 +112,7 @@ public class RPSManager : MonoBehaviour
                             break;
 
                         case "Scissors":
-                            Result.text = "The scissors cuts the paper, you win!";
+                            Result.text = "you win!";
                             playerWinCount++;
                             CurrWinedRound++;
                             break;
@@ -126,13 +126,13 @@ public class RPSManager : MonoBehaviour
                     switch (myChoice)
                     {
                         case "Rock":
-                            Result.text = "The rock destroys the scissors, you win!";
+                            Result.text = "you win!";
                             playerWinCount++;
                             CurrWinedRound++;
                             break;
 
                         case "Paper":
-                            Result.text = "The scissors cuts the paper, you Lose!";
+                            Result.text = "you Lose!";
                             enemyWinCount++;
                             isAIWon = true;
                             break;
@@ -158,21 +158,21 @@ public class RPSManager : MonoBehaviour
             switch (myChoice)
         {
             case "Rock":
-                Result.text = "The rock destroys the scissors, you win!";
+                Result.text = "you win!";
                 playerWinCount++;
                 CurrWinedRound++;
                 AIChoice.sprite = AIScissors;
                 break;
 
             case "Paper":
-                Result.text = "The paper covers the rock, you win!";
+                Result.text = "you win!";
                 playerWinCount++;
                 CurrWinedRound++;
                 AIChoice.sprite = AIRock;
                 break;
 
             case "Scissors":                 
-                Result.text = "The scissors cuts the paper, you win!";
+                Result.text = "you win!";
                 playerWinCount++;
                 CurrWinedRound++;
                 AIChoice.sprite = AIPaper;

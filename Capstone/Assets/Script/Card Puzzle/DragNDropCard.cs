@@ -13,6 +13,8 @@ public class DragNDropCard : MonoBehaviour
     public GameObject objectDragToPos;
     private bool isLocked;
     public float DropDistance;
+    public Image PlayerChoice;
+    public Sprite EmptyCard;
 
     [Header("Card Puzzle Canvas")]
     public Canvas RPSCanvas;
@@ -73,6 +75,9 @@ public class DragNDropCard : MonoBehaviour
             isLocked = true;
             objectToDrag.transform.position = objectDragToPos.transform.position;
             rpsManager.Play(MyChoice);
+            
+            PlayerChoice.sprite = gameObject.GetComponent<Image>().sprite;
+            gameObject.GetComponent<Image>().enabled = false;
             Debug.Log("in position");
             Invoke("SendBackCards", rpsManager.WaitForSeconds);
             //Destroy(gameObject);
@@ -87,9 +92,12 @@ public class DragNDropCard : MonoBehaviour
     }
     void SendBackCards()
     {
+        gameObject.GetComponent<Image>().enabled = true;
+        PlayerChoice.sprite = EmptyCard;
+        rpsManager.AIChoice.sprite = EmptyCard;
         objectToDrag.transform.position = objectInitPos;
         isLocked = false;
-        rpsManager.AIChoice.sprite = null;
+        //rpsManager.AIChoice.sprite = null;
         rpsManager.Result.text = "Choose your Card";
 
     }
