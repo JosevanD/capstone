@@ -30,11 +30,18 @@ public class RPSManager : MonoBehaviour
     [Header("The Ending Door")]
     public GameObject TheEndingDoorObj;
 
+    
+    private AudioSource CardAudioSource;
+
+    [Header("Card Battle SFX")]
+    public AudioClip WonClip;
+
     private Charactor_Controller charactorController;
 
     private bool isAIWon;
     private void Start()
     {
+        CardAudioSource = GetComponent<AudioSource>();
         charactorController = FindObjectOfType<Charactor_Controller>();
         Result.text = "Choose Your Card From The Right Pile";
         CurrWinedRound = 0;
@@ -53,6 +60,7 @@ public class RPSManager : MonoBehaviour
             
             TheEndingDoorObj.SetActive(true);
             charactorController.isInteracting = false;*/
+            CardAudioSource.PlayOneShot(WonClip);
             StartCoroutine(Countdown(3));
         }
         playerScore.text = "" +  playerWinCount;
@@ -184,6 +192,8 @@ public class RPSManager : MonoBehaviour
         }
 
         Debug.Log("complete");
+        //CardAudioSource.Stop();
+        
         Result.text = "You Won the Battle!";
         CardPuzzleGameobject.SetActive(false);
 
