@@ -30,4 +30,9 @@ public class ChapterName : MonoBehaviour
         }
     }
 
+    public void ChapterNameDisable()
+    {
+        gameObject.SetActive(false);
+    }
+
 }
