@@ -13,6 +13,7 @@ public class PopupUI : MonoBehaviour
     //[SerializeField] AudioSource popupSound;
     [SerializeField] AudioSource lockedSound;
     [SerializeField] float lockShakeDelay;
+    [SerializeField] bool isPlayOnce;
     void Start()
     {
         isPopupActive = false;
@@ -65,6 +66,11 @@ public class PopupUI : MonoBehaviour
         popupUI.SetActive(false);
         
         isPopupActive = false;
+
+        if (isPlayOnce == true)
+        {
+            DeletePopup();
+        }
     }
 
     private void LockedPopup()
@@ -96,5 +102,10 @@ public class PopupUI : MonoBehaviour
         popupAnimator.SetBool("LockTry", false);
 
 
+    }
+
+    private void DeletePopup()
+    {
+        Destroy(popupUI);
     }
 }
