@@ -21,7 +21,7 @@ public class DNDForPlacingTart : MonoBehaviour
     void Start()
     {
         packingManager = FindObjectOfType<PackingManager>();
-
+        chocoPuzzleManager = FindObjectOfType<ChocoPuzzleManager>();
         objectInitPos = objectToDrag.transform.position;
     }
 
