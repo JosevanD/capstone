@@ -83,7 +83,7 @@ public class SceneTracker : MonoBehaviour
         }
 
         //Pause Game
-        PauseMenu();
+        //PauseMenu();
 
         if (sceneChanged == true)
         {

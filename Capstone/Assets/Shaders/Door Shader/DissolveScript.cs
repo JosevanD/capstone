@@ -30,6 +30,7 @@ public class DissolveScript : MonoBehaviour
     public MeshCollider frameCollider;
     public BoxCollider enterDoorCollider;
     [SerializeField] GameObject toDisable;
+    [SerializeField] GameObject popUpUI;
 
     [Header("Others")]
     private GameObject sceneTracker;
@@ -78,7 +79,7 @@ public class DissolveScript : MonoBehaviour
 
     public void DoorAppear()
     {
-        
+            
             appearSound.enabled = true;
             doorCollider.enabled = true;
             frameCollider.enabled = true;
@@ -90,8 +91,11 @@ public class DissolveScript : MonoBehaviour
 
     public void DoorDissolve()
     {
+        if (popUpUI != null)
+        {
+            Destroy(popUpUI);
+        }
         
-
         dissolveSound.enabled = true;
         doorCollider.enabled = false;
         frameCollider.enabled = false;
