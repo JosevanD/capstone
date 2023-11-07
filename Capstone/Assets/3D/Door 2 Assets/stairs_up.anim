@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 3.75
-        value: {x: 6.789999, y: 1.382, z: 4.54}
+        value: {x: 6.21, y: 0.92, z: 4.54}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -30,8 +30,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 8.333333
         value: {x: 9.88, y: 3.229, z: 4.54}
-        inSlope: {x: 0.4208593, y: 0, z: 0}
-        outSlope: {x: 0.4208593, y: 0, z: 0}
+        inSlope: {x: 0.42085928, y: 0, z: 0}
+        outSlope: {x: 0.42085928, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -331,7 +331,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.43333334
+        time: 0.96666664
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -368,7 +368,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.43333334
+        time: 0.96666664
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -646,7 +646,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 3.75
-        value: 6.789999
+        value: 6.21
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -656,8 +656,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 8.333333
         value: 9.88
-        inSlope: 0.4208593
-        outSlope: 0.4208593
+        inSlope: 0.42085928
+        outSlope: 0.42085928
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -683,7 +683,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 3.75
-        value: 1.382
+        value: 0.92
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1032,7 +1032,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.43333334
+        time: 0.96666664
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -1069,7 +1069,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.43333334
+        time: 0.96666664
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -1104,7 +1104,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.23333333
+  - time: 0.98333335
     functionName: AnimDisableObj
     data: 
     objectReferenceParameter: {fileID: 0}
