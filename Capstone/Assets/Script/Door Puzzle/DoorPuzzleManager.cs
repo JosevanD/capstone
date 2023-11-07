@@ -8,11 +8,18 @@ public class DoorPuzzleManager : MonoBehaviour
     public GameObject DoorPuzzleCanvas;
 
     [HideInInspector]
+    public AudioSource DoorAudioSource;
+
+    [Header("Door SFX")]
+    public AudioClip ClosingClip;
+
+    [HideInInspector]
     public SceneSwitch sceneSwitch;
     // Start is called before the first frame update
     void Awake()
     {
         //DoorPuzzleCanvas.SetActive(false);
+        DoorAudioSource = GetComponent<AudioSource>();
         sceneSwitch = FindObjectOfType<SceneSwitch>();
 
     }

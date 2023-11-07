@@ -18,6 +18,8 @@ public class DraggingDoorNew : MonoBehaviour
 
     SceneSwitch sceneSwitch;
 
+    private bool isClosingPlay;
+
 
     // Use this for initialization
     private void Awake()
@@ -28,7 +30,7 @@ public class DraggingDoorNew : MonoBehaviour
     void Start()
     {
         StartCoroutine(doorMover());
-        
+        isClosingPlay = false;
     }
 
     // Update is called once per frame
@@ -104,8 +106,15 @@ public class DraggingDoorNew : MonoBehaviour
             }
             if (yRot <= 0)
             {
+                
                 yRot = 0;
                 moveDoor = false;
+                if (!isClosingPlay)
+                {
+                    doorPuzzleManager.DoorAudioSource.PlayOneShot(doorPuzzleManager.ClosingClip);
+                    isClosingPlay = true;
+                }
+                
                 StartCoroutine(Countdown(3));
 
             }
@@ -131,7 +140,7 @@ public class DraggingDoorNew : MonoBehaviour
             yield return new WaitForSeconds(1);
             counter--;
         }
-
+        
         Debug.Log("complete");
         sceneSwitch.TriggerSceneSwitch();
         doorPuzzleManager.DoorPuzzleCanvas.SetActive(false);
