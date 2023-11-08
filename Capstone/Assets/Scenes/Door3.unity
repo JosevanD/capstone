@@ -8050,7 +8050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &878107427
 Transform:
   m_ObjectHideFlags: 0
@@ -16645,12 +16645,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1848936047}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1848936051 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4932169065114147663, guid: 30d09a6e580ab5b43a1b869b003504da,
-    type: 3}
-  m_PrefabInstance: {fileID: 1848936047}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1861348874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20682,7 +20676,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerObj
       value: 
-      objectReference: {fileID: 1848936051}
+      objectReference: {fileID: 130399510}
     - target: {fileID: 3125204841455764124, guid: dea6f304b15d55046935472f6c217741,
         type: 3}
       propertyPath: bgAudioObject

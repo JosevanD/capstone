@@ -774,7 +774,7 @@ PrefabInstance:
         type: 3}
       propertyPath: popUpUI
       value: 
-      objectReference: {fileID: 184042464}
+      objectReference: {fileID: 0}
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: toDisable
@@ -898,13 +898,18 @@ PrefabInstance:
     - target: {fileID: 7277016309794945264, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: doorNo
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: popUpUI
+      value: 
+      objectReference: {fileID: 184042464}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: toDisable
@@ -942,6 +947,12 @@ GameObject:
 --- !u!1 &184042464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1756632908780480545, guid: 4db05069fdd699447966d3fad85239c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 184042462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &184042465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7867629760617491476, guid: 4db05069fdd699447966d3fad85239c7,
     type: 3}
   m_PrefabInstance: {fileID: 184042462}
   m_PrefabAsset: {fileID: 0}
@@ -1321,7 +1332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &452541340
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3618,6 +3629,11 @@ PrefabInstance:
       propertyPath: TargetSceneName
       value: Door1
       objectReference: {fileID: 0}
+    - target: {fileID: 287277325441206763, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1756632908780480545, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_IsActive
@@ -3878,6 +3894,11 @@ PrefabInstance:
       propertyPath: prevDoorUI
       value: 
       objectReference: {fileID: 1923148360}
+    - target: {fileID: 6350492090073776711, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6953873381995468022, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_IsActive
@@ -3906,6 +3927,11 @@ PrefabInstance:
     - target: {fileID: 8742619645875002364, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742619645875002364, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: isDisableObj
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8869385508048479155, guid: 4db05069fdd699447966d3fad85239c7,
@@ -3951,6 +3977,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 120177661051802864, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
     - {fileID: 1580008214337739138, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
+    - {fileID: 7204534939165919704, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
 --- !u!4 &1605989416 stripped
 Transform:
@@ -5841,7 +5868,7 @@ PrefabInstance:
         type: 3}
       propertyPath: toDisable
       value: 
-      objectReference: {fileID: 1179439337}
+      objectReference: {fileID: 184042465}
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: isDissolve
@@ -5976,7 +6003,7 @@ PrefabInstance:
         type: 3}
       propertyPath: toDisable
       value: 
-      objectReference: {fileID: 1179439337}
+      objectReference: {fileID: 184042465}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: blockageCollider
@@ -6550,7 +6577,7 @@ PrefabInstance:
         type: 3}
       propertyPath: popUpUI
       value: 
-      objectReference: {fileID: 1923148361}
+      objectReference: {fileID: 0}
     - target: {fileID: 3738878026473947381, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: toDisable
@@ -6671,6 +6698,11 @@ PrefabInstance:
       propertyPath: doorNo
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: popUpUI
+      value: 
+      objectReference: {fileID: 1923148361}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: toDisable
@@ -6925,6 +6957,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8742619645875002364, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: popupUI
+      value: 
+      objectReference: {fileID: 2058061632}
     - target: {fileID: 8869385508048479155, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_RootOrder
@@ -8455,8 +8492,18 @@ PrefabInstance:
       objectReference: {fileID: 673855362}
     - target: {fileID: 5009916047261124923, guid: bc6261c56fa93854daafb52a8c334dd1,
         type: 3}
+      propertyPath: objToActivate
+      value: 
+      objectReference: {fileID: 1528491759}
+    - target: {fileID: 5009916047261124923, guid: bc6261c56fa93854daafb52a8c334dd1,
+        type: 3}
       propertyPath: previousAudioNo
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009916047261124923, guid: bc6261c56fa93854daafb52a8c334dd1,
+        type: 3}
+      propertyPath: hasObjToActivate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9164950563279388273, guid: bc6261c56fa93854daafb52a8c334dd1,
         type: 3}
