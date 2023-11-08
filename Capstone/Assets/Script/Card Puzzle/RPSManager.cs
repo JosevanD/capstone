@@ -36,6 +36,10 @@ public class RPSManager : MonoBehaviour
     [Header("Card Battle SFX")]
     public AudioClip WonClip;
 
+    [Header("Card Battle Prize")]
+    public GameObject PrizeCardObj;
+    public Animator CardPrizeAnimator;
+
     private Charactor_Controller charactorController;
 
     private bool isAIWon;
@@ -54,12 +58,6 @@ public class RPSManager : MonoBehaviour
     {
         if (CurrWinedRound >= TotalWinedRound)
         {
-            /*Debug.Log("complete");
-            Result.text = "You Won the Battle!";
-            CardPuzzleGameobject.SetActive(false);
-            
-            TheEndingDoorObj.SetActive(true);
-            charactorController.isInteracting = false;*/
             CardAudioSource.PlayOneShot(WonClip);
             StartCoroutine(Countdown(3));
         }
@@ -196,9 +194,10 @@ public class RPSManager : MonoBehaviour
         
         Result.text = "You Won the Battle!";
         CardPuzzleGameobject.SetActive(false);
-
-        TheEndingDoorObj.SetActive(true);
-        charactorController.isInteracting = false;
+        PrizeCardObj.SetActive(true);
+        CardPrizeAnimator.SetBool("isPlayed", true);
+        //TheEndingDoorObj.SetActive(true);
+        //charactorController.isInteracting = false;
 
     }
 
