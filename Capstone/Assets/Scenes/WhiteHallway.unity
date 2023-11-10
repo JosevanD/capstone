@@ -895,6 +895,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7204534939165919704, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: isPlayOnce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7277016309794945264, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_IsActive
@@ -3097,6 +3102,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7204534939165919704, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: isPlayOnce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: doorNo
@@ -3975,7 +3985,7 @@ PrefabInstance:
       value: Door End
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 120177661051802864, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
+    - {fileID: 0}
     - {fileID: 1580008214337739138, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
     - {fileID: 7204534939165919704, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4db05069fdd699447966d3fad85239c7, type: 3}
@@ -5984,6 +5994,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7204534939165919704, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: isPlayOnce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7277016309794945264, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: m_IsActive
@@ -6693,6 +6708,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7204534939165919704, guid: 4db05069fdd699447966d3fad85239c7,
+        type: 3}
+      propertyPath: isPlayOnce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7670030560195899939, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: doorNo
@@ -6925,7 +6945,7 @@ PrefabInstance:
     - target: {fileID: 7204534939165919704, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}
       propertyPath: isPlayOnce
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7277016309794945264, guid: 4db05069fdd699447966d3fad85239c7,
         type: 3}

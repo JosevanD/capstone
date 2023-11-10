@@ -37,7 +37,7 @@ public class PopupUI : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.tag == "Player" && isPopupActive == false)
+        if (collider.tag == "Player" && isPopupActive == false && popupUI != null)
         {
             ActivatePopup();
         }
@@ -50,7 +50,7 @@ public class PopupUI : MonoBehaviour
     {
         if (collider.tag == "Player" && isPopupActive == true)
         {
-            DeactivatePopup();
+            HidePopup();
         }
     }
     
@@ -71,6 +71,14 @@ public class PopupUI : MonoBehaviour
         {
             DeletePopup();
         }
+    } 
+    
+    private void HidePopup()
+    {
+        popupUI.SetActive(false);
+        
+        isPopupActive = false;
+
     }
 
     private void LockedPopup()
