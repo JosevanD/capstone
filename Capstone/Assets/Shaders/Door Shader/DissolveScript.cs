@@ -31,6 +31,7 @@ public class DissolveScript : MonoBehaviour
     public BoxCollider enterDoorCollider;
     [SerializeField] GameObject toDisable;
     [SerializeField] GameObject popUpUI;
+    [SerializeField] float refrate;
 
     [Header("Others")]
     private GameObject sceneTracker;
@@ -75,6 +76,7 @@ public class DissolveScript : MonoBehaviour
         {
             Destroy(this);
         }
+        refrate = refreshRate;
     }
 
     public void DoorAppear()
@@ -121,7 +123,7 @@ public class DissolveScript : MonoBehaviour
                 {
                     meshMaterials[i].SetFloat("_DissolveAmount", counter);
                 }
-                yield return new WaitForSeconds(refreshRate);
+                yield return new WaitForSeconds(0.025f);
                 sceneTracker.GetComponent<SceneTracker>().CheckDoorDissolved(doorNo);
             }
 
@@ -141,7 +143,7 @@ public class DissolveScript : MonoBehaviour
                 {
                     meshMaterials[i].SetFloat("_DissolveAmount", (1 - counter));
                 }
-                yield return new WaitForSeconds(refreshRate);
+                yield return new WaitForSeconds(0.025f);
             }
 
         }
