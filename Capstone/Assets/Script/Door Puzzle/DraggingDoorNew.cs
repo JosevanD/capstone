@@ -44,26 +44,7 @@ public class DraggingDoorNew : MonoBehaviour
             //moveDoor = true;
             Debug.Log("Mouse down");
 
-            /*RaycastHit hitInfo = new RaycastHit();
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo))
-            {
-                if (hitInfo.collider.gameObject == frontDoorCollider)
-                {
-                    moveDoor = true;
-                    Debug.Log("Front door hit");
-                    doorCollision = DoorCollision.FRONT;
-                }
-                else if (hitInfo.collider.gameObject == backDoorCollider)
-                {
-                    moveDoor = true;
-                    Debug.Log("Back door hit");
-                    doorCollision = DoorCollision.BACK;
-                }
-                else
-                {
-                    doorCollision = DoorCollision.NONE;
-                }
-            }*/
+           
         }
 
         if (Input.GetMouseButtonUp(0))

@@ -288,22 +288,22 @@ PrefabInstance:
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.800655
+      value: -41.662964
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.264
+      value: 1.3567744
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.221472
+      value: -4.234157
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
@@ -313,7 +313,7 @@ PrefabInstance:
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279254, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
@@ -338,22 +338,22 @@ PrefabInstance:
     - target: {fileID: 269314659351279255, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: field of view
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279255, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: far clip plane
-      value: 1000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279255, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: near clip plane
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 269314659351279255, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 269314659372701863, guid: 0cc67f853f6a3e64296bde71acb4feb3,
         type: 3}
@@ -13165,7 +13165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2103150220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13262,7 +13262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoorPuzzleCanvas: {fileID: 2103150219}
   DoorAudioSource: {fileID: 0}
-  ClosingClip: {fileID: 0}
+  ClosingClip: {fileID: 8300000, guid: 9ed58b4dd873cf740af473282afc400c, type: 3}
   sceneSwitch: {fileID: 0}
 --- !u!114 &2103150225
 MonoBehaviour:
@@ -21571,7 +21571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &8311110486854891681
 MeshRenderer:
   m_ObjectHideFlags: 0
