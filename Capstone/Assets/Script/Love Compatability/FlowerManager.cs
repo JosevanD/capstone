@@ -6,6 +6,7 @@ using TMPro;
 public class FlowerManager : MonoBehaviour
 {
     private CursorManager cursorManager;
+    private SceneTracker sceneTracker;
 
     [SerializeField] [Header("Flower Picking Canvas")]
     private GameObject FlowerPickingCanvasObj;
@@ -48,6 +49,7 @@ public class FlowerManager : MonoBehaviour
     {
         charactorController = FindObjectOfType<Charactor_Controller>();
         cursorManager = FindObjectOfType<CursorManager>();
+        sceneTracker = FindObjectOfType<SceneTracker>();
         CurrFlowerPetal = 0;
         FlowerPetalsCounts = FlowerPetals.Length;
         FlowerPickingAudioSource = GetComponent<AudioSource>();
@@ -66,6 +68,7 @@ public class FlowerManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             counter--;
         }
+        sceneTracker.RewardCollected();
         charactorController.isInteracting = false;
         FlowerPickingCanvasObj.SetActive(false);
         FlowerPickingObject.SetActive(false);

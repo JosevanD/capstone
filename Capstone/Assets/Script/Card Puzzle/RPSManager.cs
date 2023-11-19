@@ -41,12 +41,14 @@ public class RPSManager : MonoBehaviour
     public Animator CardPrizeAnimator;
 
     private Charactor_Controller charactorController;
+    private SceneTracker sceneTracker;
 
     private bool isAIWon;
     private void Start()
     {
         CardAudioSource = GetComponent<AudioSource>();
         charactorController = FindObjectOfType<Charactor_Controller>();
+        sceneTracker = FindObjectOfType<SceneTracker>();
         Result.text = "First to Get 3 points Wins";
         CurrWinedRound = 0;
         isAIWon = false;
@@ -190,8 +192,7 @@ public class RPSManager : MonoBehaviour
         }
 
         Debug.Log("complete");
-        //CardAudioSource.Stop();
-        
+        sceneTracker.RewardCollected();
         Result.text = "You Won the Battle!";
         CardPuzzleGameobject.SetActive(false);
         PrizeCardObj.SetActive(true);
