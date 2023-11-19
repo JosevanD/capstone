@@ -36,6 +36,8 @@ public class SceneTracker : MonoBehaviour
     public bool isDoor4Dissolved;
     public bool isDoor5Dissolved;
 
+    [Header("Reward Tracker")]
+    public int rewardsCollected;
 
     // Start is called before the first frame update
     private void Awake()
@@ -318,5 +320,10 @@ public class SceneTracker : MonoBehaviour
 
     }
    
+    public void RewardCollected()
+    {
+        rewardsCollected++;
+    }
+
 
 }

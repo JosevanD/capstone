@@ -146,6 +146,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 731939415390062423}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &71209778370220399
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,7 +3066,7 @@ GameObject:
   - component: {fileID: 8773764256381326820}
   - component: {fileID: 8822563079951644076}
   m_Layer: 5
-  m_Name: Image
+  m_Name: white_strip_reward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3127,8 +3139,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 225438885837220101}
+  - component: {fileID: 6698680666759233660}
   m_Layer: 0
-  m_Name: Reward Tracker
+  m_Name: Reward Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3155,6 +3168,25 @@ Transform:
   m_Father: {fileID: 7472264992837068944}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6698680666759233660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731939415390062423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea1c2db0fd4a204588a36e9f9840a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardsSprObj:
+  - {fileID: 6292106766181412447}
+  - {fileID: 1978014999076814695}
+  - {fileID: 2389387869166810302}
+  - {fileID: 7511297977654045819}
+  - {fileID: 9180510037421675749}
+  rewardsCollected: 0
 --- !u!1 &1238988450990577986
 GameObject:
   m_ObjectHideFlags: 0
@@ -3301,7 +3333,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 731939415390062423}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3311,7 +3343,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &1238988450991863302
 GameObject:
@@ -5719,7 +5751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6550221064775483149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5931,7 +5963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6419416074922187765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6482,7 +6514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1950228932666004041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6916,7 +6948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3994076418576026284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7105,7 +7137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8326704368495345069
 RectTransform:
   m_ObjectHideFlags: 0
