@@ -3723,39 +3723,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.054107, y: 2.4633112, z: 0.03462603}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &556001896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 556001897}
-  m_Layer: 0
-  m_Name: Door Puzzle Parent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &556001897
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556001896}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -131.57416, y: -62.22734, z: -31.326443}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1807235397}
-  - {fileID: 1163130821}
-  m_Father: {fileID: 0}
-  m_RootOrder: 35
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &556089535
 GameObject:
   m_ObjectHideFlags: 0
@@ -8190,8 +8157,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 442309031}
-  m_Father: {fileID: 556001897}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11946,7 +11913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677520887}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 171.93, y: -10.45, z: 305.3}
+  m_LocalPosition: {x: 173.1, y: -10.62, z: 304.61}
   m_LocalScale: {x: 9.353073, y: 9.353073, z: 9.353073}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13069,13 +13036,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807235393}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 153.41415, y: 63.36734, z: 21.156443}
+  m_LocalPosition: {x: 21.839996, y: 1.1399994, z: -10.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1990301283}
-  m_Father: {fileID: 556001897}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1808035315
 GameObject:
@@ -17958,7 +17925,7 @@ PrefabInstance:
         type: 3}
       propertyPath: objToActivate
       value: 
-      objectReference: {fileID: 1545144655}
+      objectReference: {fileID: 1807235393}
     - target: {fileID: 3736094761985602516, guid: 33a65af3edab07642b06e0f588fdff9e,
         type: 3}
       propertyPath: advanceUI
