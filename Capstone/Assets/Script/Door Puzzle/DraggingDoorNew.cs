@@ -124,7 +124,7 @@ public class DraggingDoorNew : MonoBehaviour
         
         Debug.Log("complete");
         sceneSwitch.TriggerSceneSwitch();
-        doorPuzzleManager.DoorPuzzleCanvas.SetActive(false);
+        //doorPuzzleManager.DoorPuzzleCanvas.SetActive(false);
 
 
     }
