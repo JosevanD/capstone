@@ -17,7 +17,7 @@ public class TriggerDissolve : MonoBehaviour
     {
         sceneTrackerObj = GameObject.Find("SceneTracker");
 
-        doorNames = new string[] { "Door 0", "Door 1", "Door 2", "Door 3", "Door 4", "Door 5" };
+        doorNames = new string[] { "Door 0", "Door 1", "Door 2", "Door 3", "Door 4", "Door 5", "Door 6" };
 
         doorNumber = sceneTrackerObj.GetComponent<SceneTracker>().SetDissolveDoorNumber();
 

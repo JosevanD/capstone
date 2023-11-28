@@ -20,7 +20,7 @@ public class SceneTracker : MonoBehaviour
     public GameObject magicDoorPrefab;
     public GameObject triggerDissolveObj;
     //public string currentSceneName;
-    public string[] sceneNames = {"MenuScene","WhiteHallway", "Door1", "Door2", "Door3", "Door4", "Door5"};
+    public string[] sceneNames = {"MenuScene","WhiteHallway", "Door1", "Door2", "Door3", "Door4", "Door5", "Door6"};
     public bool sceneChanged;
 
     [Header("Audio Tracker")]
@@ -35,6 +35,7 @@ public class SceneTracker : MonoBehaviour
     public bool isDoor3Dissolved;
     public bool isDoor4Dissolved;
     public bool isDoor5Dissolved;
+    public bool isDoor6Dissolved;
 
     [Header("Reward Tracker")]
     public int rewardsCollected;
@@ -264,6 +265,7 @@ public class SceneTracker : MonoBehaviour
         GameObject door3ToDelete;
         GameObject door4ToDelete;
         GameObject door5ToDelete;
+        GameObject door6ToDelete;
 
        
         if (isDoor1Dissolved == true)
@@ -316,7 +318,15 @@ public class SceneTracker : MonoBehaviour
                 door5ToDelete.SetActive(false);
             }
         }
+        if (isDoor6Dissolved == true)
+        {
+            door6ToDelete = GameObject.Find("Door 5");
 
+            if (door6ToDelete != null)
+            {
+                door6ToDelete.SetActive(false);
+            }
+        }
 
     }
    
