@@ -21,7 +21,8 @@ public class ChocoPuzzleManager : MonoBehaviour
     
     }
 
-    private SceneTracker sceneTracker;
+    [HideInInspector]
+    public SceneTracker sceneTracker;
 
     public Canvas ChocoPuzzleCanvas;
     [HideInInspector]
@@ -116,7 +117,7 @@ public class ChocoPuzzleManager : MonoBehaviour
             case CurrPanels.AllFinished:
 
                 TextObj.text = null;
-                sceneTracker.RewardCollected();
+                //sceneTracker.RewardCollected();
                 Destroy(ChocoPuzzleObjects[5]);
                 LevelCompleteTrggerObj.SetActive(true);
                 break;
