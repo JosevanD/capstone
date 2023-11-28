@@ -48,6 +48,7 @@ public class PackingManager : MonoBehaviour
         chocoPuzzleManager.charactorController.isInteracting = false;
         chocoPuzzleManager.currPanels = ChocoPuzzleManager.CurrPanels.AllFinished;
         theCurrPanel.SetActive(false);
+        chocoPuzzleManager.sceneTracker.RewardCollected();
 
 
     }
