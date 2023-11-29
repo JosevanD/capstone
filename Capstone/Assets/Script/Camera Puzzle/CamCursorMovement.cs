@@ -9,15 +9,21 @@ public class CamCursorMovement : MonoBehaviour
     public float speed;
     [HideInInspector]
     public Vector3 RandomPosition;
-    
-    private Vector3 InitPos;
+
+    [Header("Central Position")]
+    public GameObject CentralBoxObj;
+    private Vector3 CentralPos;
+
     private bool isCoolDown;
-    // Update is called once per frame
 
     private void Start()
     {
-        InitPos = gameObject.transform.position;
-        RandomPosition = InitPos;
+
+        CentralPos = new Vector3(CentralBoxObj.transform.position.x, CentralBoxObj.transform.position.y, gameObject.transform.position.z);
+        RandomPosition = CentralPos;
+
+        Vector3 randomPos = new Vector3(CentralPos.x + Random.insideUnitSphere.x * RandomMovementRange, CentralPos.y + Random.insideUnitSphere.y * RandomMovementRange, CentralPos.z);
+        gameObject.transform.position = randomPos;
         isCoolDown = true;
     }
     void Update()
@@ -32,9 +38,14 @@ public class CamCursorMovement : MonoBehaviour
             isCoolDown = false;
         
         }
-        //gameObject.transform.position = Vector3.Lerp(transform.position, RandomPosition, Step);
-        gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, RandomPosition, Step);
-        //transform.position = new Vector3(Mathf.PingPong(Time.time * 1.5f, 6) - 3, Mathf.PingPong(Time.time * 1.5f, 6) - 3, InitPos.z);
+        
+        if (!isCoolDown)
+        {
+            //gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, RandomPosition, Step);
+            gameObject.transform.position = Vector3.Lerp(transform.position, RandomPosition, Step);
+            //transform.position = new Vector3(Mathf.PingPong(Time.time * 1.5f, 6) - 3, Mathf.PingPong(Time.time * 1.5f, 6) - 3, InitPos.z);
+        }
+
     }
 
     IEnumerator Countdown(int seconds)
@@ -47,7 +58,7 @@ public class CamCursorMovement : MonoBehaviour
         }
 
         //Vector3 randomPos = new Vector3(InitPos.x + Random.Range(-RandomMovementRange, RandomMovementRange), InitPos.y + Random.Range(-RandomMovementRange, RandomMovementRange), InitPos.z);
-        Vector3 randomPos = new Vector3(Random.insideUnitSphere.x * RandomMovementRange, Random.insideUnitSphere.y * RandomMovementRange, InitPos.z);
+        Vector3 randomPos = new Vector3(CentralPos.x + Random.insideUnitSphere.x * RandomMovementRange, CentralPos.y + Random.insideUnitSphere.y * RandomMovementRange, CentralPos.z);
         RandomPosition = randomPos;
         isCoolDown = true;
     }
