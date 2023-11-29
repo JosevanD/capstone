@@ -14,6 +14,7 @@ public class CameraPuzzleManager : MonoBehaviour
     public GameObject WrongPhoto;
 
     private bool isShotCool;
+    private bool isCorrectPhoto;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,16 +31,20 @@ public class CameraPuzzleManager : MonoBehaviour
 
         if (camCursorCollision.isCursorHit && Input.GetKeyDown(KeyCode.Mouse0) && isShotCool) 
         {
-            CorrectPhoto.SetActive(true);
-            StartCoroutine(CorrectPhotoCountdown(3));
+            //CorrectPhoto.SetActive(true);
+            isCorrectPhoto = true;
+            StartCoroutine(PhotoOutputCountdown(1));
+            StartCoroutine(PhotoCountdown(5));
             isShotCool = false;
             camFlash.cameraFlash();
 
         }
         if (!camCursorCollision.isCursorHit && Input.GetKeyDown(KeyCode.Mouse0) && isShotCool)
         {
-            StartCoroutine(WrongPhotoCountdown(3));
-            WrongPhoto.SetActive(true);
+            isCorrectPhoto = false;
+            StartCoroutine(PhotoOutputCountdown(1));
+            StartCoroutine(PhotoCountdown(3));
+            //WrongPhoto.SetActive(true);
             isShotCool = false;
             camFlash.cameraFlash();
             //photo Animation can be implemented
@@ -47,7 +52,7 @@ public class CameraPuzzleManager : MonoBehaviour
     }
 
 
-    IEnumerator WrongPhotoCountdown(int seconds)
+    IEnumerator PhotoCountdown(int seconds)
     {
         int counter = seconds;
         while (counter > 0)
@@ -56,11 +61,21 @@ public class CameraPuzzleManager : MonoBehaviour
             counter--;
         }
         Debug.Log("111");
-        WrongPhoto.SetActive(false);
+        
+        if (isCorrectPhoto)
+        {
+            gameObject.SetActive(false);
+        }
+        if (!isCorrectPhoto)
+        {
+            WrongPhoto.SetActive(false);
+
+        }
         isShotCool = true;
 
     }
-    IEnumerator CorrectPhotoCountdown(int seconds)
+    
+    IEnumerator PhotoOutputCountdown(int seconds)
     {
         int counter = seconds;
         while (counter > 0)
@@ -68,8 +83,10 @@ public class CameraPuzzleManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             counter--;
         }
-        Debug.Log("222");
-        gameObject.SetActive(false);
+        if(isCorrectPhoto)
+            CorrectPhoto.SetActive(true);
+        if(!isCorrectPhoto)
+            WrongPhoto.SetActive(true);
 
 
     }

@@ -22,7 +22,7 @@ public class CamCursorMovement : MonoBehaviour
         CentralPos = new Vector3(CentralBoxObj.transform.position.x, CentralBoxObj.transform.position.y, gameObject.transform.position.z);
         RandomPosition = CentralPos;
 
-        Vector3 randomPos = new Vector3(CentralPos.x + Random.insideUnitSphere.x * RandomMovementRange, CentralPos.y + Random.insideUnitSphere.y * RandomMovementRange, CentralPos.z);
+        Vector3 randomPos = new Vector3(CentralPos.x + Random.insideUnitSphere.x * RandomMovementRange * 0.1f, CentralPos.y + Random.insideUnitSphere.y * RandomMovementRange * 0.1f, CentralPos.z);
         gameObject.transform.position = randomPos;
         isCoolDown = true;
     }

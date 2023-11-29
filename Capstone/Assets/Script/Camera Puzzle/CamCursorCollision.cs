@@ -20,13 +20,22 @@ public class CamCursorCollision : MonoBehaviour
     {
         Debug.Log("Collided");
         isCursorHit = true;
-        v.weight = 1;
+        
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    
+    private void Update()
     {
         isCursorHit = false;
-        v.weight = 0;
+        if (!isCursorHit)
+        {
+            v.weight = 1;
+        }
+        if (isCursorHit)
+        {
+            v.weight = 0;
+
+        }
     }
 
 }
