@@ -23,6 +23,26 @@ MonoBehaviour:
       useGBuffer: 1
   m_CopyDepthPS: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
   m_DBufferClear: {fileID: 4800000, guid: f056d8bd2a1c7e44e9729144b4c70395, type: 3}
+--- !u!114 &-5847318049015117023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e2e32e102e44abeb72209e7ce030c3, type: 3}
+  m_Name: KawaseBlur
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    renderPassEvent: 500
+    blurMaterial: {fileID: 2100000, guid: a00afda211f274f6ca6cce958e4e13a5, type: 2}
+    blurPasses: 5
+    downsample: 2
+    copyToFramebuffer: 0
+    targetName: _blurTexture
 --- !u!114 &-5458980376223051543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,7 +107,8 @@ MonoBehaviour:
   - {fileID: 7108743488684465457}
   - {fileID: -5458980376223051543}
   - {fileID: -6492527452660751958}
-  m_RendererFeatureMap: adc0de57c6d2eee5319d680a8a54a762e990654f45ce3db4aa21af41aee8e5a5
+  - {fileID: -5847318049015117023}
+  m_RendererFeatureMap: adc0de57c6d2eee5319d680a8a54a762e990654f45ce3db4aa21af41aee8e5a5214bb9ff3627daae
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -148,3 +169,23 @@ MonoBehaviour:
     destinationType: 0
     sourceTextureId: _SourceTexture
     destinationTextureId: _DestinationTexture
+--- !u!114 &8653565099975323534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e2e32e102e44abeb72209e7ce030c3, type: 3}
+  m_Name: KawaseBlur
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    renderPassEvent: 500
+    blurMaterial: {fileID: 2100000, guid: a00afda211f274f6ca6cce958e4e13a5, type: 2}
+    blurPasses: 5
+    downsample: 2
+    copyToFramebuffer: 0
+    targetName: _blurTexture

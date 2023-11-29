@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraPuzzleManager : MonoBehaviour
 {
     CamCursorCollision camCursorCollision;
+    CameraFlash camFlash;
+
+    
+
     public GameObject CorrectPhoto;
     public GameObject WrongPhoto;
 
@@ -13,7 +18,10 @@ public class CameraPuzzleManager : MonoBehaviour
     void Start()
     {
         camCursorCollision = FindObjectOfType<CamCursorCollision>();
+        camFlash = FindObjectOfType<CameraFlash>();
         isShotCool = true;
+
+        
     }
 
     // Update is called once per frame
@@ -25,6 +33,7 @@ public class CameraPuzzleManager : MonoBehaviour
             CorrectPhoto.SetActive(true);
             StartCoroutine(CorrectPhotoCountdown(3));
             isShotCool = false;
+            camFlash.cameraFlash();
 
         }
         if (!camCursorCollision.isCursorHit && Input.GetKeyDown(KeyCode.Mouse0) && isShotCool)
@@ -32,6 +41,7 @@ public class CameraPuzzleManager : MonoBehaviour
             StartCoroutine(WrongPhotoCountdown(3));
             WrongPhoto.SetActive(true);
             isShotCool = false;
+            camFlash.cameraFlash();
             //photo Animation can be implemented
         }
     }
