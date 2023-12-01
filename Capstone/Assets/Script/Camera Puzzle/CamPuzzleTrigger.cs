@@ -6,12 +6,22 @@ public class CamPuzzleTrigger : MonoBehaviour
 {
     [Header("Cam Puzzle Canvas")]
     public GameObject CamPuzzleObj;
+    public GameObject PlayerObj;
+    private bool isCollided = false;
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if (other.tag == "Player" )
+        {
+            isCollided = true;
+        }
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && isCollided)
         {
             CamPuzzleObj.SetActive(true);
-        
+            PlayerObj.SetActive(false);
         }
+
     }
 }
