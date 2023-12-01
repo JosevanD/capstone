@@ -26,7 +26,10 @@ public class DoorPuzzleManager : MonoBehaviour
         sceneSwitch = FindObjectOfType<SceneSwitch>();
 
     }
-
+    private void Start()
+    {
+        DoorPuzzleInstructionObj.SetActive(true);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -39,7 +42,7 @@ public class DoorPuzzleManager : MonoBehaviour
         if (other.transform.tag == "Player")
         {
             DoorPuzzleCanvas.SetActive(true);
-            DoorPuzzleInstructionObj.SetActive(true);
+            
         }
 
     }
