@@ -8,7 +8,8 @@ public class CameraPuzzleManager : MonoBehaviour
     CamCursorCollision camCursorCollision;
     CameraFlash camFlash;
 
-    
+    public GameObject PlayerObj;
+    public GameObject CompanyCharacter;
 
     public GameObject CorrectPhoto;
     public GameObject WrongPhoto;
@@ -21,7 +22,8 @@ public class CameraPuzzleManager : MonoBehaviour
         camCursorCollision = FindObjectOfType<CamCursorCollision>();
         camFlash = FindObjectOfType<CameraFlash>();
         isShotCool = true;
-
+        CompanyCharacter.SetActive(false);
+        PlayerObj.SetActive(false);
         
     }
 
@@ -64,6 +66,8 @@ public class CameraPuzzleManager : MonoBehaviour
         
         if (isCorrectPhoto)
         {
+            PlayerObj.SetActive(true);
+            CompanyCharacter.SetActive(true);
             gameObject.SetActive(false);
         }
         if (!isCorrectPhoto)
