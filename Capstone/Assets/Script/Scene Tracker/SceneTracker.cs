@@ -247,6 +247,12 @@ public class SceneTracker : MonoBehaviour
             isDoor5Dissolved = true;
             doorNo = 0;
         }
+
+        if (doorNo == 6)
+        {
+            isDoor6Dissolved = true;
+            doorNo = 0;
+        }
     }
 
     private void DeleteLoading()
