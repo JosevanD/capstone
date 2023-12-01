@@ -8,27 +8,40 @@ public class CameraPuzzleManager : MonoBehaviour
     CamCursorCollision camCursorCollision;
     CameraFlash camFlash;
 
+    [Header("Instruction")]
+    public GameObject CamPuzzleInstruction;
+
     public Animator InnerBoxAnimator;
     public GameObject PlayerObj;
-    public GameObject CompanyCharacter;
+    public GameObject AcompanyCharacter;
 
     public GameObject CorrectPhoto;
     public GameObject WrongPhoto;
 
     public GameObject DoorPrefab;
 
+    [Header("Cam SFX")]
+    private AudioSource CamAudio;
+    public AudioClip FlashingSFX;
+
     private bool isShotCool;
     private bool isCorrectPhoto;
+
+    private SceneTracker sceneTracker;
+
     // Start is called before the first frame update
     void Start()
     {
+        CamPuzzleInstruction.SetActive(true);
+        CamAudio = GetComponent<AudioSource>();
         camCursorCollision = FindObjectOfType<CamCursorCollision>();
         camFlash = FindObjectOfType<CameraFlash>();
         isShotCool = true;
-        CompanyCharacter.SetActive(false);
+        AcompanyCharacter.SetActive(false);
         PlayerObj.SetActive(false);
+        sceneTracker = FindObjectOfType<SceneTracker>();
         //InnerBoxAnimator.SetBool("isHorizontal", true);
-        
+
     }
 
     // Update is called once per frame
@@ -38,16 +51,19 @@ public class CameraPuzzleManager : MonoBehaviour
         if (camCursorCollision.isCursorHit && Input.GetKeyDown(KeyCode.Mouse0) && isShotCool) 
         {
             //CorrectPhoto.SetActive(true);
+            CamPuzzleInstruction.SetActive(false);
+            CamAudio.PlayOneShot(FlashingSFX);
             isCorrectPhoto = true;
             StartCoroutine(PhotoOutputCountdown(1));
             StartCoroutine(PhotoCountdown(5));
             isShotCool = false;
             camFlash.cameraFlash();
-            InnerBoxAnimator.SetBool("isIdle", true);
+            InnerBoxAnimator.SetBool("isFinished", true);
 
         }
         if (!camCursorCollision.isCursorHit && Input.GetKeyDown(KeyCode.Mouse0) && isShotCool)
         {
+            CamAudio.PlayOneShot(FlashingSFX);
             isCorrectPhoto = false;
             StartCoroutine(PhotoOutputCountdown(1));
             StartCoroutine(PhotoCountdown(3));
@@ -71,8 +87,9 @@ public class CameraPuzzleManager : MonoBehaviour
         
         if (isCorrectPhoto)
         {
+            sceneTracker.RewardCollected();
             PlayerObj.SetActive(true);
-            CompanyCharacter.SetActive(true);
+            AcompanyCharacter.SetActive(true);
             DoorPrefab.SetActive(true);
             gameObject.SetActive(false);
         }

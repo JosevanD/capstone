@@ -11,7 +11,8 @@ public class CamCursorCollision : MonoBehaviour
 
     [Header("Blur Volume")]
     public Volume v;
-    private DepthOfField DoF;
+    [HideInInspector]
+    public DepthOfField DoF;
     private void Start()
     {
         v.profile.TryGet(out DoF);

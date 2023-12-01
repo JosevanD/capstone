@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class CamCursorAnimationController : MonoBehaviour
 {
     private CameraPuzzleManager cameraPuzzleManager;
-    
+    private CamCursorCollision camCursorCollision;
+
+    public GameObject CentralBoxObj;
     // Start is called before the first frame update
     void Start()
     {
         cameraPuzzleManager = FindObjectOfType<CameraPuzzleManager>();
+        camCursorCollision = FindObjectOfType<CamCursorCollision>();
     }
 
     // Update is called once per frame
@@ -42,4 +47,11 @@ public class CamCursorAnimationController : MonoBehaviour
         Debug.Log(RandomAnim);
 
     }
+    public void FinishedControl()
+    {
+        CentralBoxObj.SetActive(false);
+        camCursorCollision.DoF.active = false;
+    
+    }
+
     }
