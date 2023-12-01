@@ -33,14 +33,14 @@ public class CamCursorCollision : MonoBehaviour
         if (Collider.tag == "View Finder")
         {
             isCursorHit = true;
-            Debug.Log("Detected");
+            //Debug.Log("Detected");
             //v.weight = 0;
             DoF.active = false;
         }
         else
         {
             isCursorHit = false;
-            Debug.Log("not detected");
+            //Debug.Log("not detected");
             //v.weight = 1;
             DoF.active = true;
         }

@@ -8,11 +8,14 @@ public class CameraPuzzleManager : MonoBehaviour
     CamCursorCollision camCursorCollision;
     CameraFlash camFlash;
 
+    public Animator InnerBoxAnimator;
     public GameObject PlayerObj;
     public GameObject CompanyCharacter;
 
     public GameObject CorrectPhoto;
     public GameObject WrongPhoto;
+
+    public GameObject DoorPrefab;
 
     private bool isShotCool;
     private bool isCorrectPhoto;
@@ -24,6 +27,7 @@ public class CameraPuzzleManager : MonoBehaviour
         isShotCool = true;
         CompanyCharacter.SetActive(false);
         PlayerObj.SetActive(false);
+        //InnerBoxAnimator.SetBool("isHorizontal", true);
         
     }
 
@@ -39,6 +43,7 @@ public class CameraPuzzleManager : MonoBehaviour
             StartCoroutine(PhotoCountdown(5));
             isShotCool = false;
             camFlash.cameraFlash();
+            InnerBoxAnimator.SetBool("isIdle", true);
 
         }
         if (!camCursorCollision.isCursorHit && Input.GetKeyDown(KeyCode.Mouse0) && isShotCool)
@@ -68,6 +73,7 @@ public class CameraPuzzleManager : MonoBehaviour
         {
             PlayerObj.SetActive(true);
             CompanyCharacter.SetActive(true);
+            DoorPrefab.SetActive(true);
             gameObject.SetActive(false);
         }
         if (!isCorrectPhoto)
