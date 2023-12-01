@@ -7,6 +7,9 @@ public class DoorPuzzleManager : MonoBehaviour
     [Header("Door Puzzle Canvas")]
     public GameObject DoorPuzzleCanvas;
 
+    [Header("Door Puzzle Instruction")]
+    public GameObject DoorPuzzleInstructionObj;
+
     [HideInInspector]
     public AudioSource DoorAudioSource;
 
@@ -36,7 +39,7 @@ public class DoorPuzzleManager : MonoBehaviour
         if (other.transform.tag == "Player")
         {
             DoorPuzzleCanvas.SetActive(true);
-
+            DoorPuzzleInstructionObj.SetActive(true);
         }
 
     }

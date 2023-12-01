@@ -97,7 +97,7 @@ public class DraggingDoorNew : MonoBehaviour
                 }
                 
                 StartCoroutine(Countdown(3));
-
+                doorPuzzleManager.DoorPuzzleInstructionObj.SetActive(false);
             }
             else
             {
