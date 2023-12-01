@@ -20,7 +20,7 @@ public class CamCursorCollision : MonoBehaviour
 
     private void Update()
     {
-        isCursorHit = false;
+        //isCursorHit = false;
         /*isCursorHit = false;
         if (!isCursorHit)
         {
@@ -32,12 +32,14 @@ public class CamCursorCollision : MonoBehaviour
         Collider2D Collider = Physics2D.OverlapCircle(gameObject.transform.position, Radius);
         if (Collider.tag == "View Finder")
         {
+            isCursorHit = true;
             Debug.Log("Detected");
             //v.weight = 0;
             DoF.active = false;
         }
         else
         {
+            isCursorHit = false;
             Debug.Log("not detected");
             //v.weight = 1;
             DoF.active = true;
