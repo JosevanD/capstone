@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CameraPuzzleManager : MonoBehaviour
 {
+    Charactor_Controller charactorController;
     CamCursorCollision camCursorCollision;
     CameraFlash camFlash;
 
@@ -32,6 +33,7 @@ public class CameraPuzzleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        charactorController = FindObjectOfType<Charactor_Controller>();
         CamPuzzleInstruction.SetActive(true);
         CamAudio = GetComponent<AudioSource>();
         camCursorCollision = FindObjectOfType<CamCursorCollision>();
@@ -40,6 +42,7 @@ public class CameraPuzzleManager : MonoBehaviour
         AcompanyCharacter.SetActive(false);
         PlayerObj.SetActive(false);
         sceneTracker = FindObjectOfType<SceneTracker>();
+        charactorController.isInteracting = true;
         //InnerBoxAnimator.SetBool("isHorizontal", true);
 
     }
@@ -87,11 +90,13 @@ public class CameraPuzzleManager : MonoBehaviour
         
         if (isCorrectPhoto)
         {
+            charactorController.isInteracting = false;
             sceneTracker.RewardCollected();
             PlayerObj.SetActive(true);
             AcompanyCharacter.SetActive(true);
             DoorPrefab.SetActive(true);
             gameObject.SetActive(false);
+            
         }
         if (!isCorrectPhoto)
         {

@@ -33,18 +33,18 @@ public class CamCursorAnimationController : MonoBehaviour
         var RandomAnim = Random.Range(0, 2);
         if (RandomAnim == 0)
         {
-            Debug.Log("I turn 0 on");
+            //Debug.Log("I turn 0 on");
             cameraPuzzleManager.InnerBoxAnimator.SetBool("isHorizontal", true);
             //cameraPuzzleManager.InnerBoxAnimator.SetBool("isVertical", false);
         }
         if (RandomAnim == 1)
         {
-            Debug.Log("I turn 1 on");
+            //Debug.Log("I turn 1 on");
             cameraPuzzleManager.InnerBoxAnimator.SetBool("isVertical", true);
             //cameraPuzzleManager.InnerBoxAnimator.SetBool("isHorizontal", false);
 
         }
-        Debug.Log(RandomAnim);
+        //Debug.Log(RandomAnim);
 
     }
     public void FinishedControl()
